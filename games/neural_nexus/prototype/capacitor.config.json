@@ -1,0 +1,6 @@
+{
+  "appId": "ai.openclaw.neuralnexus",
+  "appName": "Neural Nexus",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

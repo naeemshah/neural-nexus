@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Nexus: Nexus Bridge v2</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #game-container {
+            border: 2px solid #00f0ff;
+            box-shadow: 0 0 20px #bc00ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    <script>
+        const config = {
+            type: Phaser.AUTO,
+            width: 800,
+            height: 600,
+            parent: 'game-container',
+            backgroundColor: '#050510',
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    debug: false
+                }
+            },
+            scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH
+            },
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        };
+
+        const game = new Phaser.Game(config);
+
+        let dataStream;
+        let aegisSentinel;
+        let tiles;
+        let shards;
+        let score = 0;
+        let stability = 100;
+        let stabilityText;
+        let speed = 2;
+        let isGameOver = false;
+        let surgeActive = false;
+        let lastShardTime = 0;
+
+        function preload() {}
+
+        function create() {
+            const self = this;
+            tiles = this.add.group();
+            shards = this.physics.add.group();
+
+            // Create initial path
+            for (let i = 0; i < 5; i++) {
+                createTile(i * 64 + 32, 300);
+            }
+
+            // --- 4. Subject 404 Data Stream (Enhanced Sprite) ---
+            dataStream = this.add.container(32, 300);
+            let core = this.add.circle(0, 0, 15, 0x00f0ff);
+            let glow = this.add.circle(0, 0, 25, 0x00f0ff, 0.2);
+            let ring = this.add.graphics();
+            ring.lineStyle(2, 0x00f0ff, 0.8);
+            ring.strokeCircle(0, 0, 20);
+            dataStream.add([glow, core, ring]);
+
+            // Pulsing 'consciousness' animation
+            this.tweens.add({
+                targets: core,
+                scale: 1.2,
+                alpha: 0.7,
+                duration: 600,
+                yoyo: true,
+                repeat: -1,
+                ease: 'Sine.easeInOut'
+            });
+            this.tweens.add({
+                targets: ring,
+                scale: 1.5,
+                alpha: 0,
+                duration: 1000,
+                repeat: -1,
+                ease: 'Power2'
+            });
+
+            // --- 1. Aegis Sentinel (Deletion Field) ---
+            aegisSentinel = this.add.container(-150, 300);
+            let sentinelField = this.add.circle(0, 0, 50, 0xff0000, 0.2);
+            let sentinelCore = this.add.circle(0, 0, 10, 0xff3333);
+            let sentinelGlow = this.add.graphics();
+            sentinelGlow.lineStyle(2, 0xff0000, 0.5);
+            sentinelGlow.strokeCircle(0, 0, 45);
+            aegisSentinel.add([sentinelField, sentinelCore, sentinelGlow]);
+
+            // Sentinel oscillation
+            this.tweens.add({
+                targets: aegisSentinel,
+                y: '+=20',
+                duration: 1500,
+                yoyo: true,
+                repeat: -1,
+                ease: 'Sine.easeInOut'
+            });
+
+            // --- 5. UI Stability Meter ---
+            stabilityText = this.add.text(20, 20, 'STABILITY: 100%', { 
+                fontSize: '24px', 
+                fill: '#bc00ff',
+                fontStyle: 'bold'
+            });
+            
+            this.add.text(20, 50, 'SHARDS: 0', { 
+                fontSize: '18px', 
+                fill: '#00f0ff'
+            }).setName('shardText');
+
+            // --- Input ---
+            this.input.on('pointerdown', function (pointer) {
+                if (isGameOver) return;
+
+                let snapX = Math.floor(pointer.x / 64) * 64 + 32;
+                let snapY = Math.floor(pointer.y / 64) * 64 + 32;
+
+                let exists = false;
+                tiles.getChildren().forEach(tile => {
+                    if (tile.x === snapX && tile.y === snapY) exists = true;
+                });
+
+                if (!exists) {
+                    createTile(snapX, snapY);
+                    let flash = self.add.circle(snapX, snapY, 40, 0xff00ff, 0.5);
+                    self.tweens.add({
+                        targets: flash,
+                        scale: 0,
+                        alpha: 0,
+                        duration: 300,
+                        onComplete: () => flash.destroy()
+                    });
+                }
+            });
+
+            // Space key for "Synaptic Surge" (Speed boost)
+            this.input.keyboard.on('keydown-SPACE', () => {
+                if (stability > 5) {
+                    surgeActive = true;
+                    speed *= 2.5;
+                    // Visual feedback
+                    self.cameras.main.flash(100, 0, 240, 255);
+                }
+            });
+            this.input.keyboard.on('keyup-SPACE', () => {
+                if (surgeActive) {
+                    surgeActive = false;
+                    speed /= 2.5;
+                }
+            });
+
+            // Background grid
+            let graphics = this.add.graphics();
+            graphics.lineStyle(1, 0x222244, 0.3);
+            for (let x = 0; x < 800; x += 64) { graphics.moveTo(x, 0); graphics.lineTo(x, 600); }
+            for (let y = 0; y < 600; y += 64) { graphics.moveTo(0, y); graphics.lineTo(800, y); }
+            graphics.strokePath();
+        }
+
+        function createTile(x, y) {
+            let scene = game.scene.scenes[0];
+            let container = scene.add.container(x, y);
+            let bg = scene.add.rectangle(0, 0, 60, 60, 0x101030);
+            bg.setStrokeStyle(2, 0xbc00ff);
+            let pattern = scene.add.graphics();
+            pattern.lineStyle(2, 0x00f0ff, 0.5);
+            pattern.strokeRect(-20, -20, 40, 40);
+            container.add([bg, pattern]);
+            tiles.add(container);
+            return container;
+        }
+
+        // --- 3. Memory Shards (Random Spawns) ---
+        function spawnShard(scene) {
+            let x = dataStream.x + 400 + Math.random() * 200;
+            let y = Math.floor(Math.random() * 8 + 1) * 64 + 32;
+            if (x > 800) x -= 800;
+
+            let shard = scene.add.star(x, y, 5, 5, 12, 0xfff000);
+            scene.physics.add.existing(shard);
+            shard.body.setAllowGravity(false);
+            
+            scene.tweens.add({
+                targets: shard,
+                angle: 360,
+                duration: 2000,
+                repeat: -1
+            });
+            
+            shards.add(shard);
+        }
+
+        function update() {
+            if (isGameOver) return;
+            if (this.time.now < 1000) return;
+
+            // Move data stream
+            dataStream.x += speed;
+
+            // --- 1. Aegis Sentinel Logic ---
+            // Follows Data Stream at a distance
+            let targetX = dataStream.x - 200;
+            aegisSentinel.x = Phaser.Math.Linear(aegisSentinel.x, targetX, 0.05);
+            aegisSentinel.y = Phaser.Math.Linear(aegisSentinel.y, dataStream.y, 0.05);
+
+            // Consume tiles
+            tiles.getChildren().forEach(tile => {
+                let dist = Phaser.Math.Distance.Between(aegisSentinel.x, aegisSentinel.y, tile.x, tile.y);
+                if (dist < 60) {
+                    // Tile consumed effect
+                    this.tweens.add({
+                        targets: tile,
+                        scale: 0,
+                        alpha: 0,
+                        duration: 200,
+                        onComplete: () => tile.destroy()
+                    });
+                }
+            });
+
+            // --- 2. Neural Static (Visual Glitch) ---
+            let sentinelDist = Phaser.Math.Distance.Between(dataStream.x, dataStream.y, aegisSentinel.x, aegisSentinel.y);
+            if (sentinelDist < 250) {
+                let intensity = (250 - sentinelDist) / 2500;
+                this.cameras.main.shake(100, intensity);
+                if (Math.random() > 0.9) {
+                    this.cameras.main.setTint(0xff5555);
+                    this.time.delayedCall(50, () => this.cameras.main.clearTint());
+                }
+            }
+
+            // --- 5. Stability Meter & Surge Logic ---
+            if (surgeActive) {
+                stability -= 0.5;
+                if (stability <= 0) {
+                    stability = 0;
+                    surgeActive = false;
+                    speed = 2; // Reset speed
+                }
+            } else if (stability < 100) {
+                stability += 0.05; // Slow recovery
+            }
+            stabilityText.setText('STABILITY: ' + Math.floor(stability) + '%');
+
+            // Check collision with tiles (Stay on path)
+            let onPath = false;
+            tiles.getChildren().forEach(tile => {
+                if (Math.abs(dataStream.x - tile.x) < 32 && Math.abs(dataStream.y - tile.y) < 32) {
+                    onPath = true;
+                }
+            });
+
+            if (!onPath || stability <= 0) {
+                gameOver();
+            }
+
+            // Collect Shards
+            shards.getChildren().forEach(shard => {
+                if (Phaser.Math.Distance.Between(dataStream.x, dataStream.y, shard.x, shard.y) < 30) {
+                    shard.destroy();
+                    score += 1;
+                    stability = Math.min(100, stability + 10);
+                    this.children.getByName('shardText').setText('SHARDS: ' + score);
+                    
+                    // Collection effect
+                    let collect = this.add.circle(dataStream.x, dataStream.y, 10, 0xffff00, 0.8);
+                    this.tweens.add({
+                        targets: collect,
+                        scale: 4,
+                        alpha: 0,
+                        duration: 300,
+                        onComplete: () => collect.destroy()
+                    });
+                }
+            });
+
+            // Random Shard Spawning
+            if (this.time.now > lastShardTime + 3000) {
+                spawnShard(this);
+                lastShardTime = this.time.now;
+            }
+
+            // Loop and increase speed
+            if (dataStream.x > 800) {
+                dataStream.x = 0;
+                aegisSentinel.x = -200;
+                speed += 0.1;
+            }
+        }
+
+        function gameOver() {
+            if (isGameOver) return;
+            isGameOver = true;
+            let scene = game.scene.scenes[0];
+            scene.add.text(400, 300, 'CONNECTION LOST\nSTABILITY COLLAPSED', {
+                fontSize: '48px',
+                fill: '#ff0055',
+                align: 'center',
+                fontStyle: 'bold'
+            }).setOrigin(0.5);
+            
+            scene.cameras.main.shake(500, 0.05);
+            scene.cameras.main.setTint(0xff0000);
+        }
+    </script>
+</body>
+</html>

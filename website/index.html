@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naeem Shah | Senior Software Engineer</title>
+    <!-- Google Fonts: Google Sans is proprietary, using Inter for that clean Google look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Google Premium 'Deep Sea' Dark Mode Palette */
+            --bg-color: #0a0a0b;
+            --surface: #141416;
+            --surface-hover: #1c1c1f;
+            --primary: #4285f4; /* Google Blue */
+            --secondary: #34a853; /* Google Green */
+            --accent: #fbbc05; /* Google Yellow */
+            --error: #ea4335; /* Google Red */
+            --text-main: #ffffff;
+            --text-dim: #9aa0a6;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 8px 16px rgba(0,0,0,0.2);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.3);
+            --radius-lg: 28px;
+            --radius-md: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Entrance Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        /* Navigation - Minimal & Floating */
+        nav {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 48px);
+            max-width: 800px;
+            background: rgba(20, 20, 22, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 99px;
+            z-index: 1000;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        /* Layout */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 140px 0 60px;
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(66, 133, 244, 0.1);
+            color: var(--primary);
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0 auto 24px;
+            border: 1px solid rgba(66, 133, 244, 0.2);
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--primary);
+        }
+
+        h1 {
+            font-size: clamp(3.5rem, 10vw, 5.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            margin-bottom: 24px;
+            background: linear-gradient(180deg, #fff 0%, #9aa0a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        /* Product-style Experience Cards */
+        .section-header {
+            margin-bottom: 64px;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .product-card {
+            background: var(--surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            background: var(--surface-hover);
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .card-meta {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .company-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .work-details {
+            border-left: 1px solid var(--border-color);
+            padding-left: 40px;
+        }
+
+        .work-details p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 24px;
+        }
+
+        .bullet-list {
+            list-style: none;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .bullet-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        /* Skills/Stack Chips */
+        .chips-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .chip:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: linear-gradient(135deg, #1a1a1c 0%, #0a0a0b 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 40px;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-card h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            background: var(--text-main);
+            color: var(--bg-color);
+            padding: 16px 32px;
+            border-radius: 99px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 24px rgba(255, 255, 255, 0.2);
+        }
+
+        footer {
+            padding: 80px 0 40px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav { width: calc(100% - 32px); top: 16px; }
+            .nav-links { display: none; }
+            .product-card { grid-template-columns: 1fr; padding: 32px; gap: 24px; }
+            .work-details { border-left: none; border-top: 1px solid var(--border-color); padding-left: 0; padding-top: 24px; }
+            h1 { font-size: 3.5rem; }
+            .contact-card h2 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="animate-in">
+        <a href="#hero" class="logo"><div class="dot"></div> Naeem Shah</a>
+        <div class="nav-links">
+            <a href="#experience">Work</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Stack</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="status-pill animate-in delay-1">
+                <div class="status-dot"></div> Available for Strategic Leadership
+            </div>
+            <h1 class="animate-in delay-2">Architecting Scale.<br>Driving AI Innovation.</h1>
+            <p class="hero-sub animate-in delay-3">
+                Engineering Leader & Infrastructure Expert specializing in high-performance distributed systems. 10+ years of modernizing legacy architectures for global leaders like Zalando and ValueCore.
+            </p>
+            <div class="animate-in delay-3" style="display: flex; justify-content: center; gap: 16px;">
+                <a href="#experience" class="btn-primary">Explore Impact</a>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header">
+                <span class="section-tag">Leadership & Impact</span>
+                <h2>Engineering Leadership & Infrastructure Excellence</h2>
+            </div>
+            
+            <div class="experience-grid">
+                <!-- ValueCore Card -->
+                <div class="product-card animate-in">
+                    <div class="card-meta">
+                        <div>
+                            <div class="company-name">ValueCore</div>
+                            <div class="role-title">Engineering Leadership</div>
+                        </div>
+                        <div class="year-label" style="color: var(--text-dim); font-weight: 500;">2023 — Present</div>
+                    </div>
+                    <div class="work-details">
+                        <p>Directing the modernization of enterprise value management platforms, transforming legacy constraints into agile, AI-ready infrastructure.</p>
+                        <ul class="bullet-list">
+                            <li>Leading cross-functional engineering teams to deliver high-velocity, business-critical solutions for Fortune 500 clients.</li>
+                            <li>Engineered a core microservices overhaul that slashed system latency by 40%, directly enabling real-time strategic decision-making.</li>
+                            <li>Spearheading the integration of predictive AI analytics to drive product differentiation and customer ROI.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Zalando Card -->
+                <div class="product-card animate-in">
+                    <div class="card-meta">
+                        <div>
+                            <div class="company-name">Zalando</div>
+                            <div class="role-title">Senior Infrastructure Engineer</div>
+                        </div>
+                        <div class="year-label" style="color: var(--text-dim); font-weight: 500;">2021 — 2023</div>
+                    </div>
+                    <div class="work-details">
+                        <p>Scaling Europe’s premier fashion platform through resilient distributed systems and event-driven architecture.</p>
+                        <ul class="bullet-list">
+                            <li>Optimized high-traffic e-commerce pipelines, maintaining 99.99% availability during peak global sales events.</li>
+                            <li>Implemented robust event-driven systems using Node.js and AWS to process millions of requests per minute.</li>
+                            <li>Established technical excellence frameworks and mentored senior staff on cloud-native best practices.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- eGenieNext Card -->
+                <div class="product-card animate-in">
+                    <div class="card-meta">
+                        <div>
+                            <div class="company-name">eGenieNext</div>
+                            <div class="role-title">Senior Software Architect</div>
+                        </div>
+                        <div class="year-label" style="color: var(--text-dim); font-weight: 500;">2018 — 2021</div>
+                    </div>
+                    <div class="work-details">
+                        <p>Driving digital transformation for diverse industry verticals through scalable backend engineering and API optimization.</p>
+                        <ul class="bullet-list">
+                            <li>Architected full-stack enterprise applications from inception to global deployment.</li>
+                            <li>Optimized complex database schemas and API performance to support rapid user growth and data throughput.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <span class="section-tag">Featured Projects</span>
+                <h2>Strategic Technical Initiatives</h2>
+            </div>
+            <div class="experience-grid">
+                <div class="product-card animate-in">
+                    <div class="card-meta">
+                        <div class="company-name">B2B AI Cost-Saver</div>
+                        <div class="role-title">Architectural Lead</div>
+                    </div>
+                    <div class="work-details">
+                        <p>A specialized tool designed to identify and eliminate operational inefficiencies in enterprise workflows using predictive modeling.</p>
+                        <ul class="bullet-list">
+                            <li>Reduces operational overhead by up to 25% through automated resource allocation.</li>
+                            <li>Integrated with major ERP systems for seamless data ingestion.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card animate-in">
+                    <div class="card-meta">
+                        <div class="company-name">Infrastructure Modernization</div>
+                        <div class="role-title">Zalando / Infrastructure</div>
+                    </div>
+                    <div class="work-details">
+                        <p>A multi-phase initiative to transition legacy monoliths to a resilient, event-driven microservices ecosystem.</p>
+                        <ul class="bullet-list">
+                            <li>Enhanced system elasticity to handle 10x traffic spikes.</li>
+                            <li>Reduced deployment cycles from days to minutes via CI/CD automation.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card animate-in">
+                    <div class="card-meta">
+                        <div class="company-name">Enterprise Analytics Engine</div>
+                        <div class="role-title">ValueCore / Backend</div>
+                    </div>
+                    <div class="work-details">
+                        <p>High-throughput data processing engine capable of distilling billions of data points into actionable executive insights.</p>
+                        <ul class="bullet-list">
+                            <li>Optimized GraphQL aggregation layers for sub-second query responses.</li>
+                            <li>Implemented multi-tenant security architecture for Fortune 500 data isolation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-header">
+                <span class="section-tag">Capabilities</span>
+                <h2>The Technical Stack</h2>
+            </div>
+            <div class="chips-group">
+                <span class="chip">Node.js</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">AWS Architecture</span>
+                <span class="chip">Kubernetes</span>
+                <span class="chip">Next.js / React</span>
+                <span class="chip">GraphQL</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">Distributed Systems</span>
+                <span class="chip">AI Integration</span>
+                <span class="chip">Redis</span>
+                <span class="chip">Docker</span>
+                <span class="chip">CI/CD Automation</span>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-card">
+                <span class="section-tag" style="color: #fff; opacity: 0.6;">Ready to talk?</span>
+                <h2>Let's build something<br>exceptional.</h2>
+                <div style="margin-top: 32px;">
+                    <a href="mailto:naeem@example.com" class="btn-primary">Initiate Contact</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Naeem Shah. Built with precision and a Google-premium aesthetic.</p>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, .product-card').forEach(el => {
+            el.classList.add('animate-in'); // Ensure base class is there
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
