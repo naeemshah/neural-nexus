@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project $NAE | Launchpad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            cyber: '#00FF9F', // Cyber Emerald
+                        },
+                        obsidian: {
+                            deep: '#0B0E14', // Deep Sea Obsidian
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        body {
+            background-color: #0B0E14;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+
+        .cyber-glow {
+            text-shadow: 0 0 10px rgba(0, 255, 159, 0.5);
+        }
+
+        .border-cyber {
+            border: 1px solid rgba(0, 255, 159, 0.3);
+        }
+
+        .bg-obsidian-glass {
+            background: rgba(11, 14, 20, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .btn-primary {
+            background: #00FF9F;
+            color: #0B0E14;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 159, 0.2);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 159, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .burn-gradient {
+            background: linear-gradient(180deg, rgba(0, 255, 159, 0.1) 0%, rgba(11, 14, 20, 0) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-obsidian-glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tighter text-emerald-cyber cyber-glow">
+                $NAE
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-400">
+                <a href="#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
+                <a href="#tracker" class="hover:text-emerald-cyber transition-colors">Burn Tracker</a>
+                <a href="#founder" class="hover:text-emerald-cyber transition-colors">Founder</a>
+            </div>
+            <button class="btn-primary px-6 py-2.5 rounded-full font-bold text-sm">
+                CONNECT WALLET
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-40 pb-20 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-emerald-cyber/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto text-center relative">
+            <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-tight">
+                The Future of <br/>
+                <span class="text-emerald-cyber">Digital Scarcity</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Empowering the next generation of decentralized finance through aggressive deflationary mechanics and transparent leadership.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                <a href="#tokenomics" class="w-full md:w-auto px-8 py-4 border border-emerald-cyber/30 rounded-xl hover:bg-emerald-cyber/5 transition-all text-emerald-cyber font-semibold">
+                    Explore Ecosystem
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Burn Tracker Section -->
+    <section id="tracker" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-obsidian-glass border-cyber rounded-3xl p-8 md:p-12 relative overflow-hidden burn-gradient">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                    <div>
+                        <h3 class="text-gray-400 text-sm font-mono mb-2 uppercase tracking-widest">Live Burn Rate</h3>
+                        <p class="text-4xl font-bold text-emerald-cyber" id="burnRate">12,450.22 $NAE</p>
+                        <p class="text-xs text-gray-500 mt-2">PER HOUR</p>
+                    </div>
+                    <div class="border-x border-white/5">
+                        <h3 class="text-gray-400 text-sm font-mono mb-2 uppercase tracking-widest">Total Burned</h3>
+                        <p class="text-4xl font-bold text-white" id="totalBurned">250,000,000</p>
+                        <p class="text-xs text-gray-500 mt-2">25.00% OF SUPPLY</p>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-400 text-sm font-mono mb-2 uppercase tracking-widest">Remaining Supply</h3>
+                        <p class="text-4xl font-bold text-white">750,000,000</p>
+                        <p class="text-xs text-gray-500 mt-2">FIXED CAP</p>
+                    </div>
+                </div>
+                
+                <!-- Mock Chart Placeholder -->
+                <div class="mt-12 h-32 w-full flex items-end gap-1 px-4">
+                    <div class="flex-1 bg-emerald-cyber/20 h-1/2 rounded-t-sm"></div>
+                    <div class="flex-1 bg-emerald-cyber/20 h-2/3 rounded-t-sm"></div>
+                    <div class="flex-1 bg-emerald-cyber/30 h-1/3 rounded-t-sm"></div>
+                    <div class="flex-1 bg-emerald-cyber/40 h-3/4 rounded-t-sm"></div>
+                    <div class="flex-1 bg-emerald-cyber/50 h-full rounded-t-sm animate-pulse"></div>
+                </div>
+                <div class="text-center mt-6">
+                    <span class="inline-flex items-center text-[10px] font-mono text-emerald-cyber bg-emerald-cyber/10 px-3 py-1 rounded-full uppercase tracking-tighter">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-cyber mr-2 animate-ping"></span>
+                        Live Blockchain Feed
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" class="py-24 px-6 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold mb-6">Built for <span class="text-emerald-cyber">Value Preservation</span></h2>
+                    <p class="text-gray-400 mb-8 text-lg">
+                        Our smart contract is engineered to reward long-term holders while continuously reducing circulating supply.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-emerald-cyber/20 flex items-center justify-center shrink-0 mt-1">
+                                <div class="w-2 h-2 rounded-full bg-emerald-cyber"></div>
+                            </div>
+                            <div>
+                                <span class="font-bold block">1 Billion Total Supply</span>
+                                <span class="text-gray-500 text-sm">Hard-coded limit. No new tokens can ever be minted.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-emerald-cyber/20 flex items-center justify-center shrink-0 mt-1">
+                                <div class="w-2 h-2 rounded-full bg-emerald-cyber"></div>
+                            </div>
+                            <div>
+                                <span class="font-bold block">25% Genesis Burn</span>
+                                <span class="text-gray-500 text-sm">250,000,000 $NAE sent to dead address at launch.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <div class="aspect-square rounded-full border-2 border-emerald-cyber/10 flex items-center justify-center relative">
+                        <div class="w-4/5 h-4/5 rounded-full border-2 border-emerald-cyber/30 flex items-center justify-center p-8 text-center">
+                             <div class="text-emerald-cyber">
+                                 <div class="text-6xl font-bold">25%</div>
+                                 <div class="text-sm font-mono tracking-widest uppercase">Burned</div>
+                             </div>
+                        </div>
+                        <div class="absolute -top-4 right-1/4 bg-obsidian-deep border border-emerald-cyber/50 px-4 py-2 rounded-lg text-xs font-mono">
+                            TOTAL: 1,000,000,000
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Founder -->
+    <section id="founder" class="py-24 px-6 mb-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 shrink-0 border-2 border-emerald-cyber/20">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Naeem" alt="Naeem Shah" class="w-full h-full object-cover bg-obsidian-deep">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Naeem Shah</h2>
+                    <h4 class="text-emerald-cyber font-mono text-sm uppercase mb-6 tracking-widest">Founder & Visionary</h4>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Naeem Shah is a serial entrepreneur and technical architect with a decade of experience in building scalable digital infrastructures. His vision for $NAE stems from a deep-rooted belief in transparent, code-based monetary systems. 
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Under his leadership, Project $NAE aims to bridge the gap between complex blockchain mechanics and intuitive user experiences, making decentralized wealth preservation accessible to everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-gray-600 text-xs font-mono tracking-widest">© 2026 PROJECT $NAE | SECURED BY CYBER EMERALD PROTOCOL</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mock live data updates
+        function updateBurn() {
+            const burnedEl = document.getElementById('totalBurned');
+            const rateEl = document.getElementById('burnRate');
+            
+            let burned = 250000000;
+            
+            setInterval(() => {
+                const add = Math.random() * 5;
+                burned += add;
+                burnedEl.innerText = Math.floor(burned).toLocaleString();
+                
+                const rate = 12000 + (Math.random() * 1000);
+                rateEl.innerText = rate.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' $NAE';
+            }, 3000);
+        }
+        
+        window.onload = updateBurn;
+    </script>
+</body>
+</html>

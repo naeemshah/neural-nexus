@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naeem Shah | Senior Software Engineer & Engineering Leader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #2563eb;
+            --text-main: #333333;
+            --text-dim: #666666;
+            --bg: #ffffff;
+            --sidebar-bg: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            min-height: 1100px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        aside {
+            background-color: var(--sidebar-bg);
+            padding: 40px;
+            border-right: 1px solid var(--border);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-dim);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 0.9rem;
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        .aside-section {
+            margin-top: 40px;
+        }
+
+        .aside-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-item {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-item::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .title-sub {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .summary {
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .experience-item {
+            margin-bottom: 32px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            font-weight: 500;
+        }
+
+        .role {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 4px;
+        }
+
+        .bullet-list li {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .bullet-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        @media print {
+            body { padding: 0; background: white; }
+            .resume-container { box-shadow: none; width: 100%; max-width: 100%; border: none; }
+            .no-print { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .resume-container { grid-template-columns: 1fr; }
+            aside { border-right: none; border-bottom: 1px solid var(--border); }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <aside>
+            <div class="profile-img">NS</div>
+            
+            <div class="contact-item">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">naeemshah45@gmail.com</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">Location</div>
+                <div class="contact-value">Berlin, Germany / Remote</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">linkedin.com/in/naeemshah</div>
+            </div>
+
+            <div class="aside-section">
+                <div class="aside-title">Core Expertise</div>
+                <ul class="skill-list">
+                    <li class="skill-item">Distributed Systems</li>
+                    <li class="skill-item">Microservices Architecture</li>
+                    <li class="skill-item">Cloud Infrastructure (AWS)</li>
+                    <li class="skill-item">Event-Driven Design</li>
+                    <li class="skill-item">Engineering Leadership</li>
+                    <li class="skill-item">CI/CD Automation</li>
+                </ul>
+            </div>
+
+            <div class="aside-section">
+                <div class="aside-title">Technical Stack</div>
+                <ul class="skill-list">
+                    <li class="skill-item">Node.js / TypeScript</li>
+                    <li class="skill-item">Go / Python</li>
+                    <li class="skill-item">Kubernetes / Docker</li>
+                    <li class="skill-item">PostgreSQL / Redis</li>
+                    <li class="skill-item">GraphQL / REST</li>
+                    <li class="skill-item">Terraform / IaC</li>
+                </ul>
+            </div>
+
+            <div class="aside-section">
+                <div class="aside-title">Education</div>
+                <div class="contact-value" style="font-weight: 700;">BS in Computer Science</div>
+                <div class="contact-value">Top Tier University</div>
+            </div>
+        </aside>
+
+        <main>
+            <header>
+                <h1>Naeem Shah</h1>
+                <div class="title-sub">Senior Software Engineer & Engineering Leader</div>
+            </header>
+
+            <div class="summary">
+                Results-driven <span class="highlight">Senior Software Engineer</span> with over 10 years of experience building high-scale distributed systems and leading digital transformations. Proven track record in <span class="highlight">modernizing enterprise architectures</span>, reducing latency by up to 40%, and maintaining 99.99% availability for global platforms. Expert in AWS, Kubernetes, and Node.js, with a strategic focus on aligning technical initiatives with business ROI.
+            </div>
+
+            <div class="section-title">Professional Experience</div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="company">ValueCore</div>
+                    <div class="date">2023 — Present</div>
+                </div>
+                <div class="role">Engineering Leadership & Architectural Strategy</div>
+                <ul class="bullet-list">
+                    <li><span class="highlight">Led the architectural overhaul</span> of an enterprise value management platform, replacing legacy constraints with a high-performance microservices ecosystem.</li>
+                    <li><span class="highlight">Reduced system latency by 40%</span> through strategic optimization of GraphQL layers and database indexing, enabling real-time analytics for Fortune 500 clients.</li>
+                    <li><span class="highlight">Directed cross-functional teams</span> of 10+ engineers to integrate predictive AI models, increasing customer engagement by 25% within the first six months.</li>
+                    <li>Established engineering KPIs and CI/CD benchmarks that <span class="highlight">increased deployment velocity by 50%</span> while maintaining zero-downtime standards.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="company">Zalando</div>
+                    <div class="date">2021 — 2023</div>
+                </div>
+                <div class="role">Senior Infrastructure Engineer</div>
+                <ul class="bullet-list">
+                    <li><span class="highlight">Optimized high-traffic e-commerce pipelines</span> on AWS, successfully handling 10x traffic spikes during global sales events without service degradation.</li>
+                    <li>Developed and maintained <span class="highlight">event-driven services</span> processing millions of requests per minute, ensuring 99.99% uptime for critical checkout flows.</li>
+                    <li>Architected a standardized infrastructure-as-code (Terraform) framework that <span class="highlight">reduced environment provisioning time by 70%</span> across 5 internal teams.</li>
+                    <li>Mentored senior and mid-level engineers on distributed systems best practices and cloud-native resilience patterns.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="company">eGenieNext</div>
+                    <div class="date">2018 — 2021</div>
+                </div>
+                <div class="role">Senior Software Architect</div>
+                <ul class="bullet-list">
+                    <li>Architected and delivered <span class="highlight">3+ enterprise-grade full-stack applications</span> from concept to production, serving thousands of concurrent users.</li>
+                    <li>Optimized complex PostgreSQL schemas and API throughput, resulting in a <span class="highlight">30% improvement in data retrieval speeds</span> for reporting modules.</li>
+                    <li>Implemented a unified authentication and security layer across a multi-product suite, enhancing compliance with GDPR and SOC2 standards.</li>
+                </ul>
+            </div>
+
+            <div class="section-title">Strategic Projects</div>
+
+            <div class="experience-item" style="margin-bottom: 20px;">
+                <div class="company">B2B AI Cost-Efficiency Engine</div>
+                <div style="font-size: 0.95rem; color: var(--text-main); margin-top: 4px;">
+                    Led the development of a predictive resource allocation tool that <span class="highlight">reduced operational overhead by 25%</span> for enterprise clients by automating complex ERP workflows.
+                </div>
+            </div>
+
+            <div class="experience-item" style="margin-bottom: 20px;">
+                <div class="company">Global Infrastructure Resilience Initiative</div>
+                <div style="font-size: 0.95rem; color: var(--text-main); margin-top: 4px;">
+                    Spearheaded a cross-departmental initiative at Zalando to migrate legacy monolith components to a Kubernetes-based service mesh, <span class="highlight">cutting cloud costs by 15%</span> through better resource utilization.
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
