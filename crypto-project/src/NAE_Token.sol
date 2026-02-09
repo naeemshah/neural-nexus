@@ -52,23 +52,30 @@ contract NAEToken is ERC20, ERC20Burnable, Ownable {
      * If either the sender or receiver is an ecosystem address, 25% of the transfer is burned.
      */
     function _update(address from, address to, uint256 value) internal virtual override {
-        uint256 amountToBurn = 0;
+        // Optimized path for non-ecosystem transactions and mint/burn
+        if (from == address(0) || to == address(0) || (!isEcosystemAddress[from] && !isEcosystemAddress[to])) {
+            super._update(from, to, value);
+            return;
+        }
 
-        // Apply tax if it's an ecosystem transaction and not a mint/burn (from/to != address(0))
-        if (from != address(0) && to != address(0)) {
-            if (isEcosystemAddress[from] || isEcosystemAddress[to]) {
-                amountToBurn = (value * ECOSYSTEM_FEE) / FEE_DENOMINATOR;
-            }
+        // Ecosystem fee path (25% burn)
+        uint256 amountToBurn;
+        unchecked {
+            // value * 2500 / 10000 = value / 4
+            // Using bitwise shift for division if possible, but 25% is exactly value >> 2
+            amountToBurn = value >> 2; 
         }
 
         if (amountToBurn > 0) {
-            // Burn the fee portion
+            uint256 remainingValue;
+            unchecked {
+                remainingValue = value - amountToBurn;
+            }
+            // Execute burn first to maintain balance consistency
             super._update(from, address(0), amountToBurn);
-            // Transfer the remaining amount
-            super._update(from, to, value - amountToBurn);
+            super._update(from, to, remainingValue);
             emit EcosystemFeeApplied(from, to, amountToBurn);
         } else {
-            // Standard transfer
             super._update(from, to, value);
         }
     }

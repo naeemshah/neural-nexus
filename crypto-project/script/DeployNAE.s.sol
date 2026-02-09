@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import {Script} from "forge-std/Script.sol";
+import {Script, console2} from "forge-std/Script.sol";
 import {NAEToken} from "../src/NAE_Token.sol";
 
 /**
  * @title DeployNAE
  * @dev Script to deploy the NAEToken to the Base network (or local/testnet).
- * Usage: forge script script/DeployNAE.s.sol --rpc-url <your_rpc_url> --private-key <your_private_key> --broadcast
+ * Usage: forge script script/DeployNAE.s.sol --rpc-url <your_rpc_url> --broadcast --verify
  */
 contract DeployNAE is Script {
     function setUp() public {}
@@ -22,7 +22,6 @@ contract DeployNAE is Script {
 
         vm.stopBroadcast();
 
-        // Log the deployed address
-        // console.log("NAE Token deployed at:", address(naeToken));
+        console2.log("NAE Token deployed at:", address(naeToken));
     }
 }
