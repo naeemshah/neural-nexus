@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neural Nexus | $NAE Token Launch</title>
-    <meta name="description" content="Join the revolution of digital scarcity with $NAE. A high-performance, deflationary token powering the Neural Nexus ecosystem.">
+    <title>Neural Nexus | Ecosystem Hub</title>
+    <meta name="description" content="Join the revolution of digital scarcity with $NAE. A high-performance, deflationary token powering the Neural Nexus ecosystem on Base.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -106,16 +107,19 @@
             animation: pulse-slow 4s infinite;
         }
 
-        .token-chart-bar {
-            transition: height 1s ease-out;
+        #launch-app-modal {
+            display: none;
+        }
+        #launch-app-modal.active {
+            display: flex;
         }
     </style>
 </head>
 <body class="font-sans antialiased">
 
     <!-- Nav -->
-    <nav class="fixed w-full z-50 transition-all duration-300 px-6 py-4" id="main-nav">
-        <div class="max-w-7xl mx-auto flex items-center justify-between glass-panel px-6 py-3 rounded-full border-white/10">
+    <nav class="fixed w-full z-50 transition-all duration-300 px-4 sm:px-6 py-4" id="main-nav">
+        <div class="max-w-7xl mx-auto flex items-center justify-between glass-panel px-4 sm:px-6 py-3 rounded-full border-white/10">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-emerald-cyber rounded-lg flex items-center justify-center shrink-0">
                     <span class="text-obsidian-deep font-black text-xl">N</span>
@@ -126,10 +130,10 @@
             <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400">
                 <a href="#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
                 <a href="#litepaper" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
-                <a href="#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
+                <a href="#burn-stats" class="hover:text-emerald-cyber transition-colors">Burn Engine</a>
             </div>
 
-            <button class="btn-cyber px-4 sm:px-6 py-2 rounded-full text-[10px] sm:text-xs shrink-0 ml-2">
+            <button onclick="toggleModal()" class="btn-cyber px-4 sm:px-6 py-2 rounded-full text-[10px] sm:text-xs shrink-0 ml-2">
                 Launch App
             </button>
         </div>
@@ -145,125 +149,227 @@
         <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-cyber/10 border border-emerald-cyber/20 mb-8">
                 <span class="w-2 h-2 rounded-full bg-emerald-cyber animate-ping"></span>
-                <span class="text-[10px] font-mono font-bold text-emerald-cyber uppercase tracking-widest">$NAE Token Genesis Live</span>
+                <span class="text-[10px] font-mono font-bold text-emerald-cyber uppercase tracking-widest">$NAE Ecosystem Live on Base</span>
             </div>
             
-            <h1 class="text-5xl sm:text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[0.9] break-words">
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[0.9] break-words">
                 Neural Scarcity <br class="hidden sm:block"/>
                 <span class="text-emerald-cyber cyber-glow">Redefined.</span>
             </h1>
             
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-                Empowering the future of decentralized intelligence through the $NAE token. High-performance, deflationary, and community-driven.
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+                Empowering the future of decentralized intelligence through $NAE. High-performance, deflationary, and community-driven.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="#tokenomics" class="btn-cyber w-full sm:w-auto px-10 py-4 rounded-xl text-base">
-                    View Tokenomics
-                </a>
-                <a href="#litepaper" class="btn-outline w-full sm:w-auto px-10 py-4 rounded-xl text-base font-bold">
+                <button onclick="toggleModal()" class="btn-cyber w-full sm:w-auto px-10 py-4 rounded-xl text-base">
+                    Launch Hub
+                </button>
+                <a href="#litepaper" class="btn-outline w-full sm:w-auto px-10 py-4 rounded-xl text-base font-bold text-center">
                     Read Litepaper
                 </a>
             </div>
 
             <!-- Stats Bar -->
             <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/5 pt-12">
-                <div>
+                <div class="px-2">
                     <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Total Supply</div>
-                    <div class="text-2xl font-bold">1,000,000,000</div>
+                    <div class="text-xl sm:text-2xl font-bold">1,000,000,000</div>
                 </div>
-                <div>
-                    <div class="text-emerald-cyber text-[10px] font-mono uppercase mb-1">Genesis Burn</div>
-                    <div class="text-2xl font-bold">25.0%</div>
+                <div class="px-2">
+                    <div class="text-emerald-cyber text-[10px] font-mono uppercase mb-1">Burned to Date</div>
+                    <div id="hero-burned-total" class="text-xl sm:text-2xl font-bold">250,000,000</div>
                 </div>
-                <div>
-                    <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Tax</div>
-                    <div class="text-2xl font-bold">0%</div>
+                <div class="px-2">
+                    <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Network</div>
+                    <div class="text-xl sm:text-2xl font-bold">BASE</div>
                 </div>
-                <div>
-                    <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Locked Liquidity</div>
-                    <div class="text-2xl font-bold">100%</div>
+                <div class="px-2">
+                    <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Status</div>
+                    <div class="text-xl sm:text-2xl font-bold text-emerald-cyber">ACTIVE</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tokenomics -->
-    <section id="tokenomics" class="py-32 px-6">
+    <!-- Burn Engine (New Visualization Section) -->
+    <section id="burn-stats" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
+                        Real-Time <br class="hidden sm:block"/>
+                        <span class="text-emerald-cyber">Burn Analytics</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg">
+                        The 25% genesis burn was just the beginning. Monitor the live trajectory of $NAE scarcity as the ecosystem scales.
+                    </p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border-emerald-cyber/30">
+                    <div class="text-xs font-mono text-emerald-cyber uppercase mb-2">Current Burn Rate</div>
+                    <div class="text-3xl font-bold" id="burn-rate-display">1,240 <span class="text-sm text-gray-500">$NAE / HR</span></div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Main Chart -->
+                <div class="lg:col-span-2 glass-panel rounded-3xl p-4 sm:p-8 cyber-border relative min-h-[400px]">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-emerald-cyber animate-pulse"></div>
+                            <span class="text-xs font-mono text-gray-400 uppercase tracking-widest">Live Scarcity Index</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="px-3 py-1 rounded-md bg-white/5 text-[10px] font-mono text-emerald-cyber">1H</span>
+                            <span class="px-3 py-1 rounded-md bg-emerald-cyber/10 text-[10px] font-mono text-emerald-cyber">LIVE</span>
+                        </div>
+                    </div>
+                    <div class="w-full h-64 sm:h-80">
+                        <canvas id="burnChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Feed -->
+                <div class="glass-panel rounded-3xl p-6 sm:p-8 border-white/5 flex flex-col">
+                    <h3 class="text-sm font-mono text-gray-500 uppercase mb-6 tracking-widest">Recent Burn Events</h3>
+                    <div id="burn-event-log" class="space-y-4 flex-1 overflow-y-auto max-h-[350px] pr-2 custom-scrollbar">
+                        <!-- Events injected via JS -->
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-white/5">
+                        <div class="flex justify-between text-[10px] font-mono text-gray-500 uppercase">
+                            <span>Total Removed</span>
+                            <span id="total-burned-counter" class="text-emerald-cyber">250,042,102 $NAE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics (Optimized) -->
+    <section id="tokenomics" class="py-32 px-6 bg-white/[0.01]">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-8 tracking-tight break-words">
+                <div class="order-2 md:order-1">
+                    <div class="relative w-full max-w-md mx-auto">
+                        <div class="aspect-square glass-panel rounded-[2rem] sm:rounded-[3rem] cyber-border flex flex-col items-center justify-center p-6 sm:p-12 text-center">
+                            <div class="relative w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center mb-8">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 256 256">
+                                    <circle cx="128" cy="128" r="110" stroke="rgba(255,255,255,0.05)" stroke-width="24" fill="transparent" />
+                                    <circle id="donut-segment" cx="128" cy="128" r="110" stroke="#00FF9F" stroke-width="24" fill="transparent" 
+                                        stroke-dasharray="691.15" stroke-dashoffset="172.78" class="transition-all duration-1000" />
+                                </svg>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span class="text-4xl sm:text-6xl font-black text-white" id="burned-percentage-text">25.0%</span>
+                                    <span class="text-[10px] sm:text-xs font-mono text-emerald-cyber tracking-widest uppercase mt-2">Circulating Scarcity</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                                <div class="p-4 rounded-xl bg-white/5 text-left border border-white/5">
+                                    <span class="block text-[10px] text-emerald-cyber font-mono uppercase">Ecosystem</span>
+                                    <span class="text-base sm:text-lg font-bold">75.0%</span>
+                                </div>
+                                <div class="p-4 rounded-xl bg-white/5 text-left border border-white/5">
+                                    <span class="block text-[10px] text-gray-500 font-mono uppercase">Liquidity</span>
+                                    <span class="text-base sm:text-lg font-bold">100% Locked</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-8 tracking-tight">
                         Aggressive <br class="hidden sm:block"/>
-                        <span class="text-emerald-cyber">Deflationary Engine</span>
+                        <span class="text-emerald-cyber">Economic Guardrails</span>
                     </h2>
                     <p class="text-gray-400 text-lg mb-10 leading-relaxed">
-                        $NAE is designed with a singular focus: permanent supply reduction. Our architecture ensures that every milestone achieved by the Neural Nexus directly benefits the $NAE ecosystem.
+                        The $NAE protocol is engineered to thrive on Base Network. By combining zero-tax efficiency with permanent burn mechanisms, we've created the ultimate vehicle for decentralized value.
                     </p>
                     
                     <div class="space-y-6">
-                        <div class="glass-panel p-6 rounded-2xl cyber-border transition-all">
+                        <div class="glass-panel p-6 rounded-2xl border-white/5 hover:border-emerald-cyber/30 transition-all">
                             <div class="flex items-center gap-4 mb-3">
                                 <div class="w-10 h-10 rounded-lg bg-emerald-cyber/10 flex items-center justify-center text-emerald-cyber">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.5-7 3 3 3.5 1.3 6 4.5 2.5 3.3.5 6-1.343 11.657z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-bold">25% Initial Burn</h3>
+                                <h3 class="text-xl font-bold">Base Native Performance</h3>
                             </div>
-                            <p class="text-gray-500 text-sm">250 million tokens were permanently removed from circulation at genesis, sent to the provable 0x0...dead address.</p>
+                            <p class="text-gray-500 text-sm">Lightning fast transactions and minimal fees, ensuring the $NAE burn engine operates at peak efficiency without gas constraints.</p>
                         </div>
 
-                        <div class="glass-panel p-6 rounded-2xl border-white/5">
+                        <div class="glass-panel p-6 rounded-2xl border-white/5 hover:border-emerald-cyber/30 transition-all">
                             <div class="flex items-center gap-4 mb-3">
                                 <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.040L3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622l-1.382-3.016z" />
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-bold">Zero Tax Protocol</h3>
+                                <h3 class="text-xl font-bold">Provable Scarcity</h3>
                             </div>
-                            <p class="text-gray-500 text-sm">No buy or sell taxes. Full value transfer for users, powered by pure ecosystem growth and scarcity.</p>
+                            <p class="text-gray-500 text-sm">Every burn is verifiable on-chain. No admin keys, no minting functions, no surprises. Pure mathematical scarcity.</p>
                         </div>
-                    </div>
-                </div>
-
-                <div class="relative w-full max-w-md mx-auto">
-                    <div class="aspect-square glass-panel rounded-[2rem] sm:rounded-[3rem] cyber-border flex flex-col items-center justify-center p-6 sm:p-12 text-center">
-                        <div class="relative w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center mb-8">
-                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 256 256">
-                                <circle cx="128" cy="128" r="110" stroke="rgba(255,255,255,0.05)" stroke-width="24" fill="transparent" />
-                                <circle cx="128" cy="128" r="110" stroke="#00FF9F" stroke-width="24" fill="transparent" 
-                                    stroke-dasharray="691.15" stroke-dashoffset="172.78" />
-                            </svg>
-                            <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                <span class="text-4xl sm:text-6xl font-black text-white">25%</span>
-                                <span class="text-[10px] sm:text-xs font-mono text-emerald-cyber tracking-widest uppercase mt-2">Burned</span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                            <div class="p-4 rounded-xl bg-white/5 text-left">
-                                <span class="block text-[10px] text-emerald-cyber font-mono uppercase">Burned Supply</span>
-                                <span class="text-base sm:text-lg font-bold">250,000,000</span>
-                            </div>
-                            <div class="p-4 rounded-xl bg-white/5 text-left">
-                                <span class="block text-[10px] text-gray-500 font-mono uppercase">Market Circ.</span>
-                                <span class="text-base sm:text-lg font-bold">750,000,000</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Floating Data Badge -->
-                    <div class="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 glass-panel border-emerald-cyber/30 px-4 py-2 sm:px-6 sm:py-4 rounded-2xl shadow-2xl animate-bounce" style="animation-duration: 4s;">
-                        <span class="text-emerald-cyber font-mono font-bold text-[10px] sm:text-xs uppercase">Verified Burn Address</span>
-                        <div class="text-[8px] sm:text-[10px] font-mono text-gray-400 mt-1">0x000...dead</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Litepaper -->
+    <!-- App / Wallet Modal -->
+    <div id="launch-app-modal" class="fixed inset-0 z-[100] items-center justify-center px-4">
+        <div class="absolute inset-0 bg-obsidian-deep/90 backdrop-blur-xl" onclick="toggleModal()"></div>
+        <div class="relative w-full max-w-lg glass-panel rounded-[2.5rem] cyber-border p-8 sm:p-12">
+            <button onclick="toggleModal()" class="absolute top-6 right-6 text-gray-500 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="text-center mb-10">
+                <div class="w-16 h-16 bg-emerald-cyber/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-emerald-cyber">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-extrabold mb-2">Connect to Nexus</h2>
+                <p class="text-gray-500">Access the ecosystem hub on Base Network</p>
+            </div>
+
+            <div class="space-y-4">
+                <button onclick="connectWallet('Coinbase')" class="w-full flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/50 hover:bg-emerald-cyber/5 transition-all group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">C</div>
+                        <span class="font-bold text-lg">Coinbase Wallet</span>
+                    </div>
+                    <span class="text-[10px] font-mono text-gray-600 group-hover:text-emerald-cyber uppercase">Recommended</span>
+                </button>
+
+                <button onclick="connectWallet('MetaMask')" class="w-full flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/50 hover:bg-emerald-cyber/5 transition-all group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center text-orange-500 text-xl">🦊</div>
+                        <span class="font-bold text-lg">MetaMask</span>
+                    </div>
+                </button>
+
+                <button onclick="connectWallet('WalletConnect')" class="w-full flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/50 hover:bg-emerald-cyber/5 transition-all group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-blue-400/20 rounded-lg flex items-center justify-center text-blue-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.14 7.64c4.34-4.34 11.38-4.34 15.72 0l.44.44c.24.24.24.64 0 .88l-1.76 1.76c-.24.24-.64.24-.88 0l-.44-.44a7.96 7.96 0 0 0-11.24 0l-.44.44c-.24.24-.64.24-.88 0L2.82 8.96c-.24-.24-.24-.64 0-.88l.44-.44zM20.72 11.14c.24.24.24.64 0 .88l-3.08 3.08c-.24.24-.64.24-.88 0l-.44-.44a3.98 3.98 0 0 0-5.64 0l-.44.44c-.24.24-.64.24-.88 0l-3.08-3.08c-.24-.24-.24-.64 0-.88l.44-.44c2.17-2.17 5.69-2.17 7.86 0l.44.44c.24.24.64.24.88 0l.44-.44c2.17-2.17 5.69-2.17 7.86 0l.44.44z"/></svg>
+                        </div>
+                        <span class="font-bold text-lg">WalletConnect</span>
+                    </div>
+                </button>
+            </div>
+
+            <p class="mt-8 text-center text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+                By connecting, you agree to the <a href="#" class="text-emerald-cyber hover:underline">Nexus Terms</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Litepaper (Simplified) -->
     <section id="litepaper" class="py-32 bg-white/[0.02]">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-extrabold mb-6">Technical Litepaper</h2>
@@ -271,85 +377,17 @@
                 Deep dive into the Neural Nexus architecture, $NAE utility, and our roadmap for the next decade of digital scarcity.
             </p>
             <div class="glass-panel p-1 border-white/10 rounded-3xl group overflow-hidden">
-                <div class="bg-obsidian-deep p-6 sm:p-12 rounded-[1.4rem] border border-white/5 flex flex-col items-center transition-all group-hover:border-emerald-cyber/30">
+                <div class="bg-obsidian-deep p-8 sm:p-12 rounded-[1.4rem] border border-white/5 flex flex-col items-center transition-all group-hover:border-emerald-cyber/30">
                     <div class="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-cyber/10 rounded-2xl flex items-center justify-center text-emerald-cyber mb-8">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Neural Nexus Litepaper v1.0</h3>
-                    <p class="text-gray-500 mb-8 max-w-sm text-sm sm:text-base">PDF (2.4 MB) • Updated February 2026</p>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Neural Nexus Litepaper v1.1</h3>
+                    <p class="text-gray-500 mb-8 max-w-sm text-sm sm:text-base">PDF (2.4 MB) • Optimized for Mobile • Updated Feb 2026</p>
                     <button class="btn-cyber w-full sm:w-auto px-8 sm:px-12 py-4 rounded-xl text-base sm:text-lg">
                         Download Paper
                     </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Dashboard Preview -->
-    <section id="dashboard" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl font-extrabold mb-4">Internal Dashboard</h2>
-                <p class="text-gray-400">Real-time ecosystem metrics for the core development team.</p>
-            </div>
-
-            <div class="glass-panel rounded-[2rem] cyber-border overflow-hidden">
-                <div class="bg-white/5 border-b border-white/5 px-8 py-4 flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                        <div class="flex gap-1.5">
-                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
-                        </div>
-                        <span class="text-xs font-mono text-gray-500">nexus_dashboard_v4.terminal</span>
-                    </div>
-                    <span class="text-[10px] font-mono text-emerald-cyber bg-emerald-cyber/10 px-3 py-1 rounded-full uppercase">Authenticated: Admin_Shah</span>
-                </div>
-                
-                <div class="p-4 sm:p-8 grid md:grid-cols-3 gap-8">
-                    <div class="space-y-4 sm:space-y-8 col-span-1">
-                        <div class="p-6 rounded-2xl bg-white/5 border border-white/5">
-                            <div class="text-xs font-mono text-gray-500 uppercase mb-2">Liquidity Depth</div>
-                            <div class="text-2xl sm:text-3xl font-bold">$4,250,900</div>
-                            <div class="mt-2 text-emerald-cyber text-xs">+12.4% (24h)</div>
-                        </div>
-                        <div class="p-6 rounded-2xl bg-white/5 border border-white/5">
-                            <div class="text-xs font-mono text-gray-500 uppercase mb-2">Active Nodes</div>
-                            <div class="text-2xl sm:text-3xl font-bold">1,204</div>
-                            <div class="mt-2 text-emerald-cyber text-xs">ONLINE</div>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-2 p-4 sm:p-8 rounded-2xl bg-white/5 border border-white/5 flex flex-col overflow-hidden">
-                        <div class="flex items-center justify-between mb-8">
-                            <span class="text-[10px] sm:text-xs font-mono text-gray-500 uppercase">Burn Trajectory (Live)</span>
-                            <span class="text-[10px] sm:text-xs text-emerald-cyber font-mono">Real-time Feed</span>
-                        </div>
-                        <div class="flex-1 flex items-end gap-1 sm:gap-2 h-48 px-2 sm:px-4">
-                            <div class="token-chart-bar flex-1 bg-emerald-cyber/20 rounded-t-lg h-1/2"></div>
-                            <div class="token-chart-bar flex-1 bg-emerald-cyber/30 rounded-t-lg h-3/5"></div>
-                            <div class="token-chart-bar flex-1 bg-emerald-cyber/20 rounded-t-lg h-2/5"></div>
-                            <div class="token-chart-bar flex-1 bg-emerald-cyber/40 rounded-t-lg h-3/4"></div>
-                            <div class="token-chart-bar flex-1 bg-emerald-cyber/60 rounded-t-lg h-4/5"></div>
-                            <div class="token-chart-bar flex-1 bg-emerald-cyber/80 rounded-t-lg h-2/3"></div>
-                            <div class="token-chart-bar flex-1 bg-emerald-cyber rounded-t-lg h-full animate-pulse"></div>
-                        </div>
-                        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-white/5 pt-6 gap-4">
-                            <div class="flex gap-4 sm:gap-8">
-                                <div>
-                                    <div class="text-[10px] text-gray-500 uppercase font-mono">Burned Today</div>
-                                    <div class="text-sm sm:text-base font-bold">142,500 $NAE</div>
-                                </div>
-                                <div>
-                                    <div class="text-[10px] text-gray-500 uppercase font-mono">Gas Saved</div>
-                                    <div class="text-sm sm:text-base font-bold">14.2 ETH</div>
-                                </div>
-                            </div>
-                            <button class="text-xs text-emerald-cyber font-bold hover:underline">Full Analytics →</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -365,7 +403,7 @@
                     </div>
                     <span class="text-lg font-bold tracking-tighter">NEURAL NEXUS</span>
                 </div>
-                <p class="text-gray-500 text-sm max-w-xs">Building the infrastructure for decentralized intelligence. Built by Naeem Shah.</p>
+                <p class="text-gray-500 text-sm max-w-xs">Building the infrastructure for decentralized intelligence on Base. Built by Naeem Shah.</p>
             </div>
             
             <div class="flex gap-16">
@@ -392,29 +430,115 @@
     </footer>
 
     <script>
-        // Nav scroll effect
+        // --- Modal Logic ---
+        function toggleModal() {
+            const modal = document.getElementById('launch-app-modal');
+            modal.classList.toggle('active');
+            if (modal.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function connectWallet(provider) {
+            alert(`Connecting to ${provider} on Base Network... (Stub)`);
+            toggleModal();
+        }
+
+        // --- Nav Scroll Effect ---
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('main-nav');
             if (window.scrollY > 50) {
-                nav.classList.add('py-2');
+                nav.classList.add('bg-obsidian-deep/80', 'backdrop-blur-lg', 'py-2');
                 nav.classList.remove('py-4');
             } else {
+                nav.classList.remove('bg-obsidian-deep/80', 'backdrop-blur-lg', 'py-2');
                 nav.classList.add('py-4');
-                nav.classList.remove('py-2');
             }
         });
 
-        // Simple chart animation simulation
-        function randomizeChart() {
-            const bars = document.querySelectorAll('.token-chart-bar');
-            bars.forEach((bar, index) => {
-                if (index === bars.length - 1) return; // Skip pulse bar
-                const h = 20 + Math.random() * 60;
-                bar.style.height = `${h}%`;
-            });
+        // --- Burn Analytics Engine ---
+        let totalBurned = 250042102;
+        const burnRate = 1240 / 3600; // per second
+        
+        // Chart.js setup
+        const ctx = document.getElementById('burnChart').getContext('2d');
+        const burnChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Array(20).fill(''),
+                datasets: [{
+                    label: 'Burn Velocity',
+                    data: Array(20).fill(0).map(() => Math.floor(Math.random() * 50) + 100),
+                    borderColor: '#00FF9F',
+                    backgroundColor: 'rgba(0, 255, 159, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { display: false },
+                    y: { 
+                        display: true,
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                        ticks: { color: 'rgba(255,255,255,0.3)', font: { family: 'JetBrains Mono', size: 10 } }
+                    }
+                },
+                animation: { duration: 0 }
+            }
+        });
+
+        // Live updates
+        function updateBurnStats() {
+            // Update counters
+            totalBurned += Math.random() * 5;
+            document.getElementById('total-burned-counter').innerText = `${Math.floor(totalBurned).toLocaleString()} $NAE`;
+            document.getElementById('hero-burned-total').innerText = Math.floor(totalBurned).toLocaleString();
+            
+            // Update chart
+            burnChart.data.datasets[0].data.shift();
+            const newVal = burnChart.data.datasets[0].data[burnChart.data.datasets[0].data.length - 1] + (Math.random() * 10 - 5);
+            burnChart.data.datasets[0].data.push(Math.max(50, newVal));
+            burnChart.update();
+
+            // Occasionally add an event
+            if (Math.random() > 0.95) {
+                addBurnEvent();
+            }
         }
 
-        setInterval(randomizeChart, 3000);
+        function addBurnEvent() {
+            const log = document.getElementById('burn-event-log');
+            const amount = Math.floor(Math.random() * 5000) + 100;
+            const event = document.createElement('div');
+            event.className = 'flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 animate-pulse';
+            event.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-cyber"></span>
+                    <span class="text-[10px] font-mono text-gray-400">0x${Math.random().toString(16).slice(2, 8)}...</span>
+                </div>
+                <span class="text-xs font-bold text-emerald-cyber">+${amount.toLocaleString()} BURNED</span>
+            `;
+            log.prepend(event);
+            if (log.children.length > 10) log.removeChild(log.lastChild);
+        }
+
+        setInterval(updateBurnStats, 1000);
+
+        // Donut logic
+        function updateDonut() {
+            const offset = 691.15 * (1 - 0.25); // Simple stub logic for 25%
+            document.getElementById('donut-segment').style.strokeDashoffset = offset;
+        }
+        setTimeout(updateDonut, 500);
+
     </script>
 </body>
 </html>
