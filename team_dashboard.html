@@ -407,7 +407,7 @@
                     <th>ETA / Completed</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="milestone-body">
                 <!-- Phase 1 -->
                 <tr>
                     <td>Initial Repository Audit</td>
@@ -521,5 +521,36 @@
             </tbody>
         </table>
     </div>
+    <script>
+        async function updateMetrics() {
+            try {
+                // Try to fetch from the local metrics server
+                const response = await fetch('http://' + window.location.hostname + ':8081/metrics');
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const data = await response.json();
+                
+                // Update Usage Banner
+                if (data.input_tokens) document.getElementById('input-tokens').innerText = data.input_tokens;
+                if (data.output_tokens) document.getElementById('output-tokens').innerText = data.output_tokens;
+                if (data.total_cost) document.getElementById('total-cost').innerText = data.total_cost;
+                
+                // Update Milestones
+                if (data.milestones_html) {
+                    document.getElementById('milestone-body').innerHTML = data.milestones_html;
+                }
+                
+                console.log('Metrics updated at ' + new Date().toLocaleTimeString());
+            } catch (error) {
+                console.error('Error updating metrics:', error);
+            }
+        }
+
+        // Initial update
+        updateMetrics();
+        
+        // Refresh every 20 seconds
+        setInterval(updateMetrics, 20000);
+    </script>
 </body>
 </html>
