@@ -290,7 +290,7 @@
             <h1>NEURAL NEXUS <span class="ticker">$NAE</span></h1>
         </div>
         <div style="text-align: right;">
-            <p style="margin:0; font-size: 0.8rem; color: var(--text-dim); font-family: 'JetBrains Mono';">SYSTEM STATUS: OPTIMAL</p>
+            <p style="margin:0; font-size: 0.8rem; color: var(--text-dim); font-family: 'JetBrains Mono';">SYSTEM STATUS: OPTIMAL (SECURITY-FIRST)</p>
             <p style="margin:0; font-size: 1rem; color: var(--emerald); font-weight: bold;">PHASE 1: FOUNDATION</p>
         </div>
     </div>
@@ -308,6 +308,13 @@
             <span class="usage-label">Total Est. Cost</span>
             <div class="usage-value" id="total-cost">$5.00</div>
         </div>
+    </div>
+
+    <!-- Local Path Reference -->
+    <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid #1e293b; padding: 10px 20px; border-radius: 4px; margin-bottom: 40px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-dim);">
+        <span style="color: var(--emerald); font-weight: bold;">[LOCAL STORAGE]</span> 
+        Project Files: <span style="color: var(--text-main);">/data/.openclaw/workspace/neural-nexus/</span> 
+        | Keys (Local-Only): <span style="color: var(--text-main);">neural-nexus/.env</span>
     </div>
 
     <div class="grid">
@@ -359,15 +366,15 @@
             </div>
         </div>
 
-        <!-- QA Lead -->
+        <!-- QA Lead / Code Security Reviewer -->
         <div class="card">
-            <span class="status queued">Queued</span>
-            <div class="member-role">QA / Security</div>
+            <span class="status active">Active</span>
+            <div class="member-role">QA / Security Reviewer</div>
             <h3 style="margin: 5px 0 15px 0;">Security Sentinel</h3>
-            <p style="font-size: 0.9rem; color: var(--text-dim);">Security auditing & burn logic simulation. Quality assurance lead.</p>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Security auditing, burn logic simulation, and Code Security Review. Quality assurance & security lead.</p>
             <div class="log">
                 <span class="label">LATEST ACTION:</span>
-                Validated initial token burn parameters in local simulation.
+                Completed pre-push security checks and hardcoded secrets remediation.
             </div>
         </div>
 
@@ -408,6 +415,25 @@
                 </tr>
             </thead>
             <tbody id="milestone-body">
+                <!-- Security Tasks -->
+                <tr>
+                    <td>Pre-Push Security Check Implementation</td>
+                    <td><span class="status-pill status-complete">Completed</span></td>
+                    <td><span class="badge badge-qa">QA</span></td>
+                    <td>2026-02-09</td>
+                </tr>
+                <tr>
+                    <td>Remediation of Hardcoded Secrets</td>
+                    <td><span class="status-pill status-complete">Completed</span></td>
+                    <td><span class="badge badge-qa">QA</span></td>
+                    <td>2026-02-09</td>
+                </tr>
+                <tr>
+                    <td>Ongoing Security Audits & Merge Sign-offs</td>
+                    <td><span class="status-pill status-pending">In Progress</span></td>
+                    <td><span class="badge badge-qa">QA</span></td>
+                    <td>Ongoing</td>
+                </tr>
                 <!-- Phase 1 -->
                 <tr>
                     <td>Initial Repository Audit</td>
@@ -521,7 +547,14 @@
             </tbody>
         </table>
     </div>
+    <div id="refresh-timer" style="position: fixed; bottom: 20px; right: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--emerald); color: var(--emerald); padding: 5px 12px; border-radius: 20px; font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; z-index: 1000; box-shadow: 0 0 10px var(--emerald-glow);">
+        REFRESH IN: <span id="timer-seconds">20</span>s
+    </div>
+
     <script>
+        let secondsLeft = 20;
+        const timerDisplay = document.getElementById('timer-seconds');
+
         async function updateMetrics() {
             try {
                 // Try to fetch from the local metrics server
@@ -549,8 +582,15 @@
         // Initial update
         updateMetrics();
         
-        // Refresh every 20 seconds
-        setInterval(updateMetrics, 20000);
+        // Countdown timer and auto-refresh logic
+        setInterval(() => {
+            secondsLeft--;
+            if (secondsLeft <= 0) {
+                updateMetrics();
+                secondsLeft = 20;
+            }
+            timerDisplay.innerText = secondsLeft;
+        }, 1000);
     </script>
 </body>
 </html>
