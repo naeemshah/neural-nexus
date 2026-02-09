@@ -10,16 +10,22 @@ Neural Nexus is an AI-driven crypto ecosystem centered around the $NAE token on 
 - **marketing (Marketing/Content):** Litepaper drafting and now Content Writing.
 
 ## Phase 1: Foundation (Current)
-- [ ] Website Mobile & UI Final Polish (dev/qa) **[ETA: 2026-02-11]**
-- [ ] Base Testnet Deployment & Verify Burn Logic (dev/qa) **[ETA: 2026-02-10]** *CRITICAL PATH*
-- [ ] Litepaper v2: PDF Formatting & Branding (marketing) **[ETA: 2026-02-12]**
-- [ ] Social Media Account Activation & Initial Posts (marketing) **[ETA: 2026-02-10]**
+- [ ] Website Mobile & UI Final Polish (Web Dev) **[ETA: 2026-02-11]**
+- [ ] Landing page UI refinement (Web Dev) **[ETA: 2026-02-11]**
+- [ ] Base Testnet Deployment & Verify Burn Logic (Core Dev/QA) **[ETA: 2026-02-10]** *CRITICAL PATH*
+- [ ] Litepaper v2: PDF Formatting & Branding (Content Writer) **[ETA: 2026-02-12]**
+- [ ] Branding guide completion (Content Writer) **[ETA: 2026-02-12]**
+- [ ] Social Media Strategy draft (Social Media) **[ETA: 2026-02-10]**
+- [ ] Social Media Account Activation & Handle registration (Social Media) **[ETA: 2026-02-10]**
+- [ ] Day 1 Social Posts (Social Media) **[ETA: 2026-02-10]**
 - [x] Initial repo audit (PM) - Done
-- [x] Team Dashboard & Agile Board initialization (PM) - Done
-- [x] Smart Contract Compliance Review (dev) - Done
-- [ ] Setup Development Toolchain (dev) **[ETA: 2026-02-09 EOD]**
-- [ ] Contract Unit Testing - focused on burn tax (qa) **[ETA: 2026-02-11]**
-- [x] Litepaper Draft v1 (marketing) - Done
+- [x] Team Dashboard & Agile Board initialization (Project Assistant) - Done
+- [x] Smart Contract Compliance Review (Core Dev) - Done
+- [ ] Setup Development Toolchain (Core Dev) **[ETA: 2026-02-09 EOD]**
+- [ ] Contract Unit Testing - focused on burn tax (QA) **[ETA: 2026-02-11]**
+- [x] Litepaper Draft v1 (Content Writer) - Done
+- [ ] Dashboard updates (Project Assistant) **[ETA: Daily]**
+- [ ] ETA monitoring & GitHub sync (Project Assistant) **[ETA: Daily]**
 
 ## Phase 2: Refinement & Testing
 - [ ] Integration of launchpad UI with $NAE branding (dev/marketing) **[ETA: 2026-02-15]**
