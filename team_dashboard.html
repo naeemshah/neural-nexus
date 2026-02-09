@@ -2,30 +2,257 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Neural Nexus | Project Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Neural Nexus | Team Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { background: #05070a; color: #f8fafc; font-family: 'Space Grotesk', sans-serif; padding: 40px; margin: 0; }
-        .header { border-bottom: 2px solid #1e293b; padding-bottom: 20px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; }
-        h1 { color: #10b981; font-weight: 900; letter-spacing: -0.05em; font-size: 2.5rem; margin: 0; }
-        .ticker { background: #065f46; color: #10b981; padding: 5px 15px; border-radius: 8px; font-weight: bold; font-family: monospace; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
-        .card { background: #0f172a; padding: 25px; border-radius: 16px; border: 1px solid #1e293b; position: relative; }
-        .status { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 15px; }
-        .active { background: #065f46; color: #10b981; }
-        .queued { background: #1e3a8a; color: #60a5fa; }
-        .done { background: #334155; color: #94a3b8; }
-        .log { background: #05070a; padding: 15px; border-radius: 12px; font-size: 0.8rem; color: #94a3b8; border: 1px solid #1e293b; margin-top: 15px; line-height: 1.4; }
-        .label { color: #10b981; font-weight: bold; font-family: monospace; font-size: 0.75rem; display: block; margin-bottom: 5px; }
-        .member-role { font-size: 0.8rem; color: #64748b; margin-bottom: 10px; }
+        :root {
+            --bg: #020408;
+            --card-bg: #0a0f18;
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.2);
+            --border: #1e293b;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --cyber-gradient: linear-gradient(90deg, #10b981 0%, #059669 100%);
+        }
+
+        body { 
+            background: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Space Grotesk', sans-serif; 
+            padding: 40px; 
+            margin: 0; 
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(16, 185, 129, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .header { 
+            border-bottom: 2px solid var(--border); 
+            padding-bottom: 20px; 
+            margin-bottom: 40px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-end; 
+            box-shadow: 0 4px 20px -10px var(--emerald-glow);
+        }
+
+        h1 { 
+            color: var(--emerald); 
+            font-weight: 900; 
+            letter-spacing: -0.05em; 
+            font-size: 3rem; 
+            margin: 0; 
+            text-transform: uppercase;
+            text-shadow: 0 0 20px var(--emerald-glow);
+        }
+
+        .ticker { 
+            background: #065f46; 
+            color: var(--emerald); 
+            padding: 5px 15px; 
+            border-radius: 4px; 
+            font-weight: bold; 
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            margin-left: 15px;
+            border: 1px solid var(--emerald);
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 25px; 
+            margin-bottom: 50px;
+        }
+
+        .card { 
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 4px; 
+            border: 1px solid var(--border); 
+            position: relative; 
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--emerald);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -15px var(--emerald-glow);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--cyber-gradient);
+            opacity: 0.5;
+        }
+
+        .status { 
+            font-size: 0.7rem; 
+            text-transform: uppercase; 
+            font-weight: bold; 
+            padding: 4px 12px; 
+            border-radius: 2px; 
+            display: inline-block; 
+            margin-bottom: 15px; 
+            letter-spacing: 0.1em;
+        }
+
+        .active { background: #064e3b; color: var(--emerald); border: 1px solid var(--emerald); }
+        .queued { background: #1e293b; color: var(--text-dim); border: 1px solid var(--border); }
+        .done { background: #0f172a; color: #64748b; border: 1px solid #1e293b; }
+
+        .member-role { 
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem; 
+            color: var(--emerald); 
+            margin-bottom: 10px; 
+            text-transform: uppercase;
+        }
+
+        .log { 
+            background: #020408; 
+            padding: 15px; 
+            border-radius: 4px; 
+            font-size: 0.85rem; 
+            color: var(--text-dim); 
+            border-left: 3px solid var(--emerald); 
+            margin-top: 20px; 
+            line-height: 1.5;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .label { 
+            color: var(--emerald); 
+            font-weight: bold; 
+            font-size: 0.75rem; 
+            display: block; 
+            margin-bottom: 5px; 
+            opacity: 0.8;
+        }
+
+        /* Milestone Table */
+        .milestone-section {
+            margin-top: 60px;
+        }
+
+        .section-title {
+            color: var(--emerald);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .section-title::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .milestone-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        .milestone-table th {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 2px solid var(--border);
+            color: var(--emerald);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .milestone-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-dim);
+        }
+
+        .critical-path {
+            color: #ef4444 !important;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+        }
+
+        .near-deadline {
+            color: #f59e0b !important;
+        }
+
+        .milestone-table tr:hover td {
+            background: rgba(16, 185, 129, 0.02);
+            color: var(--text-main);
+        }
+
+        .badge {
+            padding: 2px 8px;
+            border-radius: 2px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge-dev { background: #1e3a8a; color: #60a5fa; }
+        .badge-qa { background: #7c2d12; color: #fdba74; }
+        .badge-mkt { background: #581c87; color: #d8b4fe; }
+        .badge-pm { background: #064e3b; color: #6ee7b7; }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-pill::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .status-complete::before { background: var(--emerald); box-shadow: 0 0 10px var(--emerald); }
+        .status-pending::before { background: #f59e0b; }
+        .status-todo::before { background: #475569; }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        .live-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: var(--emerald);
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>NEURAL NEXUS <span class="ticker">$NAE</span></h1>
+        <div>
+            <h1>NEURAL NEXUS <span class="ticker">$NAE</span></h1>
+        </div>
         <div style="text-align: right;">
-            <p style="margin:0; font-size: 0.8rem; color: #94a3b8;">Sprint: Foundation & Launch Prep</p>
-            <p style="margin:0; font-size: 0.8rem; color: #10b981;">PHASE: PROJECT INITIALIZATION</p>
+            <p style="margin:0; font-size: 0.8rem; color: var(--text-dim); font-family: 'JetBrains Mono';">SYSTEM STATUS: OPTIMAL</p>
+            <p style="margin:0; font-size: 1rem; color: var(--emerald); font-weight: bold;">PHASE 1: FOUNDATION</p>
         </div>
     </div>
 
@@ -33,73 +260,140 @@
         <!-- Project Manager -->
         <div class="card">
             <span class="status active">Active</span>
-            <h3>PM (Subagent)</h3>
-            <div class="member-role">Orchestration & Strategy</div>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Overseeing repository structure and team coordination.</p>
+            <div class="member-role">PM / Operations</div>
+            <h3 style="margin: 5px 0 15px 0;">Nexus Orchestrator</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Managing team alignment, dashboard automation, and strategic milestones.</p>
             <div class="log">
-                <span class="label">LAST ACTION:</span>
-                Initialized project dashboard and reviewed $NAE contract.
+                <span class="label">LAST SYNC:</span>
+                Refreshed Cyber Emerald dashboard and synchronized project plan.
             </div>
         </div>
 
         <!-- Developer -->
         <div class="card">
             <span class="status active">Active</span>
-            <h3>Developer (dev)</h3>
-            <div class="member-role">Web3 & Backend</div>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Smart contract refinement and deployment pipelines.</p>
+            <div class="member-role">Developer / Web3</div>
+            <h3 style="margin: 5px 0 15px 0;">Core Architect</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Smart contract refinement for Base network and technical infrastructure.</p>
             <div class="log">
-                <span class="label">TASK:</span>
-                Reviewing NAE_Token.sol for Base network compatibility.
+                <span class="label">ACTIVE TASK:</span>
+                Base Testnet Deployment & Verify Burn Logic.
             </div>
         </div>
 
         <!-- QA -->
         <div class="card">
             <span class="status queued">Queued</span>
-            <h3>QA (qa)</h3>
-            <div class="member-role">Testing & Security Audit</div>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Ensuring contract security and front-end reliability.</p>
+            <div class="member-role">QA / Security</div>
+            <h3 style="margin: 5px 0 15px 0;">Security Sentinel</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Validating burn tax mechanisms and front-end interface integrity.</p>
             <div class="log">
-                <span class="label">NEXT:</span>
-                Unit testing for 25% ecosystem burn mechanism.
+                <span class="label">PENDING:</span>
+                Contract Unit Testing (Burn Tax focus).
             </div>
         </div>
 
         <!-- Marketing -->
         <div class="card">
-            <span class="status queued">Queued</span>
-            <h3>Marketing (marketing)</h3>
-            <div class="member-role">Growth & Community</div>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Viral loops, branding, and community engagement.</p>
-            <div class="log">
-                <span class="label">NEXT:</span>
-                Drafting 'Neural Nexus' narrative and litepaper.
-            </div>
-        </div>
-
-        <!-- Project Status Summary -->
-        <div class="card">
-            <span class="status active">In Progress</span>
-            <h3>Tokenomics Core</h3>
-            <div class="member-role">NAE_Token.sol</div>
-            <div class="log">
-                <span class="label">BURN TAX:</span> 25% (Ecosystem-triggered)
-                <br><span class="label">TOTAL SUPPLY:</span> 1,000,000,000 NAE
-                <br><span class="label">NETWORK:</span> Base
-            </div>
-        </div>
-        <!-- Web & Content -->
-        <div class="card">
             <span class="status active">Active</span>
-            <h3>Web & Content</h3>
-            <div class="member-role">Web Design & Copywriting</div>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Building the new $NAE landing page and ecosystem hub.</p>
+            <div class="member-role">Marketing / Content</div>
+            <h3 style="margin: 5px 0 15px 0;">Growth Strategist</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Litepaper development, social engagement, and viral narrative construction.</p>
             <div class="log">
-                <span class="label">TASK:</span>
-                Developing landing page in /website/ with Cyber Emerald theme.
+                <span class="label">LAST ACTION:</span>
+                Litepaper Draft v1 completed.
             </div>
         </div>
+    </div>
+
+    <div class="milestone-section">
+        <h2 class="section-title"><span class="live-indicator"></span>Milestone Progress</h2>
+        <table class="milestone-table">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Responsible</th>
+                    <th>ETA / Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Phase 1 -->
+                <tr>
+                    <td>Initial Repository Audit</td>
+                    <td><span class="status-pill status-complete">Completed</span></td>
+                    <td><span class="badge badge-pm">PM</span></td>
+                    <td>2026-02-09 00:30</td>
+                </tr>
+                <tr>
+                    <td>Team Dashboard & Agile Board Init</td>
+                    <td><span class="status-pill status-complete">Completed</span></td>
+                    <td><span class="badge badge-pm">PM</span></td>
+                    <td>2026-02-09 00:43</td>
+                </tr>
+                <tr>
+                    <td>Smart Contract Compliance Review</td>
+                    <td><span class="status-pill status-complete">Completed</span></td>
+                    <td><span class="badge badge-dev">Dev</span></td>
+                    <td>2026-02-09 01:20</td>
+                </tr>
+                <tr>
+                    <td>Litepaper Draft v1</td>
+                    <td><span class="status-pill status-complete">Completed</span></td>
+                    <td><span class="badge badge-mkt">Marketing</span></td>
+                    <td>2026-02-09 01:45</td>
+                </tr>
+                <tr>
+                    <td>Website Mobile & UI Final Polish</td>
+                    <td><span class="status-pill status-pending">In Progress</span></td>
+                    <td><span class="badge badge-dev">Dev</span> / <span class="badge badge-qa">QA</span></td>
+                    <td>2026-02-11</td>
+                </tr>
+                <tr class="critical-path">
+                    <td>Base Testnet Deployment & Verify Burn Logic</td>
+                    <td><span class="status-pill status-pending">In Progress</span></td>
+                    <td><span class="badge badge-dev">Dev</span> / <span class="badge badge-qa">QA</span></td>
+                    <td>2026-02-10 (Urgent)</td>
+                </tr>
+                <tr>
+                    <td>Litepaper v2: PDF Formatting & Branding</td>
+                    <td><span class="status-pill status-todo">To Do</span></td>
+                    <td><span class="badge badge-mkt">Marketing</span></td>
+                    <td>2026-02-12</td>
+                </tr>
+                <tr class="near-deadline">
+                    <td>Social Media Activation & Initial Posts</td>
+                    <td><span class="status-pill status-todo">To Do</span></td>
+                    <td><span class="badge badge-mkt">Marketing</span></td>
+                    <td>2026-02-10</td>
+                </tr>
+                <tr class="near-deadline">
+                    <td>Setup Development Toolchain (Foundry/Hardhat)</td>
+                    <td><span class="status-pill status-todo">To Do</span></td>
+                    <td><span class="badge badge-dev">Dev</span></td>
+                    <td>2026-02-09 EOD</td>
+                </tr>
+                <tr>
+                    <td>Contract Unit Testing (Burn Tax)</td>
+                    <td><span class="status-pill status-todo">To Do</span></td>
+                    <td><span class="badge badge-qa">QA</span></td>
+                    <td>2026-02-11</td>
+                </tr>
+                <!-- Phase 2 -->
+                <tr>
+                    <td>Launchpad UI Integration</td>
+                    <td><span class="status-pill status-todo">To Do</span></td>
+                    <td><span class="badge badge-dev">Dev</span> / <span class="badge badge-mkt">Mkt</span></td>
+                    <td>2026-02-15</td>
+                </tr>
+                <tr>
+                    <td>Security Audit Simulation</td>
+                    <td><span class="status-pill status-todo">To Do</span></td>
+                    <td><span class="badge badge-qa">QA</span></td>
+                    <td>2026-02-16</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

@@ -10,29 +10,26 @@ Neural Nexus is an AI-driven crypto ecosystem centered around the $NAE token on 
 - **marketing (Marketing/Content):** Litepaper drafting and now Content Writing.
 
 ## Phase 1: Foundation (Current)
-...
-- [ ] Website Mobile & UI Final Polish (dev/qa)
-- [ ] Base Testnet Deployment & Verify Burn Logic (dev/qa)
-- [ ] Litepaper v2: PDF Formatting & Branding (marketing)
-- [ ] Social Media Account Activation & Initial Posts (marketing)
-- [x] Initial repo audit (PM)
-- [x] Team Dashboard & Agile Board initialization (PM)
-- [x] Smart Contract Compliance Review (dev) - Reviewed 2026-02-09. 
-    - *Technical Assessment:* 1B Fixed supply, 25% Burn on ecosystem transfers via `_update`. 
-    - *Observations:* Owner-controlled `isEcosystemAddress` mapping triggers tax. Burn reduces supply permanently. Compliant with project specs for Base.
-- [ ] Setup Development Toolchain (dev) - Foundry or Hardhat for Base deployment.
-- [ ] Contract Unit Testing - focused on burn tax (qa)
-- [x] Litepaper Draft v1 (marketing) [See NAE_Litepaper_v1.md in marketing workstation]
+- [ ] Website Mobile & UI Final Polish (dev/qa) **[ETA: 2026-02-11]**
+- [ ] Base Testnet Deployment & Verify Burn Logic (dev/qa) **[ETA: 2026-02-10]** *CRITICAL PATH*
+- [ ] Litepaper v2: PDF Formatting & Branding (marketing) **[ETA: 2026-02-12]**
+- [ ] Social Media Account Activation & Initial Posts (marketing) **[ETA: 2026-02-10]**
+- [x] Initial repo audit (PM) - Done
+- [x] Team Dashboard & Agile Board initialization (PM) - Done
+- [x] Smart Contract Compliance Review (dev) - Done
+- [ ] Setup Development Toolchain (dev) **[ETA: 2026-02-09 EOD]**
+- [ ] Contract Unit Testing - focused on burn tax (qa) **[ETA: 2026-02-11]**
+- [x] Litepaper Draft v1 (marketing) - Done
 
 ## Phase 2: Refinement & Testing
-- [ ] Integration of launchpad UI with $NAE branding (dev/marketing)
-- [ ] Security audit simulation (qa)
-- [ ] Stealth launch viral loop mapping (marketing)
+- [ ] Integration of launchpad UI with $NAE branding (dev/marketing) **[ETA: 2026-02-15]**
+- [ ] Security audit simulation (qa) **[ETA: 2026-02-16]**
+- [ ] Stealth launch viral loop mapping (marketing) **[ETA: 2026-02-14]**
 
 ## Phase 3: Launch
-- [ ] $NAE Token Deployment on Base Mainnet (dev)
-- [ ] Liquidity Provisioning & Bonding Curve setup
-- [ ] Public Announcement & Community Launch
+- [ ] $NAE Token Deployment on Base Mainnet (dev) **[ETA: 2026-02-20]**
+- [ ] Liquidity Provisioning & Bonding Curve setup **[ETA: 2026-02-21]**
+- [ ] Public Announcement & Community Launch **[ETA: 2026-02-22]**
 
 ## Resources
 - Token Contract: `neural-nexus/crypto/NAE_Token.sol`
