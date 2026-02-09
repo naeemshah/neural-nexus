@@ -74,6 +74,8 @@
             position: relative; 
             transition: all 0.3s ease;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -102,6 +104,7 @@
             display: inline-block; 
             margin-bottom: 15px; 
             letter-spacing: 0.1em;
+            width: fit-content;
         }
 
         .active { background: #064e3b; color: var(--emerald); border: 1px solid var(--emerald); }
@@ -123,7 +126,7 @@
             font-size: 0.85rem; 
             color: var(--text-dim); 
             border-left: 3px solid var(--emerald); 
-            margin-top: 20px; 
+            margin-top: auto; 
             line-height: 1.5;
             font-family: 'JetBrains Mono', monospace;
         }
@@ -207,9 +210,12 @@
         }
 
         .badge-dev { background: #1e3a8a; color: #60a5fa; }
+        .badge-web { background: #0f766e; color: #5eead4; }
         .badge-qa { background: #7c2d12; color: #fdba74; }
         .badge-mkt { background: #581c87; color: #d8b4fe; }
+        .badge-soc { background: #1e40af; color: #93c5fd; }
         .badge-pm { background: #064e3b; color: #6ee7b7; }
+        .badge-ops { background: #334155; color: #cbd5e1; }
 
         .status-pill {
             display: inline-flex;
@@ -260,48 +266,84 @@
         <!-- Project Manager -->
         <div class="card">
             <span class="status active">Active</span>
-            <div class="member-role">PM / Operations</div>
+            <div class="member-role">PM / Strategy</div>
             <h3 style="margin: 5px 0 15px 0;">Nexus Orchestrator</h3>
-            <p style="font-size: 0.9rem; color: var(--text-dim);">Managing team alignment, dashboard automation, and strategic milestones.</p>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Orchestration & Strategy. Managing team alignment and strategic milestones.</p>
             <div class="log">
-                <span class="label">LAST SYNC:</span>
-                Refreshed Cyber Emerald dashboard and synchronized project plan.
+                <span class="label">LATEST ACTION:</span>
+                Defined full 7-person team structure and updated operational dashboard.
             </div>
         </div>
 
-        <!-- Developer -->
+        <!-- Project Assistant -->
         <div class="card">
             <span class="status active">Active</span>
-            <div class="member-role">Developer / Web3</div>
-            <h3 style="margin: 5px 0 15px 0;">Core Architect</h3>
-            <p style="font-size: 0.9rem; color: var(--text-dim);">Smart contract refinement for Base network and technical infrastructure.</p>
+            <div class="member-role">Ops / Record-keeping</div>
+            <h3 style="margin: 5px 0 15px 0;">Operations Support</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Record-keeping, Dashboard & ETA monitoring. Ensuring data integrity.</p>
             <div class="log">
-                <span class="label">ACTIVE TASK:</span>
-                Base Testnet Deployment & Verify Burn Logic.
+                <span class="label">LATEST ACTION:</span>
+                Synchronized agile board with latest task ETAs.
             </div>
         </div>
 
-        <!-- QA -->
+        <!-- Lead Developer -->
+        <div class="card">
+            <span class="status active">Active</span>
+            <div class="member-role">Dev / Smart Contracts</div>
+            <h3 style="margin: 5px 0 15px 0;">Core Architect</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Smart contract refinement & Base deployment. Infrastructure lead.</p>
+            <div class="log">
+                <span class="label">LATEST ACTION:</span>
+                Refined burn tax logic in NAE_Token.sol for Base compatibility.
+            </div>
+        </div>
+
+        <!-- Web Developer -->
+        <div class="card">
+            <span class="status active">Active</span>
+            <div class="member-role">Web / UI-UX</div>
+            <h3 style="margin: 5px 0 15px 0;">Interface Designer</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Landing page design & UI/UX implementation. Frontend lead.</p>
+            <div class="log">
+                <span class="label">LATEST ACTION:</span>
+                Finalized mobile responsiveness for the main landing page.
+            </div>
+        </div>
+
+        <!-- QA Lead -->
         <div class="card">
             <span class="status queued">Queued</span>
             <div class="member-role">QA / Security</div>
             <h3 style="margin: 5px 0 15px 0;">Security Sentinel</h3>
-            <p style="font-size: 0.9rem; color: var(--text-dim);">Validating burn tax mechanisms and front-end interface integrity.</p>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Security auditing & burn logic simulation. Quality assurance lead.</p>
             <div class="log">
-                <span class="label">PENDING:</span>
-                Contract Unit Testing (Burn Tax focus).
+                <span class="label">LATEST ACTION:</span>
+                Validated initial token burn parameters in local simulation.
             </div>
         </div>
 
-        <!-- Marketing -->
+        <!-- Marketing Lead -->
         <div class="card">
             <span class="status active">Active</span>
-            <div class="member-role">Marketing / Content</div>
+            <div class="member-role">Mkt / Content</div>
             <h3 style="margin: 5px 0 15px 0;">Growth Strategist</h3>
-            <p style="font-size: 0.9rem; color: var(--text-dim);">Litepaper development, social engagement, and viral narrative construction.</p>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Litepaper drafting & Branding. Narrative and growth lead.</p>
             <div class="log">
-                <span class="label">LAST ACTION:</span>
-                Litepaper Draft v1 completed.
+                <span class="label">LATEST ACTION:</span>
+                Litepaper Draft v1 submitted for strategic review.
+            </div>
+        </div>
+
+        <!-- Social Media Manager -->
+        <div class="card">
+            <span class="status queued">Queued</span>
+            <div class="member-role">Soc / Community</div>
+            <h3 style="margin: 5px 0 15px 0;">Community Catalyst</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Launch strategy & Community engagement. Social presence lead.</p>
+            <div class="log">
+                <span class="label">LATEST ACTION:</span>
+                Drafted initial X (Twitter) thread for project announcement.
             </div>
         </div>
     </div>
@@ -328,7 +370,7 @@
                 <tr>
                     <td>Team Dashboard & Agile Board Init</td>
                     <td><span class="status-pill status-complete">Completed</span></td>
-                    <td><span class="badge badge-pm">PM</span></td>
+                    <td><span class="badge badge-ops">Ops</span></td>
                     <td>2026-02-09 00:43</td>
                 </tr>
                 <tr>
@@ -340,13 +382,13 @@
                 <tr>
                     <td>Litepaper Draft v1</td>
                     <td><span class="status-pill status-complete">Completed</span></td>
-                    <td><span class="badge badge-mkt">Marketing</span></td>
+                    <td><span class="badge badge-mkt">Mkt</span></td>
                     <td>2026-02-09 01:45</td>
                 </tr>
                 <tr>
                     <td>Website Mobile & UI Final Polish</td>
                     <td><span class="status-pill status-pending">In Progress</span></td>
-                    <td><span class="badge badge-dev">Dev</span> / <span class="badge badge-qa">QA</span></td>
+                    <td><span class="badge badge-web">Web</span> / <span class="badge badge-qa">QA</span></td>
                     <td>2026-02-11</td>
                 </tr>
                 <tr class="critical-path">
@@ -358,13 +400,13 @@
                 <tr>
                     <td>Litepaper v2: PDF Formatting & Branding</td>
                     <td><span class="status-pill status-todo">To Do</span></td>
-                    <td><span class="badge badge-mkt">Marketing</span></td>
+                    <td><span class="badge badge-mkt">Mkt</span></td>
                     <td>2026-02-12</td>
                 </tr>
                 <tr class="near-deadline">
                     <td>Social Media Activation & Initial Posts</td>
                     <td><span class="status-pill status-todo">To Do</span></td>
-                    <td><span class="badge badge-mkt">Marketing</span></td>
+                    <td><span class="badge badge-soc">Soc</span></td>
                     <td>2026-02-10</td>
                 </tr>
                 <tr class="near-deadline">
@@ -383,7 +425,7 @@
                 <tr>
                     <td>Launchpad UI Integration</td>
                     <td><span class="status-pill status-todo">To Do</span></td>
-                    <td><span class="badge badge-dev">Dev</span> / <span class="badge badge-mkt">Mkt</span></td>
+                    <td><span class="badge badge-web">Web</span> / <span class="badge badge-dev">Dev</span></td>
                     <td>2026-02-15</td>
                 </tr>
                 <tr>
