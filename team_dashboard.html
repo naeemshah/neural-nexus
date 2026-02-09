@@ -247,6 +247,8 @@
         .badge-qa { background: #7c2d12; color: #fdba74; }
         .badge-mkt { background: #581c87; color: #d8b4fe; }
         .badge-soc { background: #1e40af; color: #93c5fd; }
+        .badge-pr { background: #991b1b; color: #fecaca; }
+        .badge-fe { background: #0e7490; color: #a5f3fc; }
         .badge-pm { background: #064e3b; color: #6ee7b7; }
         .badge-ops { background: #334155; color: #cbd5e1; }
 
@@ -305,8 +307,8 @@
             <div class="usage-value" id="output-tokens">35,038</div>
         </div>
         <div class="usage-item">
-            <span class="usage-label">Total Est. Cost</span>
-            <div class="usage-value" id="total-cost">$5.00</div>
+            <span class="usage-label">Team Capacity</span>
+            <div class="usage-value" id="team-size">10 / 10</div>
         </div>
     </div>
 
@@ -413,6 +415,30 @@
                 Joined team; initial review of NAE_Token.sol for gas efficiency.
             </div>
         </div>
+
+        <!-- Frontend Engineer -->
+        <div class="card">
+            <span class="status active">Active</span>
+            <div class="member-role">Frontend / UI-UX</div>
+            <h3 style="margin: 5px 0 15px 0;">UI Specialist</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">UI/UX engineering, landing page polish, and launchpad integration.</p>
+            <div class="log">
+                <span class="label">LATEST ACTION:</span>
+                Assigned to landing page refinement and launchpad branding.
+            </div>
+        </div>
+
+        <!-- PR & Outreach Manager -->
+        <div class="card">
+            <span class="status active">Active</span>
+            <div class="member-role">PR / Communications</div>
+            <h3 style="margin: 5px 0 15px 0;">Nexus Spokesperson</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">External communications, partnership outreach, and media relations.</p>
+            <div class="log">
+                <span class="label">LATEST ACTION:</span>
+                Drafting PR roadmap and identifying key KOL partners.
+            </div>
+        </div>
     </div>
 
     <div class="milestone-section">
@@ -486,20 +512,20 @@
                 <tr>
                     <td>Website Landing Page & Mobile Fixes</td>
                     <td><span class="status-pill status-pending">In Progress</span></td>
-                    <td><span class="badge badge-web">Web</span></td>
-                    <td>2026-02-11</td>
+                    <td><span class="badge badge-fe">FE</span></td>
+                    <td>2026-02-10</td>
                 </tr>
                 <tr>
                     <td>UI Refinement & Polish</td>
                     <td><span class="status-pill status-pending">In Progress</span></td>
-                    <td><span class="badge badge-web">Web</span> / <span class="badge badge-qa">QA</span></td>
-                    <td>2026-02-11</td>
+                    <td><span class="badge badge-fe">FE</span> / <span class="badge badge-qa">QA</span></td>
+                    <td>2026-02-10</td>
                 </tr>
                 <tr class="critical-path">
                     <td>Base Testnet Deployment & Verify Burn Logic</td>
                     <td><span class="status-pill status-pending">In Progress</span></td>
                     <td><span class="badge badge-dev">Dev</span> / <span class="badge badge-qa">QA</span></td>
-                    <td>2026-02-10 (Urgent)</td>
+                    <td>2026-02-09 (Urgent)</td>
                 </tr>
                 <tr>
                     <td>Social Media Strategy Draft</td>
@@ -520,16 +546,22 @@
                     <td>2026-02-10</td>
                 </tr>
                 <tr>
+                    <td>PR & Outreach Roadmap</td>
+                    <td><span class="status-pill status-todo">To Do</span></td>
+                    <td><span class="badge badge-pr">PR</span></td>
+                    <td>2026-02-10</td>
+                </tr>
+                <tr>
                     <td>Litepaper v2: PDF Formatting</td>
                     <td><span class="status-pill status-todo">To Do</span></td>
                     <td><span class="badge badge-mkt">Writer</span></td>
-                    <td>2026-02-12</td>
+                    <td>2026-02-11</td>
                 </tr>
                 <tr>
                     <td>Branding Guide & Style Kit</td>
                     <td><span class="status-pill status-todo">To Do</span></td>
                     <td><span class="badge badge-mkt">Writer</span></td>
-                    <td>2026-02-12</td>
+                    <td>2026-02-11</td>
                 </tr>
                 <tr class="near-deadline">
                     <td>Setup Development Toolchain (Foundry/Hardhat)</td>
@@ -541,20 +573,26 @@
                     <td>Contract Unit Testing (Burn Tax)</td>
                     <td><span class="status-pill status-todo">To Do</span></td>
                     <td><span class="badge badge-qa">QA</span></td>
-                    <td>2026-02-11</td>
+                    <td>2026-02-10</td>
                 </tr>
                 <!-- Phase 2 -->
                 <tr>
                     <td>Launchpad UI Integration</td>
                     <td><span class="status-pill status-todo">To Do</span></td>
-                    <td><span class="badge badge-web">Web</span> / <span class="badge badge-dev">Dev</span></td>
-                    <td>2026-02-13</td>
+                    <td><span class="badge badge-fe">FE</span> / <span class="badge badge-dev">Dev</span></td>
+                    <td>2026-02-11</td>
                 </tr>
                 <tr>
                     <td>Security Audit Simulation</td>
                     <td><span class="status-pill status-todo">To Do</span></td>
-                    <td><span class="badge badge-qa">QA</span></td>
-                    <td>2026-02-14</td>
+                    <td><span class="badge badge-qa">QA</span> / <span class="badge badge-dev">SC</span></td>
+                    <td>2026-02-12</td>
+                </tr>
+                <tr>
+                    <td>KOL & Media Outreach Blitz</td>
+                    <td><span class="status-pill status-todo">To Do</span></td>
+                    <td><span class="badge badge-pr">PR</span></td>
+                    <td>2026-02-13</td>
                 </tr>
             </tbody>
         </table>
