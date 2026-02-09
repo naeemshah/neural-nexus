@@ -13,8 +13,8 @@ contract DeployNAE is Script {
     function setUp() public {}
 
     function run() public {
-        // Retrieve private key from environment or use a placeholder for simulation
-        uint256 deployerPrivateKey = vm.envOr("PRIVATE_KEY", uint256(0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80));
+        // Retrieve private key from environment
+        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         
         vm.startBroadcast(deployerPrivateKey);
 
