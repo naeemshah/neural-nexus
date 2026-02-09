@@ -41,10 +41,25 @@ contract NAETokenTest is Test {
         vm.prank(user1);
         token.transfer(ecosystem, amount);
 
-        uint256 expectedBurn = (amount * 2500) / 10000;
+        uint256 expectedBurn = amount >> 2; // Exact 25%
         uint256 expectedReceived = amount - expectedBurn;
 
         assertEq(token.balanceOf(ecosystem), expectedReceived);
         assertEq(token.totalSupply(), (1_000_000_000 * 10**18) - expectedBurn);
+    }
+
+    function testEcosystemBurnFrom() public {
+        vm.prank(owner);
+        token.setEcosystemAddress(ecosystem, true);
+
+        uint256 amount = 400 * 10**18;
+        vm.prank(owner);
+        token.transfer(ecosystem, amount);
+
+        // From ecosystem to user should also burn
+        vm.prank(ecosystem);
+        token.transfer(user2, amount);
+
+        assertEq(token.balanceOf(user2), 300 * 10**18); // 400 - 100
     }
 }
