@@ -8,4 +8,7 @@ read_when:
 
 # Keep this file empty (or with only comments) to skip heartbeat API calls.
 
-# Add tasks below when you want the agent to check something periodically.
+# Neural Nexus Monitoring
+1. Check sub-agent progress on milestones (Dev: Testnet, QA: Audit, Marketing: Litepaper).
+2. Report any blockers or successful milestone completions to the user.
+3. Keep the Team Dashboard and Git repository updated with latest commits.

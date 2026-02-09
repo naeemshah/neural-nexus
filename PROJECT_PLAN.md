@@ -5,11 +5,16 @@ Neural Nexus is an AI-driven crypto ecosystem centered around the $NAE token on 
 
 ## Team
 - **PM (Project Manager):** Orchestration, dashboard maintenance, and strategy.
-- **dev (Developer):** Smart contract refinement, deployment, and integration.
-- **qa (Quality Assurance):** Security auditing, unit testing, and UI/UX validation.
-- **marketing (Marketing):** Branding, litepaper drafting, and community growth.
+- **dev (Developer/Web):** Smart contract refinement and now Web Development.
+- **qa (Quality Assurance):** Security auditing and UI/UX validation.
+- **marketing (Marketing/Content):** Litepaper drafting and now Content Writing.
 
 ## Phase 1: Foundation (Current)
+...
+- [ ] Website Mobile & UI Final Polish (dev/qa)
+- [ ] Base Testnet Deployment & Verify Burn Logic (dev/qa)
+- [ ] Litepaper v2: PDF Formatting & Branding (marketing)
+- [ ] Social Media Account Activation & Initial Posts (marketing)
 - [x] Initial repo audit (PM)
 - [x] Team Dashboard & Agile Board initialization (PM)
 - [x] Smart Contract Compliance Review (dev) - Reviewed 2026-02-09. 
