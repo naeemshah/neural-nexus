@@ -59,6 +59,39 @@
             border: 1px solid var(--emerald);
         }
 
+        .usage-banner {
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px solid var(--emerald);
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);
+        }
+
+        .usage-item {
+            text-align: center;
+        }
+
+        .usage-label {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--emerald);
+            margin-bottom: 5px;
+            letter-spacing: 0.1em;
+        }
+
+        .usage-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+        }
+
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
@@ -259,6 +292,21 @@
         <div style="text-align: right;">
             <p style="margin:0; font-size: 0.8rem; color: var(--text-dim); font-family: 'JetBrains Mono';">SYSTEM STATUS: OPTIMAL</p>
             <p style="margin:0; font-size: 1rem; color: var(--emerald); font-weight: bold;">PHASE 1: FOUNDATION</p>
+        </div>
+    </div>
+
+    <div class="usage-banner">
+        <div class="usage-item">
+            <span class="usage-label">Input Tokens</span>
+            <div class="usage-value" id="input-tokens">9,178,911</div>
+        </div>
+        <div class="usage-item">
+            <span class="usage-label">Output Tokens</span>
+            <div class="usage-value" id="output-tokens">35,038</div>
+        </div>
+        <div class="usage-item">
+            <span class="usage-label">Total Est. Cost</span>
+            <div class="usage-value" id="total-cost">$5.00</div>
         </div>
     </div>
 
