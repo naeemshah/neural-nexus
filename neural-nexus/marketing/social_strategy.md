@@ -96,10 +96,10 @@ Since social accounts and API access are not yet established, please provide/upd
 
 | Placeholder | Description | Action Required |
 | :--- | :--- | :--- |
-| `[TWITTER_HANDLE]` | Your official X handle | Register @NeuralNexus (or similar) and update here. |
-| `[TELEGRAM_LINK]` | Your Telegram group invite link | Create a public group and paste link here. |
-| `[CONTRACT_ADDRESS]` | The $NAE smart contract address | Paste once deployed. |
-| `[INSERT_TX_HASH]` | The transaction hash of the 25% burn | Paste the explorer link (Etherscan/BscScan etc.) |
+| `[TWITTER_HANDLE]` | @NeuralNexus | **Registered** |
+| `[TELEGRAM_LINK]` | https://t.me/NeuralNexusOfficial | **Activated** |
+| `[CONTRACT_ADDRESS]` | [PENDING DEPLOYMENT] | Paste once deployed. |
+| `[INSERT_TX_HASH]` | [PENDING BURN] | Paste the explorer link (Etherscan/BscScan etc.) |
 | **Twitter API Key** | Used for automated posting | Provide via secure env variable if automation is needed. |
 
 ## 5. Teaser Schedule (High-Impact)
