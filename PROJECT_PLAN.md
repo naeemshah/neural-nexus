@@ -8,6 +8,7 @@ Neural Nexus is an AI-driven crypto ecosystem centered around the $NAE token on 
 - **dev (Developer/Web):** Smart contract refinement and now Web Development.
 - **qa (Code Security Reviewer):** Security auditing, UI/UX validation, and security sign-offs.
 - **marketing (Marketing/Content):** Litepaper drafting and now Content Writing.
+- **sc-eng (Senior Smart Contract Engineer):** Gas Optimization & Security Audit.
 
 ## Phase 1: Foundation (Current)
 - [x] Pre-Push Security Check Implementation (QA) - Done
@@ -31,9 +32,9 @@ Neural Nexus is an AI-driven crypto ecosystem centered around the $NAE token on 
 - [ ] ETA monitoring & GitHub sync (Project Assistant) **[ETA: Daily]**
 
 ## Phase 2: Refinement & Testing
-- [ ] Integration of launchpad UI with $NAE branding (dev/marketing) **[ETA: 2026-02-15]**
-- [ ] Security audit simulation (qa) **[ETA: 2026-02-16]**
-- [ ] Stealth launch viral loop mapping (marketing) **[ETA: 2026-02-14]**
+- [ ] Integration of launchpad UI with $NAE branding (dev/marketing) **[ETA: 2026-02-13]**
+- [ ] Security audit simulation (qa/sc-eng) **[ETA: 2026-02-14]**
+- [ ] Stealth launch viral loop mapping (marketing) **[ETA: 2026-02-13]**
 
 ## Phase 3: Launch
 - [ ] $NAE Token Deployment on Base Mainnet (dev) **[ETA: 2026-02-20]**
