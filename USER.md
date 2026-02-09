@@ -3,4 +3,4 @@
 - **Name:** Msmmd
 - **What to call them:** Msmmd
 - **Timezone:** America/New_York
-- **Notes:** 
+- **Notes:** Prefers Telegram; Email: naeemshah45@gmail.com

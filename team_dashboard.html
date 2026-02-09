@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project $NAE | Stealth Launch Dashboard</title>
+    <title>Neural Nexus | Project Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body { background: #05070a; color: #f8fafc; font-family: 'Space Grotesk', sans-serif; padding: 40px; margin: 0; }
         .header { border-bottom: 2px solid #1e293b; padding-bottom: 20px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; }
         h1 { color: #10b981; font-weight: 900; letter-spacing: -0.05em; font-size: 2.5rem; margin: 0; }
         .ticker { background: #065f46; color: #10b981; padding: 5px 15px; border-radius: 8px; font-weight: bold; font-family: monospace; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
         .card { background: #0f172a; padding: 25px; border-radius: 16px; border: 1px solid #1e293b; position: relative; }
         .status { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 15px; }
         .active { background: #065f46; color: #10b981; }
@@ -17,92 +17,76 @@
         .done { background: #334155; color: #94a3b8; }
         .log { background: #05070a; padding: 15px; border-radius: 12px; font-size: 0.8rem; color: #94a3b8; border: 1px solid #1e293b; margin-top: 15px; line-height: 1.4; }
         .label { color: #10b981; font-weight: bold; font-family: monospace; font-size: 0.75rem; display: block; margin-bottom: 5px; }
+        .member-role { font-size: 0.8rem; color: #64748b; margin-bottom: 10px; }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>PROJECT $NAE <span class="ticker">$NAE</span></h1>
+        <h1>NEURAL NEXUS <span class="ticker">$NAE</span></h1>
         <div style="text-align: right;">
-            <p style="margin:0; font-size: 0.8rem; color: #94a3b8;">Sprint: Stealth Foundation</p>
-            <p style="margin:0; font-size: 0.8rem; color: #10b981;">PHASE: WAR ROOM CONFIGURATION</p>
+            <p style="margin:0; font-size: 0.8rem; color: #94a3b8;">Sprint: Foundation & Launch Prep</p>
+            <p style="margin:0; font-size: 0.8rem; color: #10b981;">PHASE: PROJECT INITIALIZATION</p>
         </div>
     </div>
 
     <div class="grid">
-        <!-- Lead PM -->
+        <!-- Project Manager -->
         <div class="card">
             <span class="status active">Active</span>
-            <h3>PM (Mmeke)</h3>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Lead Orchestrator.</p>
+            <h3>PM (Subagent)</h3>
+            <div class="member-role">Orchestration & Strategy</div>
+            <p style="font-size: 0.9rem; color: #94a3b8;">Overseeing repository structure and team coordination.</p>
             <div class="log">
                 <span class="label">LAST ACTION:</span>
-                Assembled specialized $1M Crypto War Room.
+                Initialized project dashboard and reviewed $NAE contract.
             </div>
         </div>
 
-        <!-- Web3 Architect -->
-        <div class="card">
-            <span class="status done">Done</span>
-            <h3>Web3 Architect</h3>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Solidity & Smart Contracts Lead.</p>
-            <div class="log">
-                <span class="label">SUCCESS:</span>
-                NAE_Token.sol verified and passed security audit.
-            </div>
-        </div>
-
-        <!-- Visual Director -->
+        <!-- Developer -->
         <div class="card">
             <span class="status active">Active</span>
-            <h3>Visual Director</h3>
-            <p style="font-size: 0.9rem; color: #94a3b8;">High-end branding & Identity.</p>
+            <h3>Developer (dev)</h3>
+            <div class="member-role">Web3 & Backend</div>
+            <p style="font-size: 0.9rem; color: #94a3b8;">Smart contract refinement and deployment pipelines.</p>
             <div class="log">
                 <span class="label">TASK:</span>
-                Finalizing 'Cyber Emerald' logo and Investor One-Pager.
+                Reviewing NAE_Token.sol for Base network compatibility.
             </div>
         </div>
 
-        <!-- Liquidity Manager -->
+        <!-- QA -->
         <div class="card">
             <span class="status queued">Queued</span>
-            <h3>Liquidity Manager</h3>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Price Stability & Pool Strategy.</p>
+            <h3>QA (qa)</h3>
+            <div class="member-role">Testing & Security Audit</div>
+            <p style="font-size: 0.9rem; color: #94a3b8;">Ensuring contract security and front-end reliability.</p>
             <div class="log">
                 <span class="label">NEXT:</span>
-                Drafting Uniswap V3 / Base liquidity bonding curve.
+                Unit testing for 25% ecosystem burn mechanism.
             </div>
         </div>
 
-        <!-- Viral Marketer -->
-        <div class="card">
-            <span class="status active">Active</span>
-            <h3>Viral Marketer</h3>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Guerilla Hype & Community Growth.</p>
-            <div class="log">
-                <span class="label">TASK:</span>
-                Mapping out 'Stealth Announcement' viral loops.
-            </div>
-        </div>
-
-        <!-- Zephyr -->
+        <!-- Marketing -->
         <div class="card">
             <span class="status queued">Queued</span>
-            <h3>Zephyr</h3>
-            <p style="font-size: 0.9rem; color: #94a3b8;">AI Community Lead.</p>
+            <h3>Marketing (marketing)</h3>
+            <div class="member-role">Growth & Community</div>
+            <p style="font-size: 0.9rem; color: #94a3b8;">Viral loops, branding, and community engagement.</p>
             <div class="log">
-                <span class="label">STATUS:</span>
-                Awaiting Discord/Telegram API keys for deployment.
+                <span class="label">NEXT:</span>
+                Drafting 'Neural Nexus' narrative and litepaper.
             </div>
         </div>
 
-        <!-- Security Shield -->
+        <!-- Project Status Summary -->
         <div class="card">
-            <span class="status active">Active</span>
-            <h3>Security Shield</h3>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Anti-exploit & Audit Monitoring.</p>
+            <span class="status active">In Progress</span>
+            <h3>Tokenomics Core</h3>
+            <div class="member-role">NAE_Token.sol</div>
             <div class="log">
-                <span class="label">MONITORING:</span>
-                Watching for Flash Loan & Sandwich attack vectors.
+                <span class="label">BURN TAX:</span> 25% (Ecosystem-triggered)
+                <br><span class="label">TOTAL SUPPLY:</span> 1,000,000,000 NAE
+                <br><span class="label">NETWORK:</span> Base
             </div>
         </div>
     </div>
