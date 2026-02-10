@@ -37,6 +37,12 @@
             scroll-behavior: smooth;
         }
 
+        /* Responsive Fixes */
+        @media (max-width: 640px) {
+            h1 { font-size: 2.5rem !important; }
+            .hero-stats { grid-template-cols: 1fr 1fr !important; gap: 1rem !important; }
+        }
+
         /* Mobile Menu Overlay */
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
@@ -134,7 +140,7 @@
             
             <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400">
                 <a href="#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
-                <a href="/neural-nexus/litepaper.html" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
+                <a href="/neural-nexus/litepaper.pdf" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
                 <a href="#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
                 <a href="/neural-nexus/launchpad/index.html" class="hover:text-emerald-cyber transition-colors text-emerald-cyber">Launchpad</a>
             </div>
@@ -152,7 +158,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-obsidian-deep/95 backdrop-blur-xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 text-center text-sm font-bold uppercase tracking-widest z-40">
             <a href="#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
-            <a href="/neural-nexus/litepaper.html" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
+            <a href="/neural-nexus/litepaper.pdf" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
             <a href="#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
             <a href="/neural-nexus/launchpad/index.html" class="text-emerald-cyber">Launchpad</a>
         </div>
@@ -187,13 +193,13 @@
                 <a href="#tokenomics" class="btn-outline w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl text-base font-bold">
                     View Tokenomics
                 </a>
-                <a href="/neural-nexus/litepaper.html" target="_blank" class="btn-outline w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl text-base font-bold">
+                <a href="/neural-nexus/litepaper.pdf" target="_blank" class="btn-outline w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl text-base font-bold">
                     Read Litepaper
                 </a>
             </div>
 
             <!-- Stats Bar -->
-            <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/5 pt-12">
+            <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/5 pt-12 hero-stats">
                 <div>
                     <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Total Supply</div>
                     <div class="text-2xl font-bold">1,000,000,000</div>
@@ -305,7 +311,7 @@
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold mb-4">Neural Nexus Litepaper v1.0</h3>
                     <p class="text-gray-500 mb-8 max-w-sm text-sm sm:text-base">PDF (2.4 MB) • Updated February 2026</p>
-                    <a href="/neural-nexus/litepaper.html" target="_blank" class="btn-cyber w-full sm:w-auto px-8 sm:px-12 py-4 rounded-xl text-base sm:text-lg inline-block text-center">
+                    <a href="/neural-nexus/litepaper.pdf" target="_blank" class="btn-cyber w-full sm:w-auto px-8 sm:px-12 py-4 rounded-xl text-base sm:text-lg inline-block text-center">
                         Download Paper
                     </a>
                 </div>
