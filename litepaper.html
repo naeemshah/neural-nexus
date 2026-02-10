@@ -3,185 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neural Nexus Litepaper</title>
+    <title>Neural Nexus | Litepaper v1.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
-        
-        body {
-            background-color: #0B0E14;
-            color: #F8FAFC;
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            padding: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .cyber-glow {
-            text-shadow: 0 0 15px rgba(0, 255, 159, 0.6);
-        }
-        
-        .cyber-border {
-            border: 1px solid rgba(0, 255, 159, 0.2);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-        
-        h1, h2, h3 {
-            color: #00FF9F;
-            font-weight: 800;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; }
-        
-        .section {
-            background: rgba(11, 14, 20, 0.8);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(0, 255, 159, 0.1);
-        }
-        
-        .tokenomics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .token-card {
-            background: rgba(0, 255, 159, 0.05);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid rgba(0, 255, 159, 0.1);
-        }
-        
-        .back-btn {
-            display: inline-block;
-            margin-top: 40px;
-            padding: 12px 24px;
-            background: rgba(0, 255, 159, 0.1);
-            border: 1px solid rgba(0, 255, 159, 0.3);
-            border-radius: 8px;
-            color: #00FF9F;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .back-btn:hover {
-            background: rgba(0, 255, 159, 0.2);
-            transform: translateY(-2px);
-        }
+        body { background-color: #0B0E14; color: #F8FAFC; font-family: 'Inter', sans-serif; }
+        .cyber-glow { text-shadow: 0 0 15px rgba(0, 255, 159, 0.6); }
+        .emerald-cyber { color: #00FF9F; }
     </style>
 </head>
-<body>
-    <div class="section">
-        <h1 class="cyber-glow">Neural Nexus Litepaper</h1>
-        <p><strong>Version:</strong> 2.0 | <strong>Date:</strong> February 2026</p>
-        
-        <div style="margin: 30px 0; padding: 20px; background: rgba(0, 255, 159, 0.05); border-left: 4px solid #00FF9F;">
-            <p><strong>Note:</strong> This is a placeholder litepaper. The full PDF version is being prepared by the marketing team.</p>
+<body class="flex flex-col items-center justify-center min-h-screen p-6 text-center">
+    <div class="max-w-2xl">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-8 tracking-tighter">
+            Neural Nexus <br/>
+            <span class="emerald-cyber cyber-glow">Litepaper</span>
+        </h1>
+        <p class="text-xl text-gray-400 mb-12 leading-relaxed">
+            The technical blueprint for decentralized intelligence and hyper-deflationary scarcity is currently being finalized for the v1.0 release.
+        </p>
+        <div class="bg-white/5 border border-white/10 p-8 rounded-3xl mb-12">
+            <p class="text-emerald-cyber font-mono mb-4 uppercase tracking-widest">Expected Release</p>
+            <p class="text-2xl font-bold">Q1 2026</p>
         </div>
+        <a href="/neural-nexus/website/index.html" class="inline-block px-8 py-4 border border-emerald-cyber/30 rounded-xl hover:bg-emerald-cyber/10 transition-all text-emerald-cyber font-bold uppercase tracking-widest">
+            Back to Ecosystem
+        </a>
     </div>
-    
-    <div class="section">
-        <h2>Executive Summary</h2>
-        <p>Neural Nexus ($NAE) is an AI-driven crypto ecosystem built on the Base network, featuring a unique 25% ecosystem burn mechanism that creates permanent digital scarcity.</p>
-        
-        <h3>Core Innovation</h3>
-        <ul>
-            <li><strong>Fixed Supply:</strong> 1,000,000,000 NAE (1 Billion)</li>
-            <li><strong>Ecosystem Burn:</strong> 25% tax on ecosystem-triggered transfers</li>
-            <li><strong>Network:</strong> Base (Ethereum L2)</li>
-            <li><strong>Token Standard:</strong> ERC-20 with burn extensions</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h2>Tokenomics</h2>
-        
-        <div class="tokenomics-grid">
-            <div class="token-card">
-                <h3>Supply Structure</h3>
-                <p><strong>Total Supply:</strong> 1,000,000,000 NAE</p>
-                <p><strong>Initial Circulation:</strong> 100% at launch</p>
-                <p><strong>Deflation Rate:</strong> 25% on ecosystem transfers</p>
-            </div>
-            
-            <div class="token-card">
-                <h3>Burn Mechanism</h3>
-                <p><strong>Tax:</strong> 25% ecosystem fee</p>
-                <p><strong>Trigger:</strong> Ecosystem address transfers</p>
-                <p><strong>Effect:</strong> Permanent supply reduction</p>
-                <p><strong>Destination:</strong> Burn address (0x0)</p>
-            </div>
-            
-            <div class="token-card">
-                <h3>Ecosystem</h3>
-                <p><strong>Launchpad:</strong> Neural Nexus Launchpad</p>
-                <p><strong>Dashboard:</strong> Real-time analytics</p>
-                <p><strong>Governance:</strong> Owner-managed ecosystem addresses</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="section">
-        <h2>Technical Implementation</h2>
-        
-        <h3>Smart Contract</h3>
-        <p><strong>Contract:</strong> NAE_Token.sol</p>
-        <p><strong>Standards:</strong> ERC20, ERC20Burnable, Ownable</p>
-        <p><strong>Key Function:</strong> _update() override for 25% burn logic</p>
-        
-        <h3>Security</h3>
-        <ul>
-            <li>OpenZeppelin audited contracts</li>
-            <li>Base network compatibility</li>
-            <li>Owner-controlled ecosystem mapping</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h2>Roadmap</h2>
-        
-        <h3>Phase 1: Foundation (Current)</h3>
-        <ul>
-            <li>Contract development & auditing</li>
-            <li>Website & launchpad development</li>
-            <li>Litepaper v2 finalization</li>
-            <li>Base Testnet deployment</li>
-        </ul>
-        
-        <h3>Phase 2: Refinement & Testing</h3>
-        <ul>
-            <li>Security audit simulation</li>
-            <li>Launchpad UI integration</li>
-            <li>Community building</li>
-        </ul>
-        
-        <h3>Phase 3: Launch</h3>
-        <ul>
-            <li>Base Mainnet deployment</li>
-            <li>Liquidity provisioning</li>
-            <li>Public announcement</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h2>Team & Community</h2>
-        <p><strong>Project Manager:</strong> Orchestration & strategy</p>
-        <p><strong>Developer:</strong> Smart contracts & web development</p>
-        <p><strong>QA:</strong> Security auditing & testing</p>
-        <p><strong>Marketing:</strong> Content & community growth</p>
-        
-        <p><strong>Community Channels:</strong> Coming soon</p>
-    </div>
-    
-    <a href="/" class="back-btn">← Back to Neural Nexus</a>
 </body>
 </html>
