@@ -65,6 +65,15 @@
         .burn-gradient {
             background: linear-gradient(180deg, rgba(0, 255, 159, 0.1) 0%, rgba(11, 14, 20, 0) 100%);
         }
+
+        /* Mobile Menu Overlay */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -85,9 +94,24 @@
                 <a href="/website/index.html#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
                 <a href="#founder" class="hover:text-emerald-cyber transition-colors">Founder</a>
             </div>
-            <button class="btn-primary px-6 py-2 rounded-full font-bold text-xs uppercase tracking-wider">
-                Connect Wallet
-            </button>
+            
+            <div class="flex items-center gap-4">
+                <button class="btn-primary px-4 sm:px-6 py-2 rounded-full font-bold text-[10px] sm:text-xs uppercase tracking-wider whitespace-nowrap">
+                    Connect Wallet
+                </button>
+                <button id="menu-toggle" class="md:hidden text-emerald-cyber">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-obsidian-deep/95 backdrop-blur-xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 text-center text-xs font-bold uppercase tracking-widest z-40">
+            <a href="/website/index.html#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
+            <a href="#tracker" class="hover:text-emerald-cyber transition-colors">Burn Tracker</a>
+            <a href="/litepaper.pdf" target="_blank" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
+            <a href="/website/index.html#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
+            <a href="#founder" class="hover:text-emerald-cyber transition-colors">Founder</a>
         </div>
     </nav>
 
@@ -251,6 +275,21 @@
         }
         
         window.onload = updateBurn;
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>

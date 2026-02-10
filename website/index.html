@@ -37,6 +37,15 @@
             scroll-behavior: smooth;
         }
 
+        /* Mobile Menu Overlay */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+
         .cyber-glow {
             text-shadow: 0 0 15px rgba(0, 255, 159, 0.6);
         }
@@ -126,13 +135,26 @@
             <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400">
                 <a href="#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
                 <a href="/litepaper.pdf" target="_blank" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
-                <a href="/website/index.html#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
+                <a href="#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
                 <a href="/launchpad/index.html" class="hover:text-emerald-cyber transition-colors text-emerald-cyber">Launchpad</a>
             </div>
 
-            <a href="/launchpad/index.html" class="btn-cyber px-4 sm:px-6 py-2 rounded-full text-[10px] sm:text-xs shrink-0 ml-2 flex items-center justify-center">
-                Launchpad
-            </a>
+            <div class="flex items-center">
+                <a href="/launchpad/index.html" class="btn-cyber px-4 sm:px-6 py-2 rounded-full text-[10px] sm:text-xs shrink-0 ml-2 flex items-center justify-center">
+                    Launchpad
+                </a>
+                <button id="menu-toggle" class="md:hidden ml-4 text-emerald-cyber p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-obsidian-deep/95 backdrop-blur-xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 text-center text-sm font-bold uppercase tracking-widest z-40">
+            <a href="#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
+            <a href="/litepaper.pdf" target="_blank" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
+            <a href="#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
+            <a href="/launchpad/index.html" class="text-emerald-cyber">Launchpad</a>
         </div>
     </nav>
 
@@ -428,6 +450,21 @@
         }
 
         setInterval(randomizeChart, 3000);
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>
