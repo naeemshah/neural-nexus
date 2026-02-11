@@ -43,8 +43,8 @@ const Navigation = () => {
       {/* Mobile Menu */}
       <div 
         id="mobile-menu" 
-        className={`md:hidden absolute top-full left-0 w-full bg-obsidian-deep/95 backdrop-blur-xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 text-center text-xs font-bold uppercase tracking-widest z-40 transition-transform duration-300 ${
-          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        className={`md:hidden fixed top-16 sm:top-20 left-0 w-full h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] bg-obsidian-deep/98 backdrop-blur-xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 text-center text-xs font-bold uppercase tracking-widest z-40 transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0 pointer-events-none'
         }`}
       >
         <a href="#tokenomics" className="hover:text-emerald-cyber transition-colors" onClick={() => setIsMenuOpen(false)}>Tokenomics</a>

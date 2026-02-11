@@ -89,18 +89,18 @@
         },
         {
           "file": "apps/launchpad/src/components/Hero.tsx",
-          "hash": "13090540609102277594"
+          "hash": "1078992311084721706"
         },
         {
           "file": "apps/launchpad/src/components/LaunchpadDashboard.tsx",
-          "hash": "6035776614554530896",
+          "hash": "17890777968462101104",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "apps/launchpad/src/components/Navigation.tsx",
-          "hash": "4476470192165351946",
+          "hash": "8041579948650899148",
           "deps": [
             "npm:react"
           ]
@@ -336,7 +336,7 @@
       },
       {
         "file": "UPTIME.md",
-        "hash": "11575177284510723471"
+        "hash": "3774037775257219953"
       },
       {
         "file": "USER.md",
@@ -451,12 +451,24 @@
         "hash": "14530678894505119406"
       },
       {
+        "file": "marketing/brand-voice-guidelines.md",
+        "hash": "13926534525120721729"
+      },
+      {
         "file": "marketing/litepaper-pdf-plan.md",
         "hash": "2240629877653064244"
       },
       {
+        "file": "marketing/market-trends-tracker.md",
+        "hash": "7415164958503406370"
+      },
+      {
         "file": "marketing/marketing-strategy.md",
         "hash": "803852603577062283"
+      },
+      {
+        "file": "marketing/restart-summary.md",
+        "hash": "9381924808210098380"
       },
       {
         "file": "marketing/social-media-plan.md",

@@ -1,8 +1,8 @@
 {
   "run": {
-    "command": "nx run-many --target=build --all",
-    "startTime": "2026-02-11T12:24:19.231Z",
-    "endTime": "2026-02-11T12:24:19.243Z",
+    "command": "nx run launchpad:build",
+    "startTime": "2026-02-11T12:41:53.598Z",
+    "endTime": "2026-02-11T12:41:54.932Z",
     "inner": false
   },
   "tasks": [
@@ -10,11 +10,11 @@
       "taskId": "launchpad:build",
       "target": "build",
       "projectName": "launchpad",
-      "hash": "10820686946866351306",
-      "startTime": "2026-02-11T12:24:19.238Z",
-      "endTime": "2026-02-11T12:24:19.242Z",
+      "hash": "489450443376022716",
+      "startTime": "2026-02-11T12:41:53.606Z",
+      "endTime": "2026-02-11T12:41:54.928Z",
       "params": "",
-      "cacheStatus": "local-cache-hit",
+      "cacheStatus": "cache-miss",
       "status": 0
     }
   ]

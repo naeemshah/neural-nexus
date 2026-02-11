@@ -26,19 +26,19 @@ const LaunchpadDashboard = () => {
           <p className="text-gray-400">Phase 1: Genesis Liquidity Generation</p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Status Card */}
-          <div className="lg:col-span-2 bg-obsidian-deep/60 backdrop-blur-xl border-emerald-cyber/20 border-2 rounded-3xl p-6 sm:p-8 relative overflow-hidden burn-gradient cyber-border">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center sm:text-left mb-8">
+          <div className="lg:col-span-2 bg-obsidian-deep/60 backdrop-blur-xl border-emerald-cyber/20 border-2 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 relative overflow-hidden burn-gradient cyber-border">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 text-center sm:text-left mb-6 sm:mb-8">
               <div>
-                <h3 className="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Current Status</h3>
-                <p className="text-2xl sm:text-4xl font-bold text-emerald-cyber" id="burnRate">{burnStatus}</p>
-                <p className="text-[10px] sm:text-xs text-gray-500 mt-2">RAISE TARGET: 50.0 ETH</p>
+                <h3 className="text-gray-400 text-[9px] xs:text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Current Status</h3>
+                <p className="text-xl sm:text-2xl md:text-4xl font-bold text-emerald-cyber" id="burnRate">{burnStatus}</p>
+                <p className="text-[9px] xs:text-[10px] sm:text-xs text-gray-500 mt-2">RAISE TARGET: 50.0 ETH</p>
               </div>
               <div>
-                <h3 className="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Network</h3>
-                <p className="text-2xl sm:text-4xl font-bold text-white">BASE</p>
-                <p className="text-[10px] sm:text-xs text-emerald-cyber mt-2">MAINNET DEPLOYMENT READY</p>
+                <h3 className="text-gray-400 text-[9px] xs:text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Network</h3>
+                <p className="text-xl sm:text-2xl md:text-4xl font-bold text-white">BASE</p>
+                <p className="text-[9px] xs:text-[10px] sm:text-xs text-emerald-cyber mt-2">MAINNET DEPLOYMENT READY</p>
               </div>
             </div>
 
@@ -70,7 +70,7 @@ const LaunchpadDashboard = () => {
           </div>
 
           {/* Action Card */}
-          <div className="bg-obsidian-deep/60 backdrop-blur-xl border-white/10 border rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+          <div className="bg-obsidian-deep/60 backdrop-blur-xl border-white/10 border rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 flex flex-col justify-center">
             <div className="mb-6">
               <label className="block text-[10px] font-mono text-gray-500 uppercase mb-2">Amount (ETH)</label>
               <div className="relative">
@@ -87,7 +87,7 @@ const LaunchpadDashboard = () => {
             </div>
             <button 
               id="contribute-btn" 
-              className="btn-primary w-full py-5 rounded-2xl text-base mb-4 opacity-50 cursor-not-allowed"
+              className="btn-primary w-full py-4 sm:py-5 rounded-xl sm:rounded-2xl text-sm sm:text-base mb-4 opacity-50 cursor-not-allowed"
               disabled
             >
               Connect Wallet to Contribute
