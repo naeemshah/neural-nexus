@@ -106,7 +106,7 @@
             <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
                 <a href="../website/index.html#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
                 <a href="https://github.com/naeemshah/neural-nexus/blob/main/LITEPAPER.md" target="_blank" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
-                <a href="#tracker" class="hover:text-emerald-cyber transition-colors">Burn Tracker</a>
+                <a href="#tracker" class="hover:text-emerald-cyber transition-colors">Launch Status</a>
                 <a href="../website/index.html#founder" class="hover:text-emerald-cyber transition-colors">Founder</a>
             </div>
             
@@ -162,19 +162,19 @@
             <div class="bg-obsidian-deep/60 backdrop-blur-xl border-emerald-cyber/20 border-2 rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden burn-gradient cyber-border">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 text-center">
                     <div>
-                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Live Burn Rate</h3>
-                        <p class="text-2xl sm:text-4xl font-bold text-emerald-cyber" id="burnRate">12,450.22 $NAE</p>
-                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">PER HOUR</p>
+                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Presale Status</h3>
+                        <p class="text-2xl sm:text-4xl font-bold text-emerald-cyber" id="burnRate">PRE-OPENING</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">WAITING FOR DEPLOY</p>
                     </div>
                     <div class="sm:border-x border-white/5">
-                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Total Burned</h3>
+                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Genesis Burn</h3>
                         <p class="text-2xl sm:text-4xl font-bold text-white"><span id="totalBurned">250,000,000</span> <span class="text-emerald-cyber text-lg">$NAE</span></p>
-                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">25.00% OF SUPPLY</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">COMMITTED AT LAUNCH</p>
                     </div>
                     <div class="sm:col-span-2 md:col-span-1">
-                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Remaining Supply</h3>
-                        <p class="text-2xl sm:text-4xl font-bold text-white">750,000,000</p>
-                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">FIXED CAP</p>
+                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Target Liquidity</h3>
+                        <p class="text-2xl sm:text-4xl font-bold text-white">100% LOCKED</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">UNICRYPT ESCROW</p>
                     </div>
                 </div>
                 
@@ -273,18 +273,11 @@
     <script>
         // Mock live data updates
         function updateBurn() {
-            const burnedEl = document.getElementById('totalBurned');
             const rateEl = document.getElementById('burnRate');
             
-            let burned = 250000000;
-            
             setInterval(() => {
-                const add = Math.random() * 5;
-                burned += add;
-                burnedEl.innerText = Math.floor(burned).toLocaleString();
-                
-                const rate = 12000 + (Math.random() * 1000);
-                rateEl.innerText = rate.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' $NAE';
+                const states = ['PRE-OPENING', 'INITIALIZING', 'WAITING_DEPLOY', 'TESTING_NODE'];
+                rateEl.innerText = states[Math.floor(Math.random() * states.length)];
             }, 3000);
         }
         
