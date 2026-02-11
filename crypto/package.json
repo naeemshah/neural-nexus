@@ -4,6 +4,7 @@
   "description": "",
   "main": "hardhat.config.js",
   "directories": {
+    "lib": "lib",
     "test": "test"
   },
   "scripts": {
@@ -14,5 +15,17 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "hardhat": "^2.28.5",
+    "openzeppelin-solidity": "^3.4.2"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "ethereum-cryptography": "^2.2.1",
+    "p-map": "^7.0.4",
+    "ws": "^8.19.0"
+  }
 }

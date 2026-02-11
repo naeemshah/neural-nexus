@@ -1,11 +1,299 @@
 {
   "version": "6.0",
-  "nxVersion": "20.0.0",
+  "nxVersion": "22.5.0",
   "pathMappings": {},
-  "nxJsonPlugins": [],
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    },
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "devTargetName": "dev",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    }
+  ],
   "fileMap": {
-    "projectFileMap": {},
+    "projectFileMap": {
+      "crypto": [
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/access/Ownable.sol/Ownable.dbg.json",
+          "hash": "2296553604312228009"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/access/Ownable.sol/Ownable.json",
+          "hash": "3015676074576646957"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC1155Errors.dbg.json",
+          "hash": "2296553604312228009"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC1155Errors.json",
+          "hash": "3667524756250438225"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC20Errors.dbg.json",
+          "hash": "2296553604312228009"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC20Errors.json",
+          "hash": "14284409518264713642"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC721Errors.dbg.json",
+          "hash": "2296553604312228009"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC721Errors.json",
+          "hash": "1531797590951936860"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/token/ERC20/ERC20.sol/ERC20.dbg.json",
+          "hash": "10486588324590698885"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/token/ERC20/ERC20.sol/ERC20.json",
+          "hash": "3881053591289317107"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.dbg.json",
+          "hash": "10486588324590698885"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json",
+          "hash": "4673131353698575888"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol/ERC20Burnable.dbg.json",
+          "hash": "16056436899677485075"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol/ERC20Burnable.json",
+          "hash": "13198045000525860404"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol/IERC20Metadata.dbg.json",
+          "hash": "16056436899677485075"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol/IERC20Metadata.json",
+          "hash": "12187101676763668706"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/utils/Context.sol/Context.dbg.json",
+          "hash": "2296553604312228009"
+        },
+        {
+          "file": "crypto/artifacts/@openzeppelin/contracts/utils/Context.sol/Context.json",
+          "hash": "8744695991137860051"
+        },
+        {
+          "file": "crypto/artifacts/build-info/9ca6d33e1bd2b2a7788026b04d62dc4b.json",
+          "hash": "13967928514930558317"
+        },
+        {
+          "file": "crypto/artifacts/build-info/c3c64929627f48aa71af31d85a26198b.json",
+          "hash": "14469189614779813313"
+        },
+        {
+          "file": "crypto/artifacts/contracts/NAE_Token.sol/NAE_Token.dbg.json",
+          "hash": "10867874307353907801"
+        },
+        {
+          "file": "crypto/artifacts/contracts/NAE_Token.sol/NAE_Token.json",
+          "hash": "13969314585701236101"
+        },
+        {
+          "file": "crypto/cache/solidity-files-cache.json",
+          "hash": "8514344205296306531"
+        },
+        {
+          "file": "crypto/contracts/NAE_Token.sol",
+          "hash": "12379906722577831799"
+        },
+        {
+          "file": "crypto/foundry.toml",
+          "hash": "6720239761127762301"
+        },
+        {
+          "file": "crypto/hardhat.config.js",
+          "hash": "5803575608614505887",
+          "deps": [
+            "npm:@nomicfoundation/hardhat-toolbox"
+          ]
+        },
+        {
+          "file": "crypto/package.json",
+          "hash": "11035037725001301546",
+          "deps": [
+            "npm:@nomicfoundation/hardhat-toolbox",
+            "npm:@openzeppelin/contracts",
+            "npm:hardhat",
+            "npm:openzeppelin-solidity",
+            "npm:chalk@5.6.2",
+            "npm:ethereum-cryptography@2.2.1",
+            "npm:p-map@7.0.4",
+            "npm:ws@8.19.0"
+          ]
+        },
+        {
+          "file": "crypto/scripts/deploy.js",
+          "hash": "2288459267881170911",
+          "deps": [
+            "npm:hardhat"
+          ]
+        },
+        {
+          "file": "crypto/test/NAE_Token.js",
+          "hash": "6962994865076064938",
+          "deps": [
+            "npm:chai",
+            "npm:hardhat"
+          ]
+        },
+        {
+          "file": "crypto/test/NAE_Token.t.sol",
+          "hash": "10427961423701145538"
+        },
+        {
+          "file": "crypto/test/NAE_Token.test.js",
+          "hash": "6669850704980967154",
+          "deps": [
+            "npm:chai",
+            "npm:hardhat"
+          ]
+        }
+      ],
+      "launchpad": [
+        {
+          "file": "apps/launchpad/dist/assets/index-BLnD-kzz.css",
+          "hash": "6373250694712022429"
+        },
+        {
+          "file": "apps/launchpad/dist/assets/index-CspBhv8i.js",
+          "hash": "2578627035796476590"
+        },
+        {
+          "file": "apps/launchpad/dist/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/launchpad/dist/index.html",
+          "hash": "5620751456326438281"
+        },
+        {
+          "file": "apps/launchpad/index.html",
+          "hash": "8608260812339919961"
+        },
+        {
+          "file": "apps/launchpad/package.json",
+          "hash": "3176027650938005631"
+        },
+        {
+          "file": "apps/launchpad/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/launchpad/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/launchpad/src/app/app.tsx",
+          "hash": "17514779364019295185"
+        },
+        {
+          "file": "apps/launchpad/src/app/nx-welcome.tsx",
+          "hash": "1775940914884046162"
+        },
+        {
+          "file": "apps/launchpad/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/launchpad/src/components/Footer.tsx",
+          "hash": "14437805438876231825"
+        },
+        {
+          "file": "apps/launchpad/src/components/Founder.tsx",
+          "hash": "1574179174703453065"
+        },
+        {
+          "file": "apps/launchpad/src/components/Hero.tsx",
+          "hash": "13090540609102277594"
+        },
+        {
+          "file": "apps/launchpad/src/components/LaunchpadDashboard.tsx",
+          "hash": "6035776614554530896",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/components/Navigation.tsx",
+          "hash": "4476470192165351946",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/components/Tokenomics.tsx",
+          "hash": "17926218567239624623"
+        },
+        {
+          "file": "apps/launchpad/src/main.tsx",
+          "hash": "7944529105552768481",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/styles.css",
+          "hash": "12689548429227228684"
+        },
+        {
+          "file": "apps/launchpad/tsconfig.app.json",
+          "hash": "12830358968167672754"
+        },
+        {
+          "file": "apps/launchpad/tsconfig.json",
+          "hash": "1731869790938503978"
+        },
+        {
+          "file": "apps/launchpad/vite.config.mts",
+          "hash": "13312556737403092774",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ]
+    },
     "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "527181948614936038"
+      },
       {
         "file": "AGENTS.md",
         "hash": "11975787563018185217"
@@ -31,6 +319,10 @@
         "hash": "7625379015968821379"
       },
       {
+        "file": "README.md",
+        "hash": "9619319556354105542"
+      },
+      {
         "file": "SOUL.md",
         "hash": "14820798590149558305"
       },
@@ -49,10 +341,6 @@
       {
         "file": "agile_tunnel.log",
         "hash": "1808790735424593695"
-      },
-      {
-        "file": "apps/launchpad/index.html",
-        "hash": "2091619647503337542"
       },
       {
         "file": "apps/website/index.html",
@@ -127,22 +415,6 @@
         "hash": "8245704254013187531"
       },
       {
-        "file": "crypto/contracts/NAE_Token.sol",
-        "hash": "11993893373178758304"
-      },
-      {
-        "file": "crypto/foundry.toml",
-        "hash": "6720239761127762301"
-      },
-      {
-        "file": "crypto/hardhat.config.js",
-        "hash": "13252532947676477125"
-      },
-      {
-        "file": "crypto/test/NAE_Token.t.sol",
-        "hash": "9254111067165487852"
-      },
-      {
         "file": "dashboard_tunnel.log",
         "hash": "2337451782531087087"
       },
@@ -160,11 +432,11 @@
       },
       {
         "file": "litepaper.html",
-        "hash": "12105840523475513145"
+        "hash": "13043272278818468615"
       },
       {
         "file": "litepaper.txt",
-        "hash": "4823028991106900637"
+        "hash": "2876103596487770963"
       },
       {
         "file": "local_status.html",
@@ -172,15 +444,27 @@
       },
       {
         "file": "nx.json",
-        "hash": "9396151912043268842"
+        "hash": "1818281983959169981"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "4320337233073219291"
       },
       {
         "file": "package.json",
-        "hash": "18102164639725968400"
+        "hash": "2300260085998638365"
       },
       {
         "file": "server.log",
         "hash": "7965975456411842692"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "10228449970230076666"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "13799943705444046152"
       },
       {
         "file": "tunnel.log",
@@ -199,5 +483,6 @@
         "hash": "3520246524940440080"
       }
     ]
-  }
+  },
+  "externalNodesHash": "6650092597267612789"
 }

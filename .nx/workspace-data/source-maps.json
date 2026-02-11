@@ -1,0 +1,630 @@
+{
+  "apps/launchpad": {
+    "root": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "apps/launchpad/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.dependsOn": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.cache": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.inputs": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.outputs": [
+      "apps/launchpad/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.executor": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.cwd": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "apps/launchpad/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "apps/launchpad/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "apps/launchpad/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "apps/launchpad/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "projectType": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.options": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.cache": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.outputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.metadata": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.syncGenerators": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.executor": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.options.cwd": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.options.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.technologies": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.technologies.0": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.description": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.help": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.help.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.help.example": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.continuous": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.options": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.syncGenerators": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.executor": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.options.cwd": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.options.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.technologies": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.technologies.0": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.description": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.help": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.help.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.help.example": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.deprecated": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.continuous": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.syncGenerators": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.executor": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options.cwd": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.technologies": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.technologies.0": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.description": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help.example": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.continuous": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.dependsOn": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.executor": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options.cwd": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.technologies": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.technologies.0": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.description": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help.example": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.continuous": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.executor": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.options": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.syncGenerators": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.options.buildTarget": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.options.spa": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies.1": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build-deps": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build-deps.dependsOn": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.continuous": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "apps/launchpad/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "name": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "apps/launchpad/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "crypto": {
+    "root": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.3": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.compile": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.compile.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.compile.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.compile.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.compile.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.compile.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.compile.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:sepolia": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:sepolia.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:sepolia.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:sepolia.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:sepolia.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:sepolia.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:sepolia.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:mainnet": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:mainnet.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:mainnet.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:mainnet.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:mainnet.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:mainnet.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:mainnet.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.dependsOn": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.outputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  }
+}
