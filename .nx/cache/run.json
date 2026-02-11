@@ -1,8 +1,8 @@
 {
   "run": {
-    "command": "nx run unified:build",
-    "startTime": "2026-02-11T17:59:40.064Z",
-    "endTime": "2026-02-11T17:59:43.610Z",
+    "command": "nx build unified",
+    "startTime": "2026-02-11T18:37:49.165Z",
+    "endTime": "2026-02-11T18:37:52.607Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "unified:build:production",
       "target": "build",
       "projectName": "unified",
-      "hash": "17281769639586593719",
-      "startTime": "2026-02-11T17:59:40.074Z",
-      "endTime": "2026-02-11T17:59:43.608Z",
+      "hash": "10258353990408501502",
+      "startTime": "2026-02-11T18:37:49.175Z",
+      "endTime": "2026-02-11T18:37:52.606Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

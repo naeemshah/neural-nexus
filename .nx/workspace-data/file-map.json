@@ -34,45 +34,6 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "ui": [
-        {
-          "file": "packages/ui/package.json",
-          "hash": "17725253923978244668",
-          "deps": [
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "packages/ui/project.json",
-          "hash": "11764587849024977316"
-        },
-        {
-          "file": "packages/ui/src/components/Button.tsx",
-          "hash": "11785867420283090310",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "packages/ui/src/components/index.ts",
-          "hash": "7319235952904313692"
-        },
-        {
-          "file": "packages/ui/src/index.ts",
-          "hash": "1303119947381699652"
-        },
-        {
-          "file": "packages/ui/tsconfig.json",
-          "hash": "15888353574876792831"
-        },
-        {
-          "file": "packages/ui/tsconfig.lib.json",
-          "hash": "4481596079156568130"
-        }
-      ],
       "website": [
         {
           "file": "apps/website/index.html",
@@ -241,7 +202,7 @@
         },
         {
           "file": "apps/unified/src/components/LaunchpadDashboard.tsx",
-          "hash": "11984435126309190986",
+          "hash": "17759480113840669754",
           "deps": [
             "npm:react"
           ]
@@ -470,6 +431,45 @@
             "npm:chai",
             "npm:hardhat"
           ]
+        }
+      ],
+      "ui": [
+        {
+          "file": "packages/ui/package.json",
+          "hash": "17725253923978244668",
+          "deps": [
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "packages/ui/project.json",
+          "hash": "11764587849024977316"
+        },
+        {
+          "file": "packages/ui/src/components/Button.tsx",
+          "hash": "11785867420283090310",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/src/components/index.ts",
+          "hash": "7319235952904313692"
+        },
+        {
+          "file": "packages/ui/src/index.ts",
+          "hash": "1303119947381699652"
+        },
+        {
+          "file": "packages/ui/tsconfig.json",
+          "hash": "15888353574876792831"
+        },
+        {
+          "file": "packages/ui/tsconfig.lib.json",
+          "hash": "4481596079156568130"
         }
       ],
       "launchpad": [
@@ -785,6 +785,10 @@
         "hash": "16379867364606647227"
       },
       {
+        "file": "frontend_improvements.md",
+        "hash": "11773510089929276194"
+      },
+      {
         "file": "game_tunnel.log",
         "hash": "15011331028065925829"
       },
@@ -799,6 +803,10 @@
       {
         "file": "local_status.html",
         "hash": "9305014108696404028"
+      },
+      {
+        "file": "marketing/IMMEDIATE-USER-ACTIONS-1807.txt",
+        "hash": "7178547801772501338"
       },
       {
         "file": "marketing/IMMEDIATE-USER-ACTIONS.txt",
@@ -825,12 +833,28 @@
         "hash": "13926534525120721729"
       },
       {
+        "file": "marketing/cron-output-1807.txt",
+        "hash": "1040207664069865987"
+      },
+      {
+        "file": "marketing/cron-response-1817.txt",
+        "hash": "13664494614379247787"
+      },
+      {
         "file": "marketing/generate-pdf.js",
         "hash": "17080913253503079218"
       },
       {
+        "file": "marketing/generate_simple_pdf.py",
+        "hash": "13081823164642186085"
+      },
+      {
         "file": "marketing/implementation-plan.md",
         "hash": "14407609632404449522"
+      },
+      {
+        "file": "marketing/litepaper-interim-status.html",
+        "hash": "5195313704919982935"
       },
       {
         "file": "marketing/litepaper-pdf-plan.md",
@@ -857,6 +881,10 @@
         "hash": "7781461086063563865"
       },
       {
+        "file": "marketing/litepaper-v2.0-TEXT-PLACEHOLDER.txt",
+        "hash": "6009825511710920535"
+      },
+      {
         "file": "marketing/litepaper-v2.0.html",
         "hash": "9015330537456625961"
       },
@@ -881,6 +909,10 @@
         "hash": "10848815079206254872"
       },
       {
+        "file": "marketing/marketing-agent-report-2026-02-11-1807.md",
+        "hash": "5139493129225092557"
+      },
+      {
         "file": "marketing/marketing-agent-report-2026-02-11.md",
         "hash": "8633560604456425789"
       },
@@ -891,6 +923,14 @@
       {
         "file": "marketing/marketing-strategy.md",
         "hash": "803852603577062283"
+      },
+      {
+        "file": "marketing/marketing-summary-1807.txt",
+        "hash": "3209722153383339768"
+      },
+      {
+        "file": "marketing/marketing-summary-1817.txt",
+        "hash": "9888461296779114350"
       },
       {
         "file": "marketing/marketing-summary-output.txt",
@@ -943,6 +983,10 @@
       {
         "file": "tailwind.config.js",
         "hash": "5754782747188112344"
+      },
+      {
+        "file": "test_mobile_launchpad.html",
+        "hash": "9903273506772859196"
       },
       {
         "file": "test_mobile_responsive.html",
