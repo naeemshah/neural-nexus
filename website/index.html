@@ -208,19 +208,19 @@
                 <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 border-t border-white/5 pt-12 hero-stats">
                     <div class="hover:translate-y-[-2px] transition-transform">
                         <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Total Supply</div>
-                        <div class="text-xl sm:text-2xl font-bold">1B</div>
+                        <div class="text-xl sm:text-2xl font-bold">1B $NAE</div>
                     </div>
                     <div class="hover:translate-y-[-2px] transition-transform">
                         <div class="text-emerald-cyber text-[10px] font-mono uppercase mb-1">Genesis Burn</div>
                         <div class="text-xl sm:text-2xl font-bold">250M</div>
                     </div>
                     <div class="hover:translate-y-[-2px] transition-transform">
-                        <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Tax</div>
+                        <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Buy/Sell Tax</div>
                         <div class="text-xl sm:text-2xl font-bold">0%</div>
                     </div>
                     <div class="hover:translate-y-[-2px] transition-transform">
-                        <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Contract</div>
-                        <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-cyber">TBA</div>
+                        <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Network</div>
+                        <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-cyber">BASE</div>
                     </div>
                 </div>
         </div>
@@ -358,49 +358,65 @@
                     <span class="text-[10px] font-mono text-emerald-cyber bg-emerald-cyber/10 px-3 py-1 rounded-full uppercase">Authenticated: Admin_Shah</span>
                 </div>
                 
-                <div class="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
-                            <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Liquidity Depth</div>
-                            <div class="text-2xl font-bold">$4.25M</div>
-                            <div class="mt-2 text-emerald-cyber text-xs">+12.4% (24h)</div>
-                        </div>
-                        <div class="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
-                            <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Active Nodes</div>
-                            <div class="text-2xl font-bold">1,204</div>
-                            <div class="mt-2 text-emerald-cyber text-xs">ONLINE</div>
-                        </div>
-                        <div class="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
-                            <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Market Cap</div>
-                            <div class="text-2xl font-bold">$12.8M</div>
-                            <div class="mt-2 text-emerald-cyber text-xs">STABLE</div>
-                        </div>
+                <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+                    <div class="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
+                        <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Liquidity Depth</div>
+                        <div class="text-2xl font-bold">$4.25M</div>
+                        <div class="mt-2 text-emerald-cyber text-xs">+12.4% (24h)</div>
+                    </div>
+                    <div class="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
+                        <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Active Nodes</div>
+                        <div class="text-2xl font-bold">1,204</div>
+                        <div class="mt-2 text-emerald-cyber text-xs">ONLINE</div>
+                    </div>
+                    <div class="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
+                        <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Market Cap</div>
+                        <div class="text-2xl font-bold">$12.8M</div>
+                        <div class="mt-2 text-emerald-cyber text-xs">STABLE</div>
+                    </div>
+                </div>
 
-                <div class="md:col-span-2 p-4 sm:p-8 rounded-2xl bg-white/5 border border-white/5 flex flex-col overflow-hidden relative group">
-                    <div class="absolute inset-0 bg-emerald-cyber/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-                    <div class="flex items-center justify-between mb-8">
-                        <span class="text-[10px] sm:text-xs font-mono text-gray-500 uppercase">Deployment Progress (Live)</span>
-                        <span class="text-[10px] sm:text-xs text-emerald-cyber font-mono">Real-time Feed</span>
-                    </div>
-                    <div class="flex-1 flex items-end gap-1 sm:gap-2 h-48 px-2 sm:px-4">
-                        <div class="token-chart-bar flex-1 bg-emerald-cyber/20 rounded-t-lg h-full transition-all duration-700 ease-in-out"></div>
-                        <div class="token-chart-bar flex-1 bg-emerald-cyber/30 rounded-t-lg h-full transition-all duration-700 ease-in-out"></div>
-                        <div class="token-chart-bar flex-1 bg-emerald-cyber/20 rounded-t-lg h-full transition-all duration-700 ease-in-out"></div>
-                        <div class="token-chart-bar flex-1 bg-emerald-cyber/40 rounded-t-lg h-full transition-all duration-700 ease-in-out"></div>
-                        <div class="token-chart-bar flex-1 bg-emerald-cyber/60 rounded-t-lg h-4/5 transition-all duration-700 ease-in-out"></div>
-                        <div class="token-chart-bar flex-1 bg-emerald-cyber/80 rounded-t-lg h-1/5 transition-all duration-700 ease-in-out"></div>
-                        <div class="token-chart-bar flex-1 bg-emerald-cyber rounded-t-lg h-1/6 animate-pulse transition-all duration-700 ease-in-out"></div>
-                    </div>
-                    <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-white/5 pt-6 gap-4">
-                        <div class="flex gap-4 sm:gap-8">
-                            <div>
-                                <div class="text-[10px] text-gray-500 uppercase font-mono">Internal Status</div>
-                                <div class="text-sm sm:text-base font-bold text-yellow-500" id="mainBurnToday">READY_FOR_DEPLOY</div>
-                            </div>
-                            <div>
-                                <div class="text-[10px] text-gray-500 uppercase font-mono">Mainnet Status</div>
-                                <div class="text-sm sm:text-base font-bold text-emerald-cyber">Base</div>
-                            </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-4 sm:p-8 rounded-2xl bg-white/5 border border-white/5 flex flex-col overflow-hidden relative group">
+                        <div class="absolute inset-0 bg-emerald-cyber/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="flex items-center justify-between mb-8">
+                            <span class="text-[10px] sm:text-xs font-mono text-gray-500 uppercase">Deployment Progress (Live)</span>
+                            <span class="text-[10px] sm:text-xs text-emerald-cyber font-mono">Real-time Feed</span>
                         </div>
-                        <a href="../launchpad/index.html#tracker" class="text-xs text-emerald-cyber font-bold hover:underline">Launch Status →</a>
+                        <div class="flex-1 flex items-end gap-1 sm:gap-2 h-48 px-2 sm:px-4">
+                            <div class="token-chart-bar flex-1 bg-emerald-cyber/20 rounded-t-lg h-full transition-all duration-700 ease-in-out"></div>
+                            <div class="token-chart-bar flex-1 bg-emerald-cyber/30 rounded-t-lg h-full transition-all duration-700 ease-in-out"></div>
+                            <div class="token-chart-bar flex-1 bg-emerald-cyber/20 rounded-t-lg h-full transition-all duration-700 ease-in-out"></div>
+                            <div class="token-chart-bar flex-1 bg-emerald-cyber/40 rounded-t-lg h-full transition-all duration-700 ease-in-out"></div>
+                            <div class="token-chart-bar flex-1 bg-emerald-cyber/60 rounded-t-lg h-4/5 transition-all duration-700 ease-in-out"></div>
+                            <div class="token-chart-bar flex-1 bg-emerald-cyber/80 rounded-t-lg h-1/5 transition-all duration-700 ease-in-out"></div>
+                            <div class="token-chart-bar flex-1 bg-emerald-cyber rounded-t-lg h-1/6 animate-pulse transition-all duration-700 ease-in-out"></div>
+                        </div>
+                        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-white/5 pt-6 gap-4">
+                            <div class="flex gap-4 sm:gap-8">
+                                <div>
+                                    <div class="text-[10px] text-gray-500 uppercase font-mono">Internal Status</div>
+                                    <div class="text-sm sm:text-base font-bold text-yellow-500" id="mainBurnToday">READY_FOR_DEPLOY</div>
+                                </div>
+                                <div>
+                                    <div class="text-[10px] text-gray-500 uppercase font-mono">Mainnet Status</div>
+                                    <div class="text-sm sm:text-base font-bold text-emerald-cyber">Base</div>
+                                </div>
+                            </div>
+                            <a href="../launchpad/index.html#tracker" class="text-xs text-emerald-cyber font-bold hover:underline">Launch Status →</a>
+                        </div>
+                    </div>
+
+                    <!-- New Log Panel -->
+                    <div class="p-4 sm:p-8 rounded-2xl bg-black/50 border border-white/5 font-mono text-[10px] sm:text-xs overflow-hidden relative">
+                        <div class="text-gray-500 mb-4 uppercase tracking-widest border-b border-white/5 pb-2">Nexus_System_Logs</div>
+                        <div class="space-y-2 text-emerald-cyber/80 h-48 overflow-y-auto" id="system-logs">
+                            <div>[01:57:04] BOOT_SEQUENCE: INITIALIZED</div>
+                            <div>[01:57:12] NODE_SYNC: 100% SUCCESS</div>
+                            <div>[01:57:25] SECURITY_AUDIT: PASSED</div>
+                            <div>[01:57:40] LP_LOCK_MODULE: READY</div>
+                            <div class="animate-pulse">[01:58:01] WAITING_FOR_GENESIS_SIGNAL...</div>
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -500,6 +516,24 @@
                 const states = ['SYNCING_NODES', 'READY_FOR_DEPLOY', 'OPTIMIZING_GAS', 'VERIFYING_SRC'];
                 statusEl.innerText = states[Math.floor(Math.random() * states.length)];
                 statusEl.className = 'text-sm sm:text-base font-bold text-emerald-cyber';
+            }
+
+            // Log update simulation
+            const logPanel = document.getElementById('system-logs');
+            if (logPanel) {
+                const logEntries = [
+                    'MEMPOOL_SCAN: CLEAN',
+                    'GAS_PRICE: 0.01 gwei',
+                    'BLOCK_HEIGHT: 18492042',
+                    'PEER_COUNT: 128',
+                    'LATENCY: 42ms'
+                ];
+                const newLog = document.createElement('div');
+                const now = new Date();
+                const time = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+                newLog.innerText = `[${time}] ${logEntries[Math.floor(Math.random() * logEntries.length)]}`;
+                logPanel.prepend(newLog);
+                if (logPanel.children.length > 20) logPanel.lastElementChild.remove();
             }
         }
 
