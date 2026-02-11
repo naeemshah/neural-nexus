@@ -1,14 +1,25 @@
 {
   "name": "neural-nexus",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test",
+    "test:crypto": "cd crypto && npx hardhat test",
+    "compile:crypto": "cd crypto && npx hardhat compile",
+    "test:forge": "cd crypto && forge test"
+  },
   "private": true,
+  "devDependencies": {
+    "nx": "latest",
+    "@nx/workspace": "latest",
+    "@nx/react": "latest",
+    "@nx/js": "latest"
+  },
   "workspaces": [
     "apps/*",
     "packages/*",
     "crypto"
-  ],
-  "scripts": {
-    "test:crypto": "cd crypto && npx hardhat test",
-    "compile:crypto": "cd crypto && npx hardhat compile"
-  }
+  ]
 }

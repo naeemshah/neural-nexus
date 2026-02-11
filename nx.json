@@ -8,25 +8,18 @@
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["default", "^default"]
+    },
+    "test": {
+      "cache": true,
+      "inputs": ["default", "^default"]
     }
   },
-  "projects": {
-    "crypto": {
-      "root": "crypto",
-      "projectType": "library",
-      "targets": {
-        "test": {
-          "executor": "nx:run-commands",
-          "options": {
-            "command": "forge test",
-            "cwd": "crypto"
-          }
-        }
-      }
-    },
-    "website": {
-      "root": "website",
-      "projectType": "application"
-    }
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": []
   }
 }

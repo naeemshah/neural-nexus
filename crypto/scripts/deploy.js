@@ -1,14 +1,17 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-  console.log("Deploying NAE Token...");
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying NAE Token with account:", deployer.address);
 
-  const NAE = await ethers.getContractFactory("NAEToken");
-  const nae = await NAE.deploy();
+  const initialSupply = 1000000; // 1 million
+  const NAE = await ethers.getContractFactory("NAE_Token");
+  const nae = await NAE.deploy(initialSupply);
 
   await nae.waitForDeployment();
 
-  console.log("NAE Token deployed to:", await nae.getAddress());
+  const address = await nae.getAddress();
+  console.log("NAE Token deployed to:", address);
 }
 
 main()
