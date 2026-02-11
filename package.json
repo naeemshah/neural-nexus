@@ -12,8 +12,10 @@
     "build:website": "nx build website",
     "build:launchpad": "nx build launchpad",
     "build:ui": "nx build ui",
+    "build:unified": "nx build unified",
     "serve:website": "nx serve website",
-    "serve:launchpad": "nx serve launchpad"
+    "serve:launchpad": "nx serve launchpad",
+    "serve:unified": "nx serve unified"
   },
   "private": true,
   "devDependencies": {
