@@ -10,11 +10,17 @@
 - Backend services
 - Shared libraries
 
+**Requirements:**
+- Ensure proper file structure following NX best practices
+- Clear separation between apps and libs
+- Proper configuration for build, test, and deployment
+
 **Tasks:**
-- [ ] Initialize NX workspace
-- [ ] Configure project structure
+- [ ] Initialize NX workspace with proper structure
+- [ ] Configure project structure with clear separation
 - [ ] Set up build pipelines
 - [ ] Configure testing frameworks
+- [ ] Ensure all files are in proper directories
 
 ## 2. Rewrite Website in React
 **Priority:** High  
