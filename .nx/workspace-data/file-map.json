@@ -34,279 +34,6 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "unified": [
-        {
-          "file": "apps/unified/index.html",
-          "hash": "2072450701644422006"
-        },
-        {
-          "file": "apps/unified/package.json",
-          "hash": "18304369293744854579"
-        },
-        {
-          "file": "apps/unified/project.json",
-          "hash": "6911223629934651274"
-        },
-        {
-          "file": "apps/unified/src/app/app.tsx",
-          "hash": "13850556788685856103",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/Dashboard.tsx",
-          "hash": "17452433817429888401",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/Footer.tsx",
-          "hash": "2581930839235542812",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/Founder.tsx",
-          "hash": "7438591418239864015",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/Hero.tsx",
-          "hash": "3856664878029364130",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/LaunchpadContent.tsx",
-          "hash": "8224453975491233475",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/LaunchpadDashboard.tsx",
-          "hash": "11984435126309190986",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/Litepaper.tsx",
-          "hash": "14823320540316449796",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/Navigation.tsx",
-          "hash": "6999175694627372739",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/Roadmap.tsx",
-          "hash": "15405676299588977508",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/Tokenomics.tsx",
-          "hash": "13262167196509708179",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/components/WebsiteContent.tsx",
-          "hash": "1002424418375171658",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/context/WalletContext.tsx",
-          "hash": "17397330847226961764",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/unified/src/main.tsx",
-          "hash": "4565563966996085829",
-          "deps": [
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "apps/unified/tsconfig.app.json",
-          "hash": "16934318557528033754"
-        },
-        {
-          "file": "apps/unified/tsconfig.json",
-          "hash": "8555148234875497851"
-        },
-        {
-          "file": "apps/unified/vite.config.mts",
-          "hash": "11408307701306946053",
-          "deps": [
-            "npm:vite",
-            "npm:@vitejs/plugin-react"
-          ]
-        }
-      ],
-      "crypto": [
-        {
-          "file": "crypto/.env.example",
-          "hash": "17184071022434362995"
-        },
-        {
-          "file": "crypto/.gitignore",
-          "hash": "7488858766873880013"
-        },
-        {
-          "file": "crypto/DEPLOYMENT_README.md",
-          "hash": "11095497182029906485"
-        },
-        {
-          "file": "crypto/DEPLOYMENT_SUMMARY.md",
-          "hash": "102496399751098475"
-        },
-        {
-          "file": "crypto/ENHANCED_DEPLOYMENT_SUMMARY.md",
-          "hash": "6530891333218608778"
-        },
-        {
-          "file": "crypto/IMPLEMENTATION_PLAN.md",
-          "hash": "1751461582546444169"
-        },
-        {
-          "file": "crypto/PROFESSIONAL_DEPLOYMENT_PIPELINE.md",
-          "hash": "7489645005428519703"
-        },
-        {
-          "file": "crypto/README.md",
-          "hash": "14666905394156142229"
-        },
-        {
-          "file": "crypto/README_DEPLOYMENT.md",
-          "hash": "11816706958462082891"
-        },
-        {
-          "file": "crypto/SECURE_DEPLOYMENT_GUIDE.md",
-          "hash": "4493611952284473661"
-        },
-        {
-          "file": "crypto/contracts/NAE_Token.sol",
-          "hash": "12379906722577831799"
-        },
-        {
-          "file": "crypto/foundry.toml",
-          "hash": "6720239761127762301"
-        },
-        {
-          "file": "crypto/hardhat.config.js",
-          "hash": "12911699082617292647",
-          "deps": [
-            "npm:@nomicfoundation/hardhat-toolbox",
-            "npm:dotenv@17.2.4"
-          ]
-        },
-        {
-          "file": "crypto/manual_security_check.js",
-          "hash": "18068563563104733184"
-        },
-        {
-          "file": "crypto/monitor-deployment.sh",
-          "hash": "6936231934548492813"
-        },
-        {
-          "file": "crypto/package.json",
-          "hash": "14399713707588876508",
-          "deps": [
-            "npm:@nomicfoundation/hardhat-toolbox",
-            "npm:@openzeppelin/contracts",
-            "npm:hardhat",
-            "npm:openzeppelin-solidity",
-            "npm:chalk@5.6.2",
-            "npm:dotenv@17.2.4",
-            "npm:ethereum-cryptography@2.2.1",
-            "npm:p-map@7.0.4",
-            "npm:ws@8.19.0"
-          ]
-        },
-        {
-          "file": "crypto/scripts/deploy-sepolia.js",
-          "hash": "9737600946008432518",
-          "deps": [
-            "npm:hardhat",
-            "npm:chalk@5.6.2"
-          ]
-        },
-        {
-          "file": "crypto/scripts/deploy.js",
-          "hash": "2288459267881170911",
-          "deps": [
-            "npm:hardhat"
-          ]
-        },
-        {
-          "file": "crypto/scripts/evaluate-streme.js",
-          "hash": "10034969474733958604",
-          "deps": [
-            "npm:chalk@5.6.2"
-          ]
-        },
-        {
-          "file": "crypto/scripts/security-audit.js",
-          "hash": "14789334930576270731",
-          "deps": [
-            "npm:chalk@5.6.2"
-          ]
-        },
-        {
-          "file": "crypto/scripts/test-deployment.js",
-          "hash": "14717232648443055430",
-          "deps": [
-            "npm:hardhat"
-          ]
-        },
-        {
-          "file": "crypto/scripts/update-jira.js",
-          "hash": "13650932111715388515",
-          "deps": [
-            "npm:chalk@5.6.2"
-          ]
-        },
-        {
-          "file": "crypto/test/NAE_Token.js",
-          "hash": "6962994865076064938",
-          "deps": [
-            "npm:chai",
-            "npm:hardhat"
-          ]
-        },
-        {
-          "file": "crypto/test/NAE_Token.t.sol",
-          "hash": "10427961423701145538"
-        },
-        {
-          "file": "crypto/test/NAE_Token.test.js",
-          "hash": "13933655554147132776",
-          "deps": [
-            "npm:chai",
-            "npm:hardhat"
-          ]
-        }
-      ],
       "launchpad": [
         {
           "file": "apps/launchpad/dist/assets/index-5zh6tFas.js",
@@ -537,6 +264,146 @@
           ]
         }
       ],
+      "unified": [
+        {
+          "file": "apps/unified/index.html",
+          "hash": "9655029805545296988"
+        },
+        {
+          "file": "apps/unified/package.json",
+          "hash": "18304369293744854579"
+        },
+        {
+          "file": "apps/unified/project.json",
+          "hash": "6911223629934651274"
+        },
+        {
+          "file": "apps/unified/src/app/app.tsx",
+          "hash": "2568418370791149311",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Dashboard.tsx",
+          "hash": "17452433817429888401",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Footer.tsx",
+          "hash": "2581930839235542812",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Founder.tsx",
+          "hash": "7438591418239864015",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Hero.tsx",
+          "hash": "1690348866451003238",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/LaunchpadContent.tsx",
+          "hash": "8224453975491233475",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/LaunchpadDashboard.tsx",
+          "hash": "11984435126309190986",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Litepaper.tsx",
+          "hash": "14823320540316449796",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/LoadingSpinner.tsx",
+          "hash": "5011913780459319240",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Navigation.tsx",
+          "hash": "6999175694627372739",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Roadmap.tsx",
+          "hash": "15405676299588977508",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Tokenomics.tsx",
+          "hash": "13262167196509708179",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/WebsiteContent.tsx",
+          "hash": "1002424418375171658",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/context/WalletContext.tsx",
+          "hash": "17397330847226961764",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/main.tsx",
+          "hash": "4565563966996085829",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/unified/tsconfig.app.json",
+          "hash": "16934318557528033754"
+        },
+        {
+          "file": "apps/unified/tsconfig.json",
+          "hash": "8555148234875497851"
+        },
+        {
+          "file": "apps/unified/tsconfig.tsbuildinfo",
+          "hash": "6383736697696147495"
+        },
+        {
+          "file": "apps/unified/vite.config.mts",
+          "hash": "11408307701306946053",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ],
       "ui": [
         {
           "file": "packages/ui/package.json",
@@ -575,6 +442,154 @@
           "file": "packages/ui/tsconfig.lib.json",
           "hash": "4481596079156568130"
         }
+      ],
+      "crypto": [
+        {
+          "file": "crypto/.env.example",
+          "hash": "17184071022434362995"
+        },
+        {
+          "file": "crypto/.gitignore",
+          "hash": "7488858766873880013"
+        },
+        {
+          "file": "crypto/DEPLOYMENT_README.md",
+          "hash": "11095497182029906485"
+        },
+        {
+          "file": "crypto/DEPLOYMENT_SUMMARY.md",
+          "hash": "102496399751098475"
+        },
+        {
+          "file": "crypto/ENHANCED_DEPLOYMENT_SUMMARY.md",
+          "hash": "6530891333218608778"
+        },
+        {
+          "file": "crypto/IMPLEMENTATION_PLAN.md",
+          "hash": "1751461582546444169"
+        },
+        {
+          "file": "crypto/PROFESSIONAL_DEPLOYMENT_PIPELINE.md",
+          "hash": "7489645005428519703"
+        },
+        {
+          "file": "crypto/README.md",
+          "hash": "14666905394156142229"
+        },
+        {
+          "file": "crypto/README_DEPLOYMENT.md",
+          "hash": "11816706958462082891"
+        },
+        {
+          "file": "crypto/SECURE_DEPLOYMENT_GUIDE.md",
+          "hash": "4493611952284473661"
+        },
+        {
+          "file": "crypto/contracts/NAE_Token.sol",
+          "hash": "12379906722577831799"
+        },
+        {
+          "file": "crypto/foundry.toml",
+          "hash": "6720239761127762301"
+        },
+        {
+          "file": "crypto/hardhat.config.js",
+          "hash": "12911699082617292647",
+          "deps": [
+            "npm:@nomicfoundation/hardhat-toolbox",
+            "npm:dotenv@17.2.4"
+          ]
+        },
+        {
+          "file": "crypto/manual_security_check.js",
+          "hash": "18068563563104733184"
+        },
+        {
+          "file": "crypto/monitor-deployment.sh",
+          "hash": "6936231934548492813"
+        },
+        {
+          "file": "crypto/package.json",
+          "hash": "14399713707588876508",
+          "deps": [
+            "npm:@nomicfoundation/hardhat-toolbox",
+            "npm:@openzeppelin/contracts",
+            "npm:hardhat",
+            "npm:openzeppelin-solidity",
+            "npm:chalk@5.6.2",
+            "npm:dotenv@17.2.4",
+            "npm:ethereum-cryptography@2.2.1",
+            "npm:p-map@7.0.4",
+            "npm:ws@8.19.0"
+          ]
+        },
+        {
+          "file": "crypto/scripts/deploy-sepolia.js",
+          "hash": "9737600946008432518",
+          "deps": [
+            "npm:hardhat",
+            "npm:chalk@5.6.2"
+          ]
+        },
+        {
+          "file": "crypto/scripts/deploy.js",
+          "hash": "2288459267881170911",
+          "deps": [
+            "npm:hardhat"
+          ]
+        },
+        {
+          "file": "crypto/scripts/evaluate-streme.js",
+          "hash": "10034969474733958604",
+          "deps": [
+            "npm:chalk@5.6.2"
+          ]
+        },
+        {
+          "file": "crypto/scripts/security-audit.js",
+          "hash": "14789334930576270731",
+          "deps": [
+            "npm:chalk@5.6.2"
+          ]
+        },
+        {
+          "file": "crypto/scripts/test-deployment.js",
+          "hash": "14717232648443055430",
+          "deps": [
+            "npm:hardhat"
+          ]
+        },
+        {
+          "file": "crypto/scripts/update-jira.js",
+          "hash": "13650932111715388515",
+          "deps": [
+            "npm:chalk@5.6.2"
+          ]
+        },
+        {
+          "file": "crypto/security_analysis.md",
+          "hash": "4146032919993208357"
+        },
+        {
+          "file": "crypto/test/NAE_Token.js",
+          "hash": "6962994865076064938",
+          "deps": [
+            "npm:chai",
+            "npm:hardhat"
+          ]
+        },
+        {
+          "file": "crypto/test/NAE_Token.t.sol",
+          "hash": "10427961423701145538"
+        },
+        {
+          "file": "crypto/test/NAE_Token.test.js",
+          "hash": "13933655554147132776",
+          "deps": [
+            "npm:chai",
+            "npm:hardhat"
+          ]
+        }
       ]
     },
     "nonProjectFiles": [
@@ -609,6 +624,10 @@
       {
         "file": "NEW_REQUIREMENTS.md",
         "hash": "7625379015968821379"
+      },
+      {
+        "file": "QA_REPORT_2026-02-11.md",
+        "hash": "14885219575058121674"
       },
       {
         "file": "README.md",
@@ -727,12 +746,12 @@
         "hash": "3176027650938005631"
       },
       {
-        "file": "dist/apps/unified/assets/index-BA4BpeiY.js",
-        "hash": "9522563743550402769"
+        "file": "dist/apps/unified/assets/index-BvPQ6sY1.js",
+        "hash": "13517216270571678995"
       },
       {
         "file": "dist/apps/unified/index.html",
-        "hash": "17313789582677087483"
+        "hash": "16362534713558419644"
       },
       {
         "file": "dist/apps/unified/package.json",
@@ -775,6 +794,14 @@
         "hash": "9305014108696404028"
       },
       {
+        "file": "marketing/IMMEDIATE-USER-ACTIONS.txt",
+        "hash": "9174694663096489846"
+      },
+      {
+        "file": "marketing/MARKETING-SUMMARY-OUTPUT.txt",
+        "hash": "17460272413311415611"
+      },
+      {
         "file": "marketing/blog-article-1.md",
         "hash": "14530678894505119406"
       },
@@ -791,6 +818,10 @@
         "hash": "13926534525120721729"
       },
       {
+        "file": "marketing/generate-pdf.js",
+        "hash": "17080913253503079218"
+      },
+      {
         "file": "marketing/implementation-plan.md",
         "hash": "14407609632404449522"
       },
@@ -799,8 +830,28 @@
         "hash": "2240629877653064244"
       },
       {
+        "file": "marketing/litepaper-pdf-simple.html",
+        "hash": "9015330537456625961"
+      },
+      {
+        "file": "marketing/litepaper-pdf-template.html",
+        "hash": "7376570034661441486"
+      },
+      {
         "file": "marketing/litepaper-v2-enhanced.md",
         "hash": "5676660606306949507"
+      },
+      {
+        "file": "marketing/litepaper-v2.0-PLACEHOLDER.pdf",
+        "hash": "8057511067197627667"
+      },
+      {
+        "file": "marketing/litepaper-v2.0-READY-FOR-PDF.txt",
+        "hash": "7781461086063563865"
+      },
+      {
+        "file": "marketing/litepaper-v2.0.html",
+        "hash": "9015330537456625961"
       },
       {
         "file": "marketing/litepaper.html",
@@ -811,20 +862,52 @@
         "hash": "2876103596487770963"
       },
       {
+        "file": "marketing/market-trends-report.md",
+        "hash": "16965556428885230630"
+      },
+      {
         "file": "marketing/market-trends-tracker.md",
         "hash": "7415164958503406370"
+      },
+      {
+        "file": "marketing/market-trends-update-2026-02-11.md",
+        "hash": "10848815079206254872"
+      },
+      {
+        "file": "marketing/marketing-agent-report-2026-02-11.md",
+        "hash": "8633560604456425789"
+      },
+      {
+        "file": "marketing/marketing-progress-2026-02-11-1727.txt",
+        "hash": "2844968610522402767"
       },
       {
         "file": "marketing/marketing-strategy.md",
         "hash": "803852603577062283"
       },
       {
+        "file": "marketing/marketing-summary-output.txt",
+        "hash": "14673946328445499230"
+      },
+      {
+        "file": "marketing/pdf-conversion-instructions.md",
+        "hash": "14813483279008790227"
+      },
+      {
         "file": "marketing/restart-summary.md",
         "hash": "9381924808210098380"
       },
       {
+        "file": "marketing/social-media-immediate-actions.md",
+        "hash": "6840290253936094918"
+      },
+      {
         "file": "marketing/social-media-plan.md",
-        "hash": "5480931491286909860"
+        "hash": "117863417909443951"
+      },
+      {
+        "file": "marketing/social-media-templates.md",
+        "hash": "15262739776077836628"
       },
       {
         "file": "monorepo_verification.md",
@@ -853,6 +936,10 @@
       {
         "file": "tailwind.config.js",
         "hash": "5754782747188112344"
+      },
+      {
+        "file": "test_mobile_responsive.html",
+        "hash": "4119586518608186501"
       },
       {
         "file": "tsconfig.base.json",
