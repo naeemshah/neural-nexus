@@ -5,21 +5,15 @@
   },
   "targetDefaults": {
     "build": {
-      "cache": true,
       "dependsOn": ["^build"],
-      "inputs": ["default", "^default"]
+      "outputs": ["{projectRoot}/dist"]
     },
     "test": {
-      "cache": true,
-      "inputs": ["default", "^default"]
+      "outputs": ["{projectRoot}/coverage"]
     }
   },
   "workspaceLayout": {
     "appsDir": "apps",
     "libsDir": "packages"
-  },
-  "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "sharedGlobals": []
   }
 }

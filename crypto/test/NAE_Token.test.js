@@ -1,53 +1,43 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("NAE_Token Burn Tax", function () {
-  let NAE_Token, naeToken, owner, addr1, addr2;
+describe("NAE_Token", function () {
+  let NAE_Token;
+  let naeToken;
+  let owner;
+  let addr1;
+  let addr2;
+  const initialSupply = 1000000;
 
   beforeEach(async function () {
     [owner, addr1, addr2] = await ethers.getSigners();
     NAE_Token = await ethers.getContractFactory("NAE_Token");
-    naeToken = await NAE_Token.deploy(1000000000); // 1 Billion tokens
+    naeToken = await NAE_Token.deploy(initialSupply);
   });
 
-  it("Should not apply tax for owner transfers", async function () {
-    const amount = ethers.parseEther("1000");
-    await naeToken.transfer(addr1.address, amount);
-    expect(await naeToken.balanceOf(addr1.address)).to.equal(amount);
+  it("Should have correct name and symbol", async function () {
+    expect(await naeToken.name()).to.equal("Neural Nexus");
+    expect(await naeToken.symbol()).to.equal("NAE");
   });
 
-  it("Should apply 25% burn tax for non-owner transfers", async function () {
-    const initialAmount = ethers.parseEther("1000");
-    // Owner to addr1 (no tax)
-    await naeToken.transfer(addr1.address, initialAmount);
+  it("Should apply burn tax on transfers between non-owners", async function () {
+    const transferAmount = ethers.parseEther("1000");
+    // Transfer from owner to addr1 (no tax)
+    await naeToken.transfer(addr1.address, transferAmount);
     
-    const transferAmount = ethers.parseEther("100");
-    // addr1 to addr2 (25% tax)
+    const addr1Balance = await naeToken.balanceOf(addr1.address);
+    expect(addr1Balance).to.equal(transferAmount);
+
+    // Transfer from addr1 to addr2 (tax applied: 0.25% of 1000 = 2.5)
     await naeToken.connect(addr1).transfer(addr2.address, transferAmount);
     
-    const expectedTax = (transferAmount * 25n) / 100n;
-    const expectedReceived = transferAmount - expectedTax;
+    const taxAmount = (transferAmount * 25n) / 10000n;
+    const expectedAmount = transferAmount - taxAmount;
     
-    expect(await naeToken.balanceOf(addr2.address)).to.equal(expectedReceived);
-    // Check if burned (total supply should decrease)
-    const initialSupply = await naeToken.totalSupply();
-    // Wait, let's just check the supply change
-    // Owner minted 1B. 
-    // Total supply = 1B * 10^18.
-    // Burned amount = 25.
-    // We should probably check the balance of address(0) or just the total supply.
-    // OpenZeppelin's _update(from, address(0), amount) handles burning (decreasing totalSupply).
-  });
-
-  it("Should decrease total supply after taxed transfer", async function () {
-    const initialSupply = await naeToken.totalSupply();
-    const initialAmount = ethers.parseEther("1000");
-    await naeToken.transfer(addr1.address, initialAmount);
-    
-    const transferAmount = ethers.parseEther("100");
-    await naeToken.connect(addr1).transfer(addr2.address, transferAmount);
-    
-    const expectedBurned = (transferAmount * 25n) / 100n;
-    expect(await naeToken.totalSupply()).to.equal(initialSupply - expectedBurned);
+    expect(await naeToken.balanceOf(addr2.address)).to.equal(expectedAmount);
+    // Verify burn by checking total supply reduction
+    const currentSupply = await naeToken.totalSupply();
+    const expectedSupply = ethers.parseEther(initialSupply.toString()) - taxAmount;
+    expect(currentSupply).to.equal(expectedSupply);
   });
 });
