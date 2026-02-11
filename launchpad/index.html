@@ -116,26 +116,26 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative pt-40 pb-20 px-6 overflow-hidden">
+    <header class="relative pt-32 sm:pt-40 pb-16 sm:pb-20 px-6 overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-emerald-cyber/10 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-5xl mx-auto text-center relative">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-cyber/10 border border-emerald-cyber/20 mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-cyber/10 border border-emerald-cyber/20 mb-6 sm:mb-8">
                 <span class="w-2 h-2 rounded-full bg-emerald-cyber animate-ping"></span>
-                <span class="text-[10px] font-mono font-bold text-emerald-cyber uppercase tracking-widest">Genesis Presale Coming Soon</span>
+                <span class="text-[9px] sm:text-[10px] font-mono font-bold text-emerald-cyber uppercase tracking-widest">Genesis Presale Coming Soon</span>
             </div>
-            <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-tight">
-                The Future of <br/>
+            <h1 class="text-4xl sm:text-5xl md:text-8xl font-bold mb-6 tracking-tight leading-[1.1]">
+                The Future of <br class="hidden sm:block"/>
                 <span class="text-emerald-cyber">Digital Scarcity</span>
             </h1>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p class="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
                 Empowering the next generation of decentralized finance through aggressive deflationary mechanics and transparent leadership.
             </p>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-                <a href="#tracker" class="w-full md:w-auto px-10 py-4 bg-emerald-cyber text-obsidian-deep rounded-xl hover:shadow-[0_0_20px_rgba(0,255,159,0.4)] transition-all font-bold uppercase tracking-widest text-sm">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#tracker" class="w-full sm:w-auto px-10 py-4 bg-emerald-cyber text-obsidian-deep rounded-xl hover:shadow-[0_0_20px_rgba(0,255,159,0.4)] transition-all font-bold uppercase tracking-widest text-sm">
                     Join Presale
                 </a>
-                <a href="/neural-nexus/website/index.html" class="w-full md:w-auto px-10 py-4 border border-emerald-cyber/30 rounded-xl hover:bg-emerald-cyber/5 transition-all text-emerald-cyber font-bold uppercase tracking-widest text-sm">
+                <a href="/neural-nexus/website/index.html" class="w-full sm:w-auto px-10 py-4 border border-emerald-cyber/30 rounded-xl hover:bg-emerald-cyber/5 transition-all text-emerald-cyber font-bold uppercase tracking-widest text-sm">
                     Back to Ecosystem
                 </a>
             </div>
@@ -143,24 +143,24 @@
     </header>
 
     <!-- Burn Tracker Section -->
-    <section id="tracker" class="py-24 px-6">
+    <section id="tracker" class="py-16 sm:py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="bg-obsidian-glass border-cyber rounded-3xl p-8 md:p-12 relative overflow-hidden burn-gradient">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="bg-obsidian-glass border-cyber rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden burn-gradient">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 text-center">
                     <div>
-                        <h3 class="text-gray-400 text-sm font-mono mb-2 uppercase tracking-widest">Live Burn Rate</h3>
-                        <p class="text-4xl font-bold text-emerald-cyber" id="burnRate">12,450.22 $NAE</p>
-                        <p class="text-xs text-gray-500 mt-2">PER HOUR</p>
+                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Live Burn Rate</h3>
+                        <p class="text-2xl sm:text-4xl font-bold text-emerald-cyber" id="burnRate">12,450.22 $NAE</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">PER HOUR</p>
                     </div>
-                    <div class="border-x border-white/5">
-                        <h3 class="text-gray-400 text-sm font-mono mb-2 uppercase tracking-widest">Total Burned</h3>
-                        <p class="text-4xl font-bold text-white"><span id="totalBurned">250,000,000</span> <span class="text-emerald-cyber text-lg">$NAE</span></p>
-                        <p class="text-xs text-gray-500 mt-2">25.00% OF SUPPLY</p>
+                    <div class="sm:border-x border-white/5">
+                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Total Burned</h3>
+                        <p class="text-2xl sm:text-4xl font-bold text-white"><span id="totalBurned">250,000,000</span> <span class="text-emerald-cyber text-lg">$NAE</span></p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">25.00% OF SUPPLY</p>
                     </div>
-                    <div>
-                        <h3 class="text-gray-400 text-sm font-mono mb-2 uppercase tracking-widest">Remaining Supply</h3>
-                        <p class="text-4xl font-bold text-white">750,000,000</p>
-                        <p class="text-xs text-gray-500 mt-2">FIXED CAP</p>
+                    <div class="sm:col-span-2 md:col-span-1">
+                        <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Remaining Supply</h3>
+                        <p class="text-2xl sm:text-4xl font-bold text-white">750,000,000</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 mt-2">FIXED CAP</p>
                     </div>
                 </div>
                 

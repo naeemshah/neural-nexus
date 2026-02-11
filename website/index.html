@@ -37,11 +37,15 @@
             scroll-behavior: smooth;
         }
 
-        /* Responsive Fixes */
+        /* Mobile Adjustments */
         @media (max-width: 640px) {
-            h1 { font-size: 2.5rem !important; }
-            .hero-stats { grid-template-cols: 1fr 1fr !important; gap: 1rem !important; }
+            h1 { font-size: 2.25rem !important; line-height: 1.1 !important; }
+            .hero-stats { grid-template-cols: 1fr 1fr !important; gap: 1rem !important; text-align: left; }
+            .section-padding { py-16 !important; }
         }
+
+        /* Prevent horizontal scroll on small devices */
+        * { max-width: 100vw; }
 
         /* Mobile Menu Overlay */
         #mobile-menu {
@@ -140,7 +144,7 @@
             
             <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400">
                 <a href="#tokenomics" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Tokenomics</a>
-                <a href="#litepaper" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Litepaper</a>
+                <a href="https://github.com/naeemshah/neural-nexus/blob/main/LITEPAPER.md" target="_blank" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Litepaper</a>
                 <a href="#dashboard" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Dashboard</a>
                 <a href="#founder" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Founder</a>
                 <a href="/neural-nexus/launchpad/index.html" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em] text-emerald-cyber">Launchpad</a>
@@ -159,7 +163,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-obsidian-deep/95 backdrop-blur-xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 text-center text-sm font-bold uppercase tracking-widest z-40">
             <a href="#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
-            <a href="#litepaper" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
+            <a href="https://github.com/naeemshah/neural-nexus/blob/main/LITEPAPER.md" target="_blank" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
             <a href="#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
             <a href="#founder" class="hover:text-emerald-cyber transition-colors">Founder</a>
             <a href="/neural-nexus/launchpad/index.html" class="text-emerald-cyber">Launchpad</a>
@@ -226,20 +230,20 @@
     </section>
 
     <!-- Tokenomics -->
-    <section id="tokenomics" class="py-32 px-6">
+    <section id="tokenomics" class="py-20 sm:py-32 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="grid md:grid-cols-2 gap-12 sm:gap-20 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-8 tracking-tight break-words">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 sm:mb-8 tracking-tight break-words">
                         Aggressive <br class="hidden sm:block"/>
                         <span class="text-emerald-cyber">Deflationary Engine</span>
                     </h2>
-                    <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                    <p class="text-gray-400 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed">
                         $NAE is designed with a singular focus: permanent supply reduction. Our architecture ensures that every milestone achieved by the Neural Nexus directly benefits the $NAE ecosystem.
                     </p>
                     
-                    <div class="space-y-6">
-                        <div class="glass-panel p-6 rounded-2xl cyber-border transition-all hover:bg-emerald-cyber/5">
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="glass-panel p-5 sm:p-6 rounded-2xl cyber-border transition-all hover:bg-emerald-cyber/5">
                             <div class="flex items-center gap-4 mb-3">
                                 <div class="w-10 h-10 rounded-lg bg-emerald-cyber/10 flex items-center justify-center text-emerald-cyber">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
