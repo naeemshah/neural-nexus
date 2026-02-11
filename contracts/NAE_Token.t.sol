@@ -26,27 +26,53 @@ contract NAETokenTest is Test {
         assertTrue(token.isEcosystemAddress(ecosystemAddr));
     }
 
-    function testEcosystemBurn() public {
+    function testEcosystemBurnOnTransferTo() public {
         uint256 transferAmount = 1000 * 10**18;
         uint256 expectedBurn = (transferAmount * 2500) / 10000;
         uint256 expectedTransfer = transferAmount - expectedBurn;
 
-        // Setup ecosystem address
         vm.prank(owner);
         token.setEcosystemAddress(ecosystemAddr, true);
 
-        // Transfer to user1 first (no tax)
         vm.prank(owner);
         token.transfer(user1, transferAmount);
-        assertEq(token.balanceOf(user1), transferAmount);
 
-        // Transfer from user1 to ecosystem address (tax applies)
         uint256 initialTotalSupply = token.totalSupply();
         vm.prank(user1);
         token.transfer(ecosystemAddr, transferAmount);
 
         assertEq(token.balanceOf(ecosystemAddr), expectedTransfer);
         assertEq(token.totalSupply(), initialTotalSupply - expectedBurn);
+    }
+
+    function testEcosystemBurnOnTransferFrom() public {
+        uint256 transferAmount = 1000 * 10**18;
+        uint256 expectedBurn = (transferAmount * 2500) / 10000;
+        uint256 expectedTransfer = transferAmount - expectedBurn;
+
+        vm.prank(owner);
+        token.setEcosystemAddress(ecosystemAddr, true);
+        
+        // Give ecosystem address some tokens
+        vm.prank(owner);
+        token.transfer(ecosystemAddr, transferAmount);
+        // Note: Transfer TO ecosystem addr burns, so ecosystemAddr gets expectedTransfer
+        uint256 balanceAfterTo = token.balanceOf(ecosystemAddr);
+        
+        uint256 initialTotalSupply = token.totalSupply();
+        vm.prank(ecosystemAddr);
+        token.transfer(user1, balanceAfterTo);
+
+        uint256 secondaryBurn = (balanceAfterTo * 2500) / 10000;
+        assertEq(token.balanceOf(user1), balanceAfterTo - secondaryBurn);
+        assertEq(token.totalSupply(), initialTotalSupply - secondaryBurn);
+    }
+
+    function testNoBurnOnStandardTransfer() public {
+        uint256 transferAmount = 1000 * 10**18;
+        vm.prank(owner);
+        token.transfer(user1, transferAmount);
+        assertEq(token.balanceOf(user1), transferAmount);
     }
 
     function testOnlyOwnerCanSetEcosystem() public {

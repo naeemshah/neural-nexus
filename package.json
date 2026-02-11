@@ -5,13 +5,23 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "contract:test": "forge test",
+    "contract:build": "forge build"
   },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
+  },
   "devDependencies": {
     "nx": "20.0.0",
     "@nx/workspace": "20.0.0",
-    "prettier": "^3.0.0"
-  }
+    "prettier": "^3.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*",
+    "contracts"
+  ]
 }
