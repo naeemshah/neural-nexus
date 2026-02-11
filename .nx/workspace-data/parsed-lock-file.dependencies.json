@@ -6601,7 +6601,7 @@
   },
   {
     "source": "npm:@tailwindcss/node",
-    "target": "npm:tailwindcss",
+    "target": "npm:tailwindcss@4.1.18",
     "type": "static"
   },
   {
@@ -6706,7 +6706,7 @@
   },
   {
     "source": "npm:@tailwindcss/postcss",
-    "target": "npm:tailwindcss",
+    "target": "npm:tailwindcss@4.1.18",
     "type": "static"
   },
   {
@@ -12795,6 +12795,21 @@
     "type": "static"
   },
   {
+    "source": "npm:mz",
+    "target": "npm:any-promise",
+    "type": "static"
+  },
+  {
+    "source": "npm:mz",
+    "target": "npm:object-assign",
+    "type": "static"
+  },
+  {
+    "source": "npm:mz",
+    "target": "npm:thenify-all",
+    "type": "static"
+  },
+  {
     "source": "npm:ndjson",
     "target": "npm:json-stringify-safe",
     "type": "static"
@@ -13620,6 +13635,56 @@
     "type": "static"
   },
   {
+    "source": "npm:postcss-import",
+    "target": "npm:postcss",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-import",
+    "target": "npm:postcss-value-parser",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-import",
+    "target": "npm:read-cache",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-import",
+    "target": "npm:resolve",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-js",
+    "target": "npm:postcss",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-js",
+    "target": "npm:camelcase-css",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-load-config",
+    "target": "npm:jiti",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-load-config",
+    "target": "npm:postcss",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-load-config",
+    "target": "npm:yaml",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-load-config",
+    "target": "npm:lilconfig",
+    "type": "static"
+  },
+  {
     "source": "npm:postcss-modules",
     "target": "npm:postcss",
     "type": "static"
@@ -13710,6 +13775,26 @@
     "type": "static"
   },
   {
+    "source": "npm:postcss-nested",
+    "target": "npm:postcss",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-nested",
+    "target": "npm:postcss-selector-parser@6.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-selector-parser@6.1.2",
+    "target": "npm:cssesc",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-selector-parser@6.1.2",
+    "target": "npm:util-deprecate",
+    "type": "static"
+  },
+  {
     "source": "npm:postcss-selector-parser",
     "target": "npm:cssesc",
     "type": "static"
@@ -13797,6 +13882,11 @@
   {
     "source": "npm:react-dom",
     "target": "npm:scheduler",
+    "type": "static"
+  },
+  {
+    "source": "npm:read-cache",
+    "target": "npm:pify@2.3.0",
     "type": "static"
   },
   {
@@ -14975,6 +15065,41 @@
     "type": "static"
   },
   {
+    "source": "npm:sucrase",
+    "target": "npm:@jridgewell/gen-mapping",
+    "type": "static"
+  },
+  {
+    "source": "npm:sucrase",
+    "target": "npm:commander@4.1.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:sucrase",
+    "target": "npm:lines-and-columns@1.2.4",
+    "type": "static"
+  },
+  {
+    "source": "npm:sucrase",
+    "target": "npm:mz",
+    "type": "static"
+  },
+  {
+    "source": "npm:sucrase",
+    "target": "npm:pirates",
+    "type": "static"
+  },
+  {
+    "source": "npm:sucrase",
+    "target": "npm:tinyglobby",
+    "type": "static"
+  },
+  {
+    "source": "npm:sucrase",
+    "target": "npm:ts-interface-checker",
+    "type": "static"
+  },
+  {
     "source": "npm:supports-color",
     "target": "npm:has-flag",
     "type": "static"
@@ -15062,6 +15187,196 @@
   {
     "source": "npm:table-layout",
     "target": "npm:wordwrapjs",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:@alloc/quick-lru",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:arg@5.0.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:chokidar@3.6.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:didyoumean",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:dlv",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:fast-glob",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:glob-parent@6.0.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:is-glob",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:jiti@1.21.7",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:lilconfig",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:micromatch",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:normalize-path",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:object-hash",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:picocolors",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:postcss",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:postcss-import",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:postcss-js",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:postcss-load-config",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:postcss-nested",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:postcss-selector-parser@6.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:resolve@1.22.11",
+    "type": "static"
+  },
+  {
+    "source": "npm:tailwindcss",
+    "target": "npm:sucrase",
+    "type": "static"
+  },
+  {
+    "source": "npm:chokidar@3.6.0",
+    "target": "npm:anymatch",
+    "type": "static"
+  },
+  {
+    "source": "npm:chokidar@3.6.0",
+    "target": "npm:braces",
+    "type": "static"
+  },
+  {
+    "source": "npm:chokidar@3.6.0",
+    "target": "npm:glob-parent",
+    "type": "static"
+  },
+  {
+    "source": "npm:chokidar@3.6.0",
+    "target": "npm:is-binary-path",
+    "type": "static"
+  },
+  {
+    "source": "npm:chokidar@3.6.0",
+    "target": "npm:is-glob",
+    "type": "static"
+  },
+  {
+    "source": "npm:chokidar@3.6.0",
+    "target": "npm:normalize-path",
+    "type": "static"
+  },
+  {
+    "source": "npm:chokidar@3.6.0",
+    "target": "npm:readdirp@3.6.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:chokidar@3.6.0",
+    "target": "npm:fsevents",
+    "type": "static"
+  },
+  {
+    "source": "npm:glob-parent",
+    "target": "npm:is-glob",
+    "type": "static"
+  },
+  {
+    "source": "npm:glob-parent@6.0.2",
+    "target": "npm:is-glob",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-selector-parser@6.1.2",
+    "target": "npm:cssesc",
+    "type": "static"
+  },
+  {
+    "source": "npm:postcss-selector-parser@6.1.2",
+    "target": "npm:util-deprecate",
+    "type": "static"
+  },
+  {
+    "source": "npm:readdirp@3.6.0",
+    "target": "npm:picomatch@2.3.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:resolve@1.22.11",
+    "target": "npm:is-core-module",
+    "type": "static"
+  },
+  {
+    "source": "npm:resolve@1.22.11",
+    "target": "npm:path-parse",
+    "type": "static"
+  },
+  {
+    "source": "npm:resolve@1.22.11",
+    "target": "npm:supports-preserve-symlinks-flag",
     "type": "static"
   },
   {
@@ -15242,6 +15557,16 @@
   {
     "source": "npm:minimatch@3.1.2",
     "target": "npm:brace-expansion@1.1.12",
+    "type": "static"
+  },
+  {
+    "source": "npm:thenify",
+    "target": "npm:any-promise",
+    "type": "static"
+  },
+  {
+    "source": "npm:thenify-all",
+    "target": "npm:thenify",
     "type": "static"
   },
   {

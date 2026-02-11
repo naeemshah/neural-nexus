@@ -1,0 +1,16 @@
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[33m[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+4  |  @tailwind utilities;
+5  |  
+6  |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;7...
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+7  |  
+8  |  @layer base {[39m
+[32m✓[39m 36 modules transformed.
+rendering chunks...
+computing gzip size...
+[2m../../dist/apps/website/[22m[32mindex.html                 [39m[1m[2m  0.48 kB[22m[1m[22m[2m │ gzip:  0.30 kB[22m
+[2m../../dist/apps/website/[22m[2massets/[22m[35mindex-BUnJNA0d.css  [39m[1m[2m 35.74 kB[22m[1m[22m[2m │ gzip:  6.50 kB[22m
+[2m../../dist/apps/website/[22m[2massets/[22m[36mindex-DqgFXTzi.js   [39m[1m[2m229.41 kB[22m[1m[22m[2m │ gzip: 67.71 kB[22m
+[32m✓ built in 1.99s[39m

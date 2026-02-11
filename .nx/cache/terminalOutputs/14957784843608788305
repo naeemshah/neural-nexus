@@ -1,0 +1,10 @@
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 15 modules transformed.
+[31m✗[39m Build failed in 758ms
+
+[7m[1m[31m NX [39m[22m[27m  [31m[31m[vite:css] [postcss] /data/.openclaw/workspace/neural-nexus/apps/website/src/styles.css:75:3: The `max-w-screen` class does not exist. If `max-w-screen` is a custom class, make sure it is defined within a `@layer` directive.[31m[39m
+
+file: [36m/data/.openclaw/workspace/neural-nexus/apps/website/src/styles.css:75:2[39m
+Pass --verbose to see the stacktrace.
+

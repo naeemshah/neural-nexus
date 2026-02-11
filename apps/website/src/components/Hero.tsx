@@ -22,7 +22,7 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 px-2">
-          <a href="/launchpad" className="w-full xs:w-auto px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 bg-emerald-cyber text-obsidian-deep rounded-lg sm:rounded-xl hover:shadow-[0_0_20px_rgba(0,255,159,0.4)] transition-all font-bold uppercase tracking-widest text-xs sm:text-sm text-center">
+          <a href="/launchpad" className="w-full xs:w-auto px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 bg-emerald-cyber text-black rounded-lg sm:rounded-xl hover:shadow-[0_0_20px_rgba(0,255,159,0.4)] transition-all font-bold uppercase tracking-widest text-xs sm:text-sm text-center">
             Go to Launchpad
           </a>
           <a href="#litepaper" className="w-full xs:w-auto px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 border border-emerald-cyber/30 rounded-lg sm:rounded-xl hover:bg-emerald-cyber/5 transition-all text-emerald-cyber font-bold uppercase tracking-widest text-xs sm:text-sm text-center">

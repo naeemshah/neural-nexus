@@ -1,0 +1,21 @@
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+Error: Cannot apply unknown utility class `bg-obsidian-deep`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    at onInvalidCandidate [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4mtailwindcss[24m/dist/lib.js:21:1314[90m)[39m
+    at Te [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4mtailwindcss[24m/dist/lib.js:16:36652[90m)[39m
+    at [90m/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4mtailwindcss[24m/dist/lib.js:21:355
+    at Rr [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4mtailwindcss[24m/dist/lib.js:3:1718[90m)[39m
+    at _ [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4mtailwindcss[24m/dist/lib.js:3:1377[90m)[39m
+    at $e [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4mtailwindcss[24m/dist/lib.js:21:172[90m)[39m
+    at un [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4mtailwindcss[24m/dist/lib.js:38:294[90m)[39m
+    at async cn [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4mtailwindcss[24m/dist/lib.js:38:631[90m)[39m
+    at async Xr [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4m@tailwindcss/node[24m/dist/index.js:10:3417[90m)[39m
+    at async I [90m(/data/.openclaw/workspace/neural-nexus/[39mnode_modules/[4m@tailwindcss/postcss[24m/dist/index.js:10:3977[90m)[39m
+[32m✓[39m 15 modules transformed.
+[31m✗[39m Build failed in 871ms
+
+[7m[1m[31m NX [39m[22m[27m  [31m[31m[vite:css] [postcss] tailwindcss: /data/.openclaw/workspace/neural-nexus/apps/website/src/styles.css:1:1: Cannot apply unknown utility class `bg-obsidian-deep`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive[31m[39m
+
+file: [36m/data/.openclaw/workspace/neural-nexus/apps/website/src/styles.css:1:0[39m
+Pass --verbose to see the stacktrace.
+

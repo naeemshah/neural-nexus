@@ -1,0 +1,10 @@
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 13 modules transformed.
+[31m✗[39m Build failed in 1.07s
+
+[7m[1m[31m NX [39m[22m[27m  [31m[31mCould not resolve "../components/Footer" from "apps/website/src/app/app.tsx"[31m[39m
+
+file: [36m/data/.openclaw/workspace/neural-nexus/apps/website/src/app/app.tsx[39m
+Pass --verbose to see the stacktrace.
+

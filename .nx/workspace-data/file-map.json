@@ -34,135 +34,126 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "ui": [
+      "launchpad": [
         {
-          "file": "packages/ui/package.json",
-          "hash": "17725253923978244668",
-          "deps": [
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:react",
-            "npm:react-dom"
-          ]
+          "file": "apps/launchpad/dist/assets/index-5zh6tFas.js",
+          "hash": "8132081853972767878"
         },
         {
-          "file": "packages/ui/project.json",
-          "hash": "11764587849024977316"
+          "file": "apps/launchpad/dist/assets/index-gOHmcgdC.css",
+          "hash": "14698085356398575847"
         },
         {
-          "file": "packages/ui/src/components/Button.tsx",
-          "hash": "11785867420283090310",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "packages/ui/src/components/index.ts",
-          "hash": "7319235952904313692"
-        },
-        {
-          "file": "packages/ui/src/index.ts",
-          "hash": "1303119947381699652"
-        },
-        {
-          "file": "packages/ui/tsconfig.json",
-          "hash": "15888353574876792831"
-        },
-        {
-          "file": "packages/ui/tsconfig.lib.json",
-          "hash": "4481596079156568130"
-        }
-      ],
-      "website": [
-        {
-          "file": "apps/website/index.html",
-          "hash": "13659816319766690989"
-        },
-        {
-          "file": "apps/website/index.html.backup",
-          "hash": "13659816319766690989"
-        },
-        {
-          "file": "apps/website/package.json",
-          "hash": "16379867364606647227"
-        },
-        {
-          "file": "apps/website/project.json",
-          "hash": "18245219435119387105"
-        },
-        {
-          "file": "apps/website/public/favicon.ico",
+          "file": "apps/launchpad/dist/favicon.ico",
           "hash": "9303420814833116677"
         },
         {
-          "file": "apps/website/src/app/app.module.css",
+          "file": "apps/launchpad/dist/index.html",
+          "hash": "4211022519816784757"
+        },
+        {
+          "file": "apps/launchpad/index.html",
+          "hash": "8608260812339919961"
+        },
+        {
+          "file": "apps/launchpad/package.json",
+          "hash": "3176027650938005631"
+        },
+        {
+          "file": "apps/launchpad/project.json",
+          "hash": "11963366486993551605"
+        },
+        {
+          "file": "apps/launchpad/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/launchpad/src/app/app.module.css",
           "hash": "8887387885984320532"
         },
         {
-          "file": "apps/website/src/app/app.tsx",
-          "hash": "18381543030862764349"
+          "file": "apps/launchpad/src/app/app.test.tsx",
+          "hash": "11149744551918586671",
+          "deps": [
+            "npm:vitest"
+          ]
         },
         {
-          "file": "apps/website/src/app/nx-welcome.tsx",
+          "file": "apps/launchpad/src/app/app.tsx",
+          "hash": "15285021634919014600"
+        },
+        {
+          "file": "apps/launchpad/src/app/nx-welcome.tsx",
           "hash": "1775940914884046162"
         },
         {
-          "file": "apps/website/src/assets/.gitkeep",
+          "file": "apps/launchpad/src/assets/.gitkeep",
           "hash": "3244421341483603138"
         },
         {
-          "file": "apps/website/src/components/Dashboard.tsx",
-          "hash": "16818190818941989867",
+          "file": "apps/launchpad/src/components/Footer.tsx",
+          "hash": "14437805438876231825"
+        },
+        {
+          "file": "apps/launchpad/src/components/Founder.tsx",
+          "hash": "1574179174703453065"
+        },
+        {
+          "file": "apps/launchpad/src/components/Hero.tsx",
+          "hash": "11194176436110975712"
+        },
+        {
+          "file": "apps/launchpad/src/components/LaunchpadDashboard.tsx",
+          "hash": "13957191571286243273",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "apps/website/src/components/Founder.tsx",
-          "hash": "14894437116291509650"
-        },
-        {
-          "file": "apps/website/src/components/Hero.tsx",
-          "hash": "2938277739333852488"
-        },
-        {
-          "file": "apps/website/src/components/Litepaper.tsx",
-          "hash": "15619404426622868182"
-        },
-        {
-          "file": "apps/website/src/components/Navigation.tsx",
-          "hash": "12330540407967666574",
+          "file": "apps/launchpad/src/components/Navigation.tsx",
+          "hash": "17552453458206840659",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "apps/website/src/components/Tokenomics.tsx",
-          "hash": "15578784627147385451"
+          "file": "apps/launchpad/src/components/Roadmap.tsx",
+          "hash": "16986631944619986675"
         },
         {
-          "file": "apps/website/src/main.tsx",
-          "hash": "7944529105552768481",
+          "file": "apps/launchpad/src/components/Tokenomics.tsx",
+          "hash": "14226937788612991090"
+        },
+        {
+          "file": "apps/launchpad/src/context/WalletContext.tsx",
+          "hash": "13181729237427574277",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/main.tsx",
+          "hash": "8890228936609297660",
           "deps": [
             "npm:react",
             "npm:react-dom"
           ]
         },
         {
-          "file": "apps/website/src/styles.css",
-          "hash": "1503552441219872295"
+          "file": "apps/launchpad/src/styles.css",
+          "hash": "7459279284553041775"
         },
         {
-          "file": "apps/website/tsconfig.app.json",
+          "file": "apps/launchpad/tsconfig.app.json",
           "hash": "12830358968167672754"
         },
         {
-          "file": "apps/website/tsconfig.json",
+          "file": "apps/launchpad/tsconfig.json",
           "hash": "1731869790938503978"
         },
         {
-          "file": "apps/website/vite.config.mts",
-          "hash": "10071300610008145038",
+          "file": "apps/launchpad/vite.config.mts",
+          "hash": "13312556737403092774",
           "deps": [
             "npm:vite",
             "npm:@vitejs/plugin-react"
@@ -289,6 +280,10 @@
           ]
         },
         {
+          "file": "crypto/security_analysis.md",
+          "hash": "9529549116303212211"
+        },
+        {
           "file": "crypto/test/NAE_Token.js",
           "hash": "6962994865076064938",
           "deps": [
@@ -309,119 +304,139 @@
           ]
         }
       ],
-      "launchpad": [
+      "ui": [
         {
-          "file": "apps/launchpad/dist/assets/index-5zh6tFas.js",
-          "hash": "8132081853972767878"
+          "file": "packages/ui/package.json",
+          "hash": "17725253923978244668",
+          "deps": [
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:react",
+            "npm:react-dom"
+          ]
         },
         {
-          "file": "apps/launchpad/dist/assets/index-gOHmcgdC.css",
-          "hash": "14698085356398575847"
+          "file": "packages/ui/project.json",
+          "hash": "11764587849024977316"
         },
         {
-          "file": "apps/launchpad/dist/favicon.ico",
+          "file": "packages/ui/src/components/Button.tsx",
+          "hash": "11785867420283090310",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/src/components/index.ts",
+          "hash": "7319235952904313692"
+        },
+        {
+          "file": "packages/ui/src/index.ts",
+          "hash": "1303119947381699652"
+        },
+        {
+          "file": "packages/ui/tsconfig.json",
+          "hash": "15888353574876792831"
+        },
+        {
+          "file": "packages/ui/tsconfig.lib.json",
+          "hash": "4481596079156568130"
+        }
+      ],
+      "website": [
+        {
+          "file": "apps/website/index.html",
+          "hash": "13659816319766690989"
+        },
+        {
+          "file": "apps/website/index.html.backup",
+          "hash": "13659816319766690989"
+        },
+        {
+          "file": "apps/website/package.json",
+          "hash": "16379867364606647227"
+        },
+        {
+          "file": "apps/website/project.json",
+          "hash": "18245219435119387105"
+        },
+        {
+          "file": "apps/website/public/favicon.ico",
           "hash": "9303420814833116677"
         },
         {
-          "file": "apps/launchpad/dist/index.html",
-          "hash": "4211022519816784757"
-        },
-        {
-          "file": "apps/launchpad/index.html",
-          "hash": "8608260812339919961"
-        },
-        {
-          "file": "apps/launchpad/package.json",
-          "hash": "3176027650938005631"
-        },
-        {
-          "file": "apps/launchpad/project.json",
-          "hash": "11963366486993551605"
-        },
-        {
-          "file": "apps/launchpad/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/launchpad/src/app/app.module.css",
+          "file": "apps/website/src/app/app.module.css",
           "hash": "8887387885984320532"
         },
         {
-          "file": "apps/launchpad/src/app/app.tsx",
-          "hash": "15285021634919014600"
+          "file": "apps/website/src/app/app.tsx",
+          "hash": "18381543030862764349"
         },
         {
-          "file": "apps/launchpad/src/app/nx-welcome.tsx",
+          "file": "apps/website/src/app/nx-welcome.tsx",
           "hash": "1775940914884046162"
         },
         {
-          "file": "apps/launchpad/src/assets/.gitkeep",
+          "file": "apps/website/src/assets/.gitkeep",
           "hash": "3244421341483603138"
         },
         {
-          "file": "apps/launchpad/src/components/Footer.tsx",
-          "hash": "14437805438876231825"
-        },
-        {
-          "file": "apps/launchpad/src/components/Founder.tsx",
-          "hash": "1574179174703453065"
-        },
-        {
-          "file": "apps/launchpad/src/components/Hero.tsx",
-          "hash": "11194176436110975712"
-        },
-        {
-          "file": "apps/launchpad/src/components/LaunchpadDashboard.tsx",
-          "hash": "13957191571286243273",
+          "file": "apps/website/src/components/Dashboard.tsx",
+          "hash": "16818190818941989867",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "apps/launchpad/src/components/Navigation.tsx",
-          "hash": "17552453458206840659",
+          "file": "apps/website/src/components/Footer.tsx",
+          "hash": "10990793677795530680"
+        },
+        {
+          "file": "apps/website/src/components/Founder.tsx",
+          "hash": "14894437116291509650"
+        },
+        {
+          "file": "apps/website/src/components/Hero.tsx",
+          "hash": "2011136167981413084"
+        },
+        {
+          "file": "apps/website/src/components/Litepaper.tsx",
+          "hash": "15619404426622868182"
+        },
+        {
+          "file": "apps/website/src/components/Navigation.tsx",
+          "hash": "2107592291298573444",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "apps/launchpad/src/components/Roadmap.tsx",
-          "hash": "16986631944619986675"
+          "file": "apps/website/src/components/Tokenomics.tsx",
+          "hash": "15578784627147385451"
         },
         {
-          "file": "apps/launchpad/src/components/Tokenomics.tsx",
-          "hash": "14226937788612991090"
-        },
-        {
-          "file": "apps/launchpad/src/context/WalletContext.tsx",
-          "hash": "13181729237427574277",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/launchpad/src/main.tsx",
-          "hash": "8890228936609297660",
+          "file": "apps/website/src/main.tsx",
+          "hash": "7944529105552768481",
           "deps": [
             "npm:react",
             "npm:react-dom"
           ]
         },
         {
-          "file": "apps/launchpad/src/styles.css",
-          "hash": "7459279284553041775"
+          "file": "apps/website/src/styles.css",
+          "hash": "16938834864594502685"
         },
         {
-          "file": "apps/launchpad/tsconfig.app.json",
+          "file": "apps/website/tsconfig.app.json",
           "hash": "12830358968167672754"
         },
         {
-          "file": "apps/launchpad/tsconfig.json",
+          "file": "apps/website/tsconfig.json",
           "hash": "1731869790938503978"
         },
         {
-          "file": "apps/launchpad/vite.config.mts",
-          "hash": "13312556737403092774",
+          "file": "apps/website/vite.config.mts",
+          "hash": "10071300610008145038",
           "deps": [
             "npm:vite",
             "npm:@vitejs/plugin-react"
@@ -559,6 +574,46 @@
         "hash": "2337451782531087087"
       },
       {
+        "file": "dist/apps/launchpad/assets/index-CT7UwRDU.css",
+        "hash": "975585195183474636"
+      },
+      {
+        "file": "dist/apps/launchpad/assets/index-bJdqVS3a.js",
+        "hash": "8132081853972767878"
+      },
+      {
+        "file": "dist/apps/launchpad/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": "dist/apps/launchpad/index.html",
+        "hash": "14343684333717812412"
+      },
+      {
+        "file": "dist/apps/launchpad/package.json",
+        "hash": "3176027650938005631"
+      },
+      {
+        "file": "dist/apps/website/assets/index-BNmG9qh1.js",
+        "hash": "13521759916753676142"
+      },
+      {
+        "file": "dist/apps/website/assets/index-CJghqEoL.css",
+        "hash": "14324032291556491363"
+      },
+      {
+        "file": "dist/apps/website/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": "dist/apps/website/index.html",
+        "hash": "734297044208455827"
+      },
+      {
+        "file": "dist/apps/website/package.json",
+        "hash": "16379867364606647227"
+      },
+      {
         "file": "game_tunnel.log",
         "hash": "15011331028065925829"
       },
@@ -595,6 +650,10 @@
         "hash": "13926534525120721729"
       },
       {
+        "file": "marketing/implementation-plan.md",
+        "hash": "14407609632404449522"
+      },
+      {
         "file": "marketing/litepaper-pdf-plan.md",
         "hash": "2240629877653064244"
       },
@@ -615,20 +674,24 @@
         "hash": "5480931491286909860"
       },
       {
+        "file": "monorepo_verification.md",
+        "hash": "10848169951607658505"
+      },
+      {
         "file": "nx.json",
         "hash": "1818281983959169981"
       },
       {
         "file": "package-lock.json",
-        "hash": "543527031656656280"
+        "hash": "16299290155759676095"
       },
       {
         "file": "package.json",
-        "hash": "8713567874546217480"
+        "hash": "16638247285832596328"
       },
       {
         "file": "postcss.config.js",
-        "hash": "17016897333719261072"
+        "hash": "17430255171421331363"
       },
       {
         "file": "server.log",
@@ -664,5 +727,5 @@
       }
     ]
   },
-  "externalNodesHash": "608035430455788925"
+  "externalNodesHash": "11250799819403040144"
 }
