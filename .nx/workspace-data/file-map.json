@@ -34,7 +34,115 @@
   ],
   "fileMap": {
     "projectFileMap": {
+      "launchpad": [
+        {
+          "file": "apps/launchpad/dist/assets/index-BLnD-kzz.css",
+          "hash": "6373250694712022429"
+        },
+        {
+          "file": "apps/launchpad/dist/assets/index-CspBhv8i.js",
+          "hash": "2578627035796476590"
+        },
+        {
+          "file": "apps/launchpad/dist/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/launchpad/dist/index.html",
+          "hash": "5620751456326438281"
+        },
+        {
+          "file": "apps/launchpad/index.html",
+          "hash": "8608260812339919961"
+        },
+        {
+          "file": "apps/launchpad/package.json",
+          "hash": "3176027650938005631"
+        },
+        {
+          "file": "apps/launchpad/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/launchpad/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/launchpad/src/app/app.tsx",
+          "hash": "17514779364019295185"
+        },
+        {
+          "file": "apps/launchpad/src/app/nx-welcome.tsx",
+          "hash": "1775940914884046162"
+        },
+        {
+          "file": "apps/launchpad/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/launchpad/src/components/Footer.tsx",
+          "hash": "14437805438876231825"
+        },
+        {
+          "file": "apps/launchpad/src/components/Founder.tsx",
+          "hash": "1574179174703453065"
+        },
+        {
+          "file": "apps/launchpad/src/components/Hero.tsx",
+          "hash": "13090540609102277594"
+        },
+        {
+          "file": "apps/launchpad/src/components/LaunchpadDashboard.tsx",
+          "hash": "6035776614554530896",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/components/Navigation.tsx",
+          "hash": "4476470192165351946",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/components/Tokenomics.tsx",
+          "hash": "17926218567239624623"
+        },
+        {
+          "file": "apps/launchpad/src/main.tsx",
+          "hash": "7944529105552768481",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/styles.css",
+          "hash": "12689548429227228684"
+        },
+        {
+          "file": "apps/launchpad/tsconfig.app.json",
+          "hash": "12830358968167672754"
+        },
+        {
+          "file": "apps/launchpad/tsconfig.json",
+          "hash": "1731869790938503978"
+        },
+        {
+          "file": "apps/launchpad/vite.config.mts",
+          "hash": "13312556737403092774",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ],
       "crypto": [
+        {
+          "file": "crypto/README.md",
+          "hash": "14666905394156142229"
+        },
         {
           "file": "crypto/artifacts/@openzeppelin/contracts/access/Ownable.sol/Ownable.dbg.json",
           "hash": "2296553604312228009"
@@ -177,114 +285,10 @@
         },
         {
           "file": "crypto/test/NAE_Token.test.js",
-          "hash": "6669850704980967154",
+          "hash": "13933655554147132776",
           "deps": [
             "npm:chai",
             "npm:hardhat"
-          ]
-        }
-      ],
-      "launchpad": [
-        {
-          "file": "apps/launchpad/dist/assets/index-BLnD-kzz.css",
-          "hash": "6373250694712022429"
-        },
-        {
-          "file": "apps/launchpad/dist/assets/index-CspBhv8i.js",
-          "hash": "2578627035796476590"
-        },
-        {
-          "file": "apps/launchpad/dist/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/launchpad/dist/index.html",
-          "hash": "5620751456326438281"
-        },
-        {
-          "file": "apps/launchpad/index.html",
-          "hash": "8608260812339919961"
-        },
-        {
-          "file": "apps/launchpad/package.json",
-          "hash": "3176027650938005631"
-        },
-        {
-          "file": "apps/launchpad/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/launchpad/src/app/app.module.css",
-          "hash": "8887387885984320532"
-        },
-        {
-          "file": "apps/launchpad/src/app/app.tsx",
-          "hash": "17514779364019295185"
-        },
-        {
-          "file": "apps/launchpad/src/app/nx-welcome.tsx",
-          "hash": "1775940914884046162"
-        },
-        {
-          "file": "apps/launchpad/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/launchpad/src/components/Footer.tsx",
-          "hash": "14437805438876231825"
-        },
-        {
-          "file": "apps/launchpad/src/components/Founder.tsx",
-          "hash": "1574179174703453065"
-        },
-        {
-          "file": "apps/launchpad/src/components/Hero.tsx",
-          "hash": "13090540609102277594"
-        },
-        {
-          "file": "apps/launchpad/src/components/LaunchpadDashboard.tsx",
-          "hash": "6035776614554530896",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/launchpad/src/components/Navigation.tsx",
-          "hash": "4476470192165351946",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/launchpad/src/components/Tokenomics.tsx",
-          "hash": "17926218567239624623"
-        },
-        {
-          "file": "apps/launchpad/src/main.tsx",
-          "hash": "7944529105552768481",
-          "deps": [
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "apps/launchpad/src/styles.css",
-          "hash": "12689548429227228684"
-        },
-        {
-          "file": "apps/launchpad/tsconfig.app.json",
-          "hash": "12830358968167672754"
-        },
-        {
-          "file": "apps/launchpad/tsconfig.json",
-          "hash": "1731869790938503978"
-        },
-        {
-          "file": "apps/launchpad/vite.config.mts",
-          "hash": "13312556737403092774",
-          "deps": [
-            "npm:vite",
-            "npm:@vitejs/plugin-react"
           ]
         }
       ]
@@ -441,6 +445,22 @@
       {
         "file": "local_status.html",
         "hash": "9305014108696404028"
+      },
+      {
+        "file": "marketing/blog-article-1.md",
+        "hash": "14530678894505119406"
+      },
+      {
+        "file": "marketing/litepaper-pdf-plan.md",
+        "hash": "2240629877653064244"
+      },
+      {
+        "file": "marketing/marketing-strategy.md",
+        "hash": "803852603577062283"
+      },
+      {
+        "file": "marketing/social-media-plan.md",
+        "hash": "5480931491286909860"
       },
       {
         "file": "nx.json",
