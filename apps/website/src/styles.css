@@ -7,13 +7,13 @@
 
 @layer base {
   body {
-    @apply bg-obsidian-deep text-gray-100 overflow-x-hidden scroll-smooth m-0 font-sans;
+    @apply bg-obsidian-deep text-gray-100 overflow-x-hidden scroll-smooth m-0 font-sans antialiased;
   }
 }
 
 @layer components {
   .cyber-glow {
-    @apply shadow-[0_0_15px_rgba(0,255,159,0.6)];
+    text-shadow: 0 0 15px rgba(0, 255, 159, 0.6);
   }
   
   .cyber-border {
@@ -24,12 +24,8 @@
     @apply border-emerald-cyber/50 shadow-[0_0_30px_rgba(0,255,159,0.1)];
   }
   
-  .bg-obsidian-glass {
-    @apply bg-obsidian-deep/80 backdrop-blur-xl;
-  }
-  
   .btn-cyber {
-    @apply bg-emerald-cyber text-obsidian-deep transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] font-bold uppercase tracking-wider relative overflow-hidden;
+    @apply bg-emerald-cyber text-obsidian-deep relative overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] font-bold uppercase tracking-wider;
   }
   
   .btn-cyber:hover {
@@ -46,6 +42,12 @@
   
   .glass-panel {
     @apply bg-obsidian-deep/60 backdrop-blur-xl border border-white/10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 255, 159, 0.15) 0%, rgba(11, 14, 20, 0) 70%);
   }
 }
 
@@ -54,9 +56,49 @@
   h1 { 
     @apply text-4xl !important leading-tight !important;
   }
+  
+  .hero-stats { 
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    text-align: left;
+  }
+  
+  .section-padding { 
+    @apply py-16 !important;
+  }
 }
 
 /* Prevent horizontal scroll */
 * { 
   @apply max-w-screen box-border;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s infinite;
+}
+
+.token-chart-bar {
+  transition: height 1s ease-out;
+}
+
+/* Mobile Menu Overlay */
+#mobile-menu {
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+}
+
+#mobile-menu.active {
+  transform: translateY(0);
+}
+
+@media (max-width: 375px) {
+  .glass-panel, .cyber-border {
+    @apply p-4 !important;
+  }
 }

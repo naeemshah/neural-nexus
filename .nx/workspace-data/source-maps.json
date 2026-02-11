@@ -1,8 +1,8 @@
 {
   "apps/launchpad": {
     "root": [
-      "apps/launchpad/package.json",
-      "nx/core/package-json"
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
     ],
     "targets": [
       "apps/launchpad/tsconfig.json",
@@ -77,136 +77,8 @@
       "@nx/js/typescript"
     ],
     "projectType": [
-      "apps/launchpad/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.build": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.options": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.cache": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.dependsOn": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.inputs": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.outputs": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.metadata": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.syncGenerators": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.executor": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.options.cwd": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.options.command": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.technologies": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.technologies.0": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.description": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.help": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.help.command": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.help.example": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.continuous": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.options": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.syncGenerators": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.executor": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.options.cwd": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.options.command": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.technologies": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.technologies.0": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.description": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.help": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.help.command": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.help.example": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.deprecated": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
     ],
     "targets.dev": [
       "apps/launchpad/vite.config.mts",
@@ -264,99 +136,7 @@
       "apps/launchpad/vite.config.mts",
       "@nx/vite/plugin"
     ],
-    "targets.preview": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.continuous": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.dependsOn": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.options": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.executor": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.options.cwd": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.options.command": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.technologies": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.technologies.0": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.description": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.help": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.help.command": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.help.example": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.continuous": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.executor": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.options": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.syncGenerators": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.options.buildTarget": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.options.spa": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
     "targets.typecheck.metadata.technologies.1": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build-deps": [
-      "apps/launchpad/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build-deps.dependsOn": [
       "apps/launchpad/vite.config.mts",
       "@nx/vite/plugin"
     ],
@@ -385,8 +165,8 @@
       "@nx/vite/plugin"
     ],
     "name": [
-      "apps/launchpad/package.json",
-      "nx/core/package-json"
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
     ],
     "tags": [
       "apps/launchpad/package.json",
@@ -416,15 +196,187 @@
       "apps/launchpad/package.json",
       "nx/core/package-json"
     ],
+    "$schema": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.scope:launchpad": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:app": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.mode": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.mode": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.port": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.hmr": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.hmr": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.executor": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.defaultConfiguration": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options.buildTarget": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.outputs": [
+      "apps/launchpad/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
     "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ]
   },
   "apps/website": {
     "root": [
-      "apps/website/package.json",
-      "nx/core/package-json"
+      "apps/website/project.json",
+      "nx/core/project-json"
     ],
     "targets": [
       "apps/website/tsconfig.json",
@@ -499,136 +451,8 @@
       "@nx/js/typescript"
     ],
     "projectType": [
-      "apps/website/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.build": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.options": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.cache": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.dependsOn": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.inputs": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.outputs": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.metadata": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.syncGenerators": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.executor": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.options.cwd": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.options.command": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.technologies": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.technologies.0": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.description": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.help": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.help.command": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build.metadata.help.example": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.continuous": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.options": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.syncGenerators": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.executor": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.options.cwd": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.options.command": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.technologies": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.technologies.0": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.description": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.help": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.help.command": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.help.example": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve.metadata.deprecated": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
+      "apps/website/project.json",
+      "nx/core/project-json"
     ],
     "targets.dev": [
       "apps/website/vite.config.mts",
@@ -686,99 +510,7 @@
       "apps/website/vite.config.mts",
       "@nx/vite/plugin"
     ],
-    "targets.preview": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.continuous": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.dependsOn": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.options": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.executor": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.options.cwd": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.options.command": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.technologies": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.technologies.0": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.description": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.help": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.help.command": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.preview.metadata.help.example": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.continuous": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.executor": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.options": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.syncGenerators": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.options.buildTarget": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.serve-static.options.spa": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
     "targets.typecheck.metadata.technologies.1": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build-deps": [
-      "apps/website/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.build-deps.dependsOn": [
       "apps/website/vite.config.mts",
       "@nx/vite/plugin"
     ],
@@ -807,8 +539,8 @@
       "@nx/vite/plugin"
     ],
     "name": [
-      "apps/website/package.json",
-      "nx/core/package-json"
+      "apps/website/project.json",
+      "nx/core/project-json"
     ],
     "tags": [
       "apps/website/package.json",
@@ -838,7 +570,405 @@
       "apps/website/package.json",
       "nx/core/package-json"
     ],
+    "$schema": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.scope:website": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:app": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.mode": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.mode": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.port": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.hmr": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.hmr": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.executor": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.defaultConfiguration": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options.buildTarget": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.outputs": [
+      "apps/website/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
     "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "packages/ui": {
+    "root": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "packages/ui/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps": [
+      "packages/ui/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.continuous": [
+      "packages/ui/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "packages/ui/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.executor": [
+      "packages/ui/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.options": [
+      "packages/ui/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.options.command": [
+      "packages/ui/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "name": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "packages/ui/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "packages/ui/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/ui/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/ui/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/ui/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "packages/ui/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "packages/ui/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/ui/package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.scope:shared": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:ui": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.entry": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.outputs": [
+      "packages/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ]
@@ -881,6 +1011,34 @@
       "nx/core/package-json"
     ],
     "metadata.targetGroups.NPM Scripts.3": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.4": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.5": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.6": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.7": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.8": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.9": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.10": [
       "crypto/package.json",
       "nx/core/package-json"
     ],
@@ -1021,6 +1179,202 @@
       "nx/core/package-json"
     ],
     "targets.deploy:mainnet.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.verify": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.verify.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.verify.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.verify.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.verify.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.verify.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.verify.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:deploy": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:deploy.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:deploy.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:deploy.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:deploy.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:deploy.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test:deploy.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.jira:update": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.jira:update.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.jira:update.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.jira:update.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.jira:update.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.jira:update.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.jira:update.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.security:audit": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.security:audit.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.security:audit.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.security:audit.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.security:audit.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.security:audit.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.security:audit.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.evaluate:streme": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.evaluate:streme.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.evaluate:streme.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.evaluate:streme.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.evaluate:streme.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.evaluate:streme.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.evaluate:streme.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:full": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:full.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:full.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:full.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:full.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:full.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy:full.metadata.runCommand": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.professional:assessment": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.professional:assessment.executor": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.professional:assessment.options": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.professional:assessment.metadata": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.professional:assessment.options.script": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.professional:assessment.metadata.scriptContent": [
+      "crypto/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.professional:assessment.metadata.runCommand": [
       "crypto/package.json",
       "nx/core/package-json"
     ],
