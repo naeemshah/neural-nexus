@@ -1,90 +1,35 @@
-# Jira Integration Plan - Neural Nexus
+# JIRA_INTEGRATION_PLAN.md
 
-## Overview
-Set up Jira integration to migrate all tasks from current boards to actual Jira for professional project management.
+## Integration Details
+- **Jira URL:** https://naeemshah45-1770775258900.atlassian.net
+- **Project Key:** NN
+- **Project ID:** 10001
+- **Auth:** naeemshah45@gmail.com (using stored API token)
 
-## Current Status
-- **Current Boards:** jira_board.html, agile_board.html, team_dashboard.html
-- **Jira Status:** Not yet set up (requires user setup)
-- **Assistant PM:** Created to manage integration
-- **Main PM:** Will coordinate and verify
+## Mapping Table (Local -> Jira)
 
-## Tasks to Migrate to Jira
+| Local Task | Jira Key | Status | Assignee |
+|------------|----------|--------|----------|
+| Monorepo (NX) | NN-1 | To Do | DEV |
+| React Rewrite | NN-2 | To Do | FE |
+| Contract Unit Tests | NN-3 | To Do | QA |
+| Litepaper PDF | NN-4 | To Do | MKT |
+| Social Media Setup | NN-5 | To Do | MKT |
+| Dev Toolchain Setup | NN-6 | In Progress | DEV |
+| Website Mobile Polish | NN-7 | In Progress | FE |
+| Project Coordination | NN-8 | In Progress | PM |
+| QA Testing | NN-9 | To Do (Blocked) | QA |
+| Base Testnet Deployment | NN-10 | To Do (Blocked) | DEV |
+| Project Dashboard | NN-11 | Done | PM |
+| Contract Compliance | NN-12 | Done | DEV |
+| 24/7 Work System | NN-13 | Done | PM |
 
-### 1. High Priority Tasks
-- **NX Monorepo Setup** (Backend Dev)
-- **React Website Rewrite** (Frontend Dev)  
-- **Dev Toolchain Initialization** (Backend Dev)
-- **Contract Unit Tests** (QA)
-- **Litepaper v2 PDF** (Marketing)
-- **Social Media Activation** (Marketing)
+## Sync Process
+- Runs every 1h via cron job.
+- Pulls current state from `neural-nexus/jira_board.html`.
+- Updates Jira issues via REST API.
+- Logs mapping in this file.
 
-### 2. In Progress Tasks
-- **Website Mobile Polish** (Frontend Dev)
-- **Project Coordination** (PM)
-- **Infrastructure Monitoring** (Infrastructure)
-
-### 3. Blocked Tasks
-- **QA Testing** (Blocked by dev toolchain)
-- **Base Testnet Deployment** (Blocked by toolchain)
-
-### 4. Completed Tasks
-- **Project Dashboard Init** (PM)
-- **Repo & Contract Review** (PM/Dev)
-- **Contract Compliance Review** (Dev)
-- **24/7 Work System** (PM)
-
-## Jira Setup Requirements (User Action Needed)
-
-### 1. Jira Instance Setup
-- [ ] Create Jira account/project
-- [ ] Set up project: "Neural Nexus"
-- [ ] Configure workflows (To Do, In Progress, Blocked, Done)
-- [ ] Set up user accounts for teams
-
-### 2. API Access
-- [ ] Generate API token
-- [ ] Configure webhooks (optional)
-- [ ] Set up integration credentials
-
-### 3. Board Configuration
-- [ ] Create Scrum/Kanban board
-- [ ] Set up columns matching current workflow
-- [ ] Configure issue types (Task, Bug, Story, Epic)
-
-## Assistant PM Responsibilities
-
-### 1. Task Migration
-- Extract tasks from HTML boards
-- Create corresponding Jira issues
-- Add proper descriptions, comments, assignees
-- Set status, priority, estimates
-
-### 2. Synchronization
-- Keep Jira in sync with our boards
-- Update status changes
-- Add comments for progress
-- Track time estimates
-
-### 3. Reporting
-- Report integration status to PM
-- Alert about sync issues
-- Provide migration progress
-
-## PM Coordination
-- Main PM will verify Jira updates
-- Ensure descriptions/comments are proper
-- Coordinate between teams and Jira
-- Handle any integration conflicts
-
-## Next Steps
-1. **User:** Set up Jira instance and provide API access
-2. **Assistant PM:** Begin task migration when Jira is ready
-3. **Main PM:** Verify migration quality
-4. **Teams:** Start using Jira for task tracking
-
-## Current Workaround
-Until Jira is set up, Assistant PM will:
-- Maintain task list ready for migration
-- Ensure all tasks have proper documentation
-- Prepare for seamless migration when Jira is available
+## Last Sync
+- **Timestamp:** 2026-02-11 02:30 UTC
+- **Result:** Initial bulk upload completed. 13 issues created and status-synced.

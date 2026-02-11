@@ -20,11 +20,11 @@ Neural Nexus is an AI-driven crypto ecosystem centered around the $NAE token on 
 - [x] Smart Contract Compliance Review (dev) - Reviewed 2026-02-09. 
     - *Technical Assessment:* 1B Fixed supply, 25% Burn on ecosystem transfers via `_update`. 
     - *Observations:* Owner-controlled `isEcosystemAddress` mapping triggers tax. Burn reduces supply permanently. Compliant with project specs for Base.
-- [ ] Setup Development Toolchain (dev) - Foundry or Hardhat for Base deployment.
+- [ ] Setup Development Toolchain (dev) - Integrating with NX Monorepo.
 - [ ] Contract Unit Testing - focused on burn tax (qa)
 - [x] Litepaper Draft v1 (marketing) [See NAE_Litepaper_v1.md in marketing workstation]
-- [ ] Monorepo Setup (NX) (dev) - High Priority [NEW]
-- [ ] React Website Rewrite (frontend) - High Priority [NEW]
+- [ ] Monorepo Setup (NX) (dev) - High Priority [IN PROGRESS]
+- [ ] React Website Rewrite (frontend) - High Priority [IN PROGRESS - Planning]
 
 ## Phase 2: Refinement & Testing
 - [ ] Integration of launchpad UI with $NAE branding (dev/marketing)
