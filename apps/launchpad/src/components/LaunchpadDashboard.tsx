@@ -62,8 +62,15 @@ const LaunchpadDashboard = () => {
       // Mock contribution - in real implementation, this would interact with the smart contract
       console.log(`Contributing ${amount} ETH from ${address}`);
       
-      // Simulate blockchain transaction
+      // Simulate blockchain transaction with better UX
       await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Simulate 10% chance of failure for demo purposes
+      const shouldFail = Math.random() < 0.1;
+      
+      if (shouldFail) {
+        throw new Error('Transaction failed: Insufficient gas or network congestion');
+      }
       
       setContributionSuccess(true);
       setTimeout(() => setContributionSuccess(false), 5000);
@@ -72,9 +79,28 @@ const LaunchpadDashboard = () => {
       setTotalRaised(prev => Math.min(PRESALE_TARGET, prev + amount));
       setContributorCount(prev => prev + 1);
       
+      // Show success notification
+      const successEvent = new CustomEvent('notification', {
+        detail: {
+          type: 'success',
+          message: `Successfully contributed ${amount} ETH!`,
+          duration: 5000
+        }
+      });
+      window.dispatchEvent(successEvent);
+      
     } catch (error) {
       console.error('Contribution failed:', error);
-      alert('Contribution failed. Please try again.');
+      
+      // Show error notification
+      const errorEvent = new CustomEvent('notification', {
+        detail: {
+          type: 'error',
+          message: error instanceof Error ? error.message : 'Contribution failed. Please try again.',
+          duration: 5000
+        }
+      });
+      window.dispatchEvent(errorEvent);
     } finally {
       setIsContributing(false);
     }
