@@ -34,6 +34,154 @@
   ],
   "fileMap": {
     "projectFileMap": {
+      "crypto": [
+        {
+          "file": "crypto/.env.example",
+          "hash": "17184071022434362995"
+        },
+        {
+          "file": "crypto/.gitignore",
+          "hash": "7488858766873880013"
+        },
+        {
+          "file": "crypto/DEPLOYMENT_README.md",
+          "hash": "11095497182029906485"
+        },
+        {
+          "file": "crypto/DEPLOYMENT_SUMMARY.md",
+          "hash": "102496399751098475"
+        },
+        {
+          "file": "crypto/ENHANCED_DEPLOYMENT_SUMMARY.md",
+          "hash": "6530891333218608778"
+        },
+        {
+          "file": "crypto/IMPLEMENTATION_PLAN.md",
+          "hash": "1751461582546444169"
+        },
+        {
+          "file": "crypto/PROFESSIONAL_DEPLOYMENT_PIPELINE.md",
+          "hash": "7489645005428519703"
+        },
+        {
+          "file": "crypto/README.md",
+          "hash": "14666905394156142229"
+        },
+        {
+          "file": "crypto/README_DEPLOYMENT.md",
+          "hash": "11816706958462082891"
+        },
+        {
+          "file": "crypto/SECURE_DEPLOYMENT_GUIDE.md",
+          "hash": "4493611952284473661"
+        },
+        {
+          "file": "crypto/contracts/NAE_Token.sol",
+          "hash": "12379906722577831799"
+        },
+        {
+          "file": "crypto/foundry.toml",
+          "hash": "6720239761127762301"
+        },
+        {
+          "file": "crypto/hardhat.config.js",
+          "hash": "12911699082617292647",
+          "deps": [
+            "npm:@nomicfoundation/hardhat-toolbox",
+            "npm:dotenv@17.2.4"
+          ]
+        },
+        {
+          "file": "crypto/manual_security_check.js",
+          "hash": "18068563563104733184"
+        },
+        {
+          "file": "crypto/monitor-deployment.sh",
+          "hash": "6936231934548492813"
+        },
+        {
+          "file": "crypto/package.json",
+          "hash": "14399713707588876508",
+          "deps": [
+            "npm:@nomicfoundation/hardhat-toolbox",
+            "npm:@openzeppelin/contracts",
+            "npm:hardhat",
+            "npm:openzeppelin-solidity",
+            "npm:chalk@5.6.2",
+            "npm:dotenv@17.2.4",
+            "npm:ethereum-cryptography@2.2.1",
+            "npm:p-map@7.0.4",
+            "npm:ws@8.19.0"
+          ]
+        },
+        {
+          "file": "crypto/scripts/deploy-sepolia.js",
+          "hash": "9737600946008432518",
+          "deps": [
+            "npm:hardhat",
+            "npm:chalk@5.6.2"
+          ]
+        },
+        {
+          "file": "crypto/scripts/deploy.js",
+          "hash": "2288459267881170911",
+          "deps": [
+            "npm:hardhat"
+          ]
+        },
+        {
+          "file": "crypto/scripts/evaluate-streme.js",
+          "hash": "10034969474733958604",
+          "deps": [
+            "npm:chalk@5.6.2"
+          ]
+        },
+        {
+          "file": "crypto/scripts/security-audit.js",
+          "hash": "14789334930576270731",
+          "deps": [
+            "npm:chalk@5.6.2"
+          ]
+        },
+        {
+          "file": "crypto/scripts/test-deployment.js",
+          "hash": "14717232648443055430",
+          "deps": [
+            "npm:hardhat"
+          ]
+        },
+        {
+          "file": "crypto/scripts/update-jira.js",
+          "hash": "13650932111715388515",
+          "deps": [
+            "npm:chalk@5.6.2"
+          ]
+        },
+        {
+          "file": "crypto/security_analysis.md",
+          "hash": "4146032919993208357"
+        },
+        {
+          "file": "crypto/test/NAE_Token.js",
+          "hash": "6962994865076064938",
+          "deps": [
+            "npm:chai",
+            "npm:hardhat"
+          ]
+        },
+        {
+          "file": "crypto/test/NAE_Token.t.sol",
+          "hash": "10427961423701145538"
+        },
+        {
+          "file": "crypto/test/NAE_Token.test.js",
+          "hash": "13933655554147132776",
+          "deps": [
+            "npm:chai",
+            "npm:hardhat"
+          ]
+        }
+      ],
       "launchpad": [
         {
           "file": "apps/launchpad/dist/assets/index-5zh6tFas.js",
@@ -279,7 +427,14 @@
         },
         {
           "file": "apps/unified/src/app/app.tsx",
-          "hash": "2568418370791149311",
+          "hash": "9300467975576268407",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Blog.tsx",
+          "hash": "12061456027486358059",
           "deps": [
             "npm:react"
           ]
@@ -342,7 +497,7 @@
         },
         {
           "file": "apps/unified/src/components/Navigation.tsx",
-          "hash": "6999175694627372739",
+          "hash": "16646394056051255038",
           "deps": [
             "npm:react"
           ]
@@ -441,154 +596,6 @@
         {
           "file": "packages/ui/tsconfig.lib.json",
           "hash": "4481596079156568130"
-        }
-      ],
-      "crypto": [
-        {
-          "file": "crypto/.env.example",
-          "hash": "17184071022434362995"
-        },
-        {
-          "file": "crypto/.gitignore",
-          "hash": "7488858766873880013"
-        },
-        {
-          "file": "crypto/DEPLOYMENT_README.md",
-          "hash": "11095497182029906485"
-        },
-        {
-          "file": "crypto/DEPLOYMENT_SUMMARY.md",
-          "hash": "102496399751098475"
-        },
-        {
-          "file": "crypto/ENHANCED_DEPLOYMENT_SUMMARY.md",
-          "hash": "6530891333218608778"
-        },
-        {
-          "file": "crypto/IMPLEMENTATION_PLAN.md",
-          "hash": "1751461582546444169"
-        },
-        {
-          "file": "crypto/PROFESSIONAL_DEPLOYMENT_PIPELINE.md",
-          "hash": "7489645005428519703"
-        },
-        {
-          "file": "crypto/README.md",
-          "hash": "14666905394156142229"
-        },
-        {
-          "file": "crypto/README_DEPLOYMENT.md",
-          "hash": "11816706958462082891"
-        },
-        {
-          "file": "crypto/SECURE_DEPLOYMENT_GUIDE.md",
-          "hash": "4493611952284473661"
-        },
-        {
-          "file": "crypto/contracts/NAE_Token.sol",
-          "hash": "12379906722577831799"
-        },
-        {
-          "file": "crypto/foundry.toml",
-          "hash": "6720239761127762301"
-        },
-        {
-          "file": "crypto/hardhat.config.js",
-          "hash": "12911699082617292647",
-          "deps": [
-            "npm:@nomicfoundation/hardhat-toolbox",
-            "npm:dotenv@17.2.4"
-          ]
-        },
-        {
-          "file": "crypto/manual_security_check.js",
-          "hash": "18068563563104733184"
-        },
-        {
-          "file": "crypto/monitor-deployment.sh",
-          "hash": "6936231934548492813"
-        },
-        {
-          "file": "crypto/package.json",
-          "hash": "14399713707588876508",
-          "deps": [
-            "npm:@nomicfoundation/hardhat-toolbox",
-            "npm:@openzeppelin/contracts",
-            "npm:hardhat",
-            "npm:openzeppelin-solidity",
-            "npm:chalk@5.6.2",
-            "npm:dotenv@17.2.4",
-            "npm:ethereum-cryptography@2.2.1",
-            "npm:p-map@7.0.4",
-            "npm:ws@8.19.0"
-          ]
-        },
-        {
-          "file": "crypto/scripts/deploy-sepolia.js",
-          "hash": "9737600946008432518",
-          "deps": [
-            "npm:hardhat",
-            "npm:chalk@5.6.2"
-          ]
-        },
-        {
-          "file": "crypto/scripts/deploy.js",
-          "hash": "2288459267881170911",
-          "deps": [
-            "npm:hardhat"
-          ]
-        },
-        {
-          "file": "crypto/scripts/evaluate-streme.js",
-          "hash": "10034969474733958604",
-          "deps": [
-            "npm:chalk@5.6.2"
-          ]
-        },
-        {
-          "file": "crypto/scripts/security-audit.js",
-          "hash": "14789334930576270731",
-          "deps": [
-            "npm:chalk@5.6.2"
-          ]
-        },
-        {
-          "file": "crypto/scripts/test-deployment.js",
-          "hash": "14717232648443055430",
-          "deps": [
-            "npm:hardhat"
-          ]
-        },
-        {
-          "file": "crypto/scripts/update-jira.js",
-          "hash": "13650932111715388515",
-          "deps": [
-            "npm:chalk@5.6.2"
-          ]
-        },
-        {
-          "file": "crypto/security_analysis.md",
-          "hash": "4146032919993208357"
-        },
-        {
-          "file": "crypto/test/NAE_Token.js",
-          "hash": "6962994865076064938",
-          "deps": [
-            "npm:chai",
-            "npm:hardhat"
-          ]
-        },
-        {
-          "file": "crypto/test/NAE_Token.t.sol",
-          "hash": "10427961423701145538"
-        },
-        {
-          "file": "crypto/test/NAE_Token.test.js",
-          "hash": "13933655554147132776",
-          "deps": [
-            "npm:chai",
-            "npm:hardhat"
-          ]
         }
       ]
     },

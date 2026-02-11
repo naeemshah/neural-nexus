@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface NavigationProps {
-  activeTab: 'website' | 'launchpad';
-  onTabChange: (tab: 'website' | 'launchpad') => void;
+  activeTab: 'website' | 'launchpad' | 'blog';
+  onTabChange: (tab: 'website' | 'launchpad' | 'blog') => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
           
           {/* Mobile menu toggle (simplified) */}
           <div className="sm:hidden text-xs text-gray-400">
-            {activeTab === 'website' ? '🌐' : '🚀'}
+            {activeTab === 'website' ? '🌐' : activeTab === 'launchpad' ? '🚀' : '📝'}
           </div>
         </div>
 
@@ -46,6 +46,17 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
           >
             <span className="sm:hidden">🚀 Buy</span>
             <span className="hidden sm:inline">🚀 Launchpad</span>
+          </button>
+          <button
+            onClick={() => onTabChange('blog')}
+            className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-lg font-medium transition-colors text-sm sm:text-base mobile-tap-target ${
+              activeTab === 'blog'
+                ? 'bg-purple-600 text-white'
+                : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+            }`}
+          >
+            <span className="sm:hidden">📝 Blog</span>
+            <span className="hidden sm:inline">📝 Blog</span>
           </button>
         </div>
 

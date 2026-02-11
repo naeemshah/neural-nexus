@@ -3,11 +3,12 @@ import { WalletProvider } from '../context/WalletContext';
 import Navigation from '../components/Navigation';
 import WebsiteContent from '../components/WebsiteContent';
 import LaunchpadContent from '../components/LaunchpadContent';
+import Blog from '../components/Blog';
 import Footer from '../components/Footer';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<'website' | 'launchpad'>('website');
+  const [activeTab, setActiveTab] = useState<'website' | 'launchpad' | 'blog'>('website');
   const [isLoading, setIsLoading] = useState(true);
 
   // Simulate initial loading
@@ -33,7 +34,9 @@ export function App() {
         <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
         
         <main className="flex-grow animate-fadeIn">
-          {activeTab === 'website' ? <WebsiteContent /> : <LaunchpadContent />}
+          {activeTab === 'website' ? <WebsiteContent /> : 
+           activeTab === 'launchpad' ? <LaunchpadContent /> : 
+           <Blog />}
         </main>
         
         <Footer />
