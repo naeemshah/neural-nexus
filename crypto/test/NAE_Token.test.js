@@ -7,7 +7,7 @@ describe("NAE_Token Burn Tax", function () {
   beforeEach(async function () {
     [owner, addr1, addr2] = await ethers.getSigners();
     NAE_Token = await ethers.getContractFactory("NAE_Token");
-    naeToken = await NAE_Token.deploy();
+    naeToken = await NAE_Token.deploy(1000000000); // 1 Billion tokens
   });
 
   it("Should not apply tax for owner transfers", async function () {

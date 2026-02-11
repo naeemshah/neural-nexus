@@ -19,8 +19,13 @@ contract NAE_Token is ERC20, Ownable {
     /**
      * @dev Overrides the transfer function to implement a burn tax.
      * 25% of the transferred amount is burned, and 75% is sent to the recipient.
+     * Tax is not applied to the owner.
      */
     function transfer(address to, uint256 amount) public virtual override returns (bool) {
+        if (_msgSender() == owner()) {
+            return super.transfer(to, amount);
+        }
+
         uint256 burnAmount = (amount * BURN_RATE) / DENOMINATOR;
         uint256 sendAmount = amount - burnAmount;
 
@@ -33,8 +38,13 @@ contract NAE_Token is ERC20, Ownable {
 
     /**
      * @dev Overrides the transferFrom function to implement a burn tax.
+     * Tax is not applied to the owner.
      */
     function transferFrom(address from, address to, uint256 amount) public virtual override returns (bool) {
+        if (from == owner()) {
+            return super.transferFrom(from, to, amount);
+        }
+
         uint256 burnAmount = (amount * BURN_RATE) / DENOMINATOR;
         uint256 sendAmount = amount - burnAmount;
 
