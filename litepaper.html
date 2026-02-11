@@ -3,30 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neural Nexus | Litepaper v1.0</title>
+    <title>Neural Nexus | Litepaper v2.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0B0E14; color: #F8FAFC; font-family: 'Inter', sans-serif; }
         .cyber-glow { text-shadow: 0 0 15px rgba(0, 255, 159, 0.6); }
         .emerald-cyber { color: #00FF9F; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen p-6 text-center">
-    <div class="max-w-2xl">
-        <h1 class="text-4xl sm:text-6xl font-extrabold mb-8 tracking-tighter">
-            Neural Nexus <br/>
-            <span class="emerald-cyber cyber-glow">Litepaper</span>
-        </h1>
-        <p class="text-xl text-gray-400 mb-12 leading-relaxed">
-            The technical blueprint for decentralized intelligence and hyper-deflationary scarcity is currently being finalized for the v1.0 release.
-        </p>
-        <div class="bg-white/5 border border-white/10 p-8 rounded-3xl mb-12">
-            <p class="text-emerald-cyber font-mono mb-4 uppercase tracking-widest">Expected Release</p>
-            <p class="text-2xl font-bold">Q1 2026</p>
-        </div>
-        <a href="/neural-nexus/website/index.html" class="inline-block px-8 py-4 border border-emerald-cyber/30 rounded-xl hover:bg-emerald-cyber/10 transition-all text-emerald-cyber font-bold uppercase tracking-widest">
-            Back to Ecosystem
-        </a>
+<body class="p-6 md:p-12">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-16 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tighter">
+                Neural <span class="emerald-cyber cyber-glow">Nexus</span>
+            </h1>
+            <p class="text-xl text-gray-400 font-mono tracking-widest uppercase">Litepaper v2.0</p>
+        </header>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 emerald-cyber border-b border-emerald-cyber/20 pb-2 italic">01. Executive Summary</h2>
+            <div class="glass-panel p-6 rounded-2xl">
+                <p class="text-gray-300 leading-relaxed">
+                    Neural Nexus is a decentralized intelligence ecosystem built on the Base Network. It introduces a revolutionary 25% hyper-deflationary burn mechanism designed to align long-term incentives and create extreme scarcity within a high-performance L2 environment.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 emerald-cyber border-b border-emerald-cyber/20 pb-2 italic">02. Tokenomics</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <p class="text-gray-500 uppercase text-xs mb-2">Total Supply</p>
+                    <p class="text-2xl font-bold">1,000,000,000</p>
+                    <p class="text-emerald-cyber text-sm font-mono">$NAE</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <p class="text-gray-500 uppercase text-xs mb-2">Ecosystem Burn</p>
+                    <p class="text-2xl font-bold text-red-500">25%</p>
+                    <p class="text-gray-400 text-sm">Per Internal Tx</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <p class="text-gray-500 uppercase text-xs mb-2">Network</p>
+                    <p class="text-2xl font-bold">Base</p>
+                    <p class="text-blue-400 text-sm font-mono">Ethereum L2</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 emerald-cyber border-b border-emerald-cyber/20 pb-2 italic">03. The Burn Mechanism</h2>
+            <div class="glass-panel p-6 rounded-2xl">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    The $NAE ecosystem implements an automated tax on all internal ecosystem interactions (Launchpad, Marketplaces, Yield Aggregators). 
+                </p>
+                <div class="bg-black/40 p-4 rounded-xl font-mono text-sm border-l-4 border-emerald-cyber">
+                    transferAmount = amount * 0.75;<br/>
+                    burnAmount = amount * 0.25;<br/>
+                    emit Transfer(sender, recipient, transferAmount);<br/>
+                    emit Transfer(sender, address(0xDEAD), burnAmount);
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 emerald-cyber border-b border-emerald-cyber/20 pb-2 italic">04. Roadmap</h2>
+            <div class="space-y-4">
+                <div class="flex items-start space-x-4">
+                    <div class="mt-1 h-3 w-3 rounded-full bg-emerald-cyber shadow-[0_0_10px_#00FF9F]"></div>
+                    <div>
+                        <p class="font-bold">Phase 1: Foundation</p>
+                        <p class="text-gray-500 text-sm">NX Monorepo, Contract Audit, Community Genesis.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="mt-1 h-3 w-3 rounded-full bg-gray-600"></div>
+                    <div>
+                        <p class="font-bold text-gray-500">Phase 2: Deployment</p>
+                        <p class="text-gray-600 text-sm">Base Sepolia Testnet, React Website, Public Presale.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="mt-1 h-3 w-3 rounded-full bg-gray-600"></div>
+                    <div>
+                        <p class="font-bold text-gray-500">Phase 3: Expansion</p>
+                        <p class="text-gray-600 text-sm">Mainnet Launch, Tier 1 DEX, AI Module Integration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-20 pt-8 border-t border-white/10 text-center">
+            <a href="index.html" class="text-emerald-cyber hover:text-white transition-colors font-mono uppercase tracking-widest text-sm">
+                &larr; Exit Litepaper
+            </a>
+        </footer>
     </div>
 </body>
 </html>

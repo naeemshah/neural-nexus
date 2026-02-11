@@ -1,3 +1,38 @@
-Neural Nexus Litepaper - Placeholder
-This is a placeholder for the Neural Nexus litepaper.
-Full litepaper coming soon.
+Neural Nexus ($NAE) Litepaper v2.0
+==================================
+
+1. Executive Summary
+Neural Nexus is a decentralized intelligence and hyper-deflationary ecosystem built on Base Network. By combining advanced AI integration with a rigorous 25% ecosystem burn mechanism, Neural Nexus creates a scarcity-driven value proposition for long-term holders and participants.
+
+2. Problem Statement
+Current DeFi ecosystems often suffer from high inflation, lack of utility, and fragmented development. Neural Nexus addresses these by implementing a permanent deflationary model and a unified development framework (NX Monorepo) that ensures rapid, high-quality ecosystem growth.
+
+3. The Solution: Neural Nexus ($NAE)
+- Base Network: Leveraging Ethereum L2 for low-cost, high-speed transactions.
+- Hyper-Deflation: A 25% tax on ecosystem-related transfers is permanently removed from supply.
+- Fixed Supply: 1,000,000,000 $NAE tokens. No mint function.
+
+4. Tokenomics
+- Total Supply: 1,000,000,000 $NAE
+- Network: Base (Optimism Stack)
+- Tax Mechanism: 25% tax on transfers within ecosystem applications (Presale, Marketplaces, etc.)
+- Burn Address: 0x000000000000000000000000000000000000dEaD
+
+5. Ecosystem Roadmap
+Phase 1: Foundation (Current)
+- NX Monorepo setup.
+- Smart contract auditing and testing.
+- Community foundation.
+
+Phase 2: Deployment
+- Base Sepolia Testnet launch.
+- Website migration to React/Next.js.
+- Public Presale launch.
+
+Phase 3: Expansion
+- Mainnet deployment.
+- Tier 1 DEX listings.
+- AI Integration features launch.
+
+6. Conclusion
+Neural Nexus is more than a token; it is a self-sustaining ecosystem designed for maximum scarcity and utility. Join the nexus.
