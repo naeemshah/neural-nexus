@@ -48,21 +48,23 @@ const Hero: React.FC<HeroProps> = ({ isLaunchpad = false }) => {
           </a>
         </div>
 
-        {/* Hero Stats */}
+        {/* Hero Stats with animation */}
         <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 md:gap-4 max-w-3xl mx-auto px-2">
-          <div className="glass-panel p-2 sm:p-3 md:p-4 rounded-lg text-center">
-            <div className="text-lg sm:text-xl md:text-2xl font-bold text-emerald-cyber">25%</div>
+          <div className="glass-panel p-2 sm:p-3 md:p-4 rounded-lg text-center transform transition-transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-cyber/20">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-emerald-cyber animate-pulse">25%</div>
             <div className="text-xs text-gray-500 uppercase font-mono mt-0.5 sm:mt-1">Burn Tax</div>
           </div>
-          <div className="glass-panel p-2 sm:p-3 md:p-4 rounded-lg text-center">
+          <div className="glass-panel p-2 sm:p-3 md:p-4 rounded-lg text-center transform transition-transform hover:scale-105 hover:shadow-lg hover:shadow-white/10">
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">1B</div>
             <div className="text-xs text-gray-500 uppercase font-mono mt-0.5 sm:mt-1">Total Supply</div>
           </div>
-          <div className="glass-panel p-2 sm:p-3 md:p-4 rounded-lg text-center">
-            <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">Base</div>
+          <div className="glass-panel p-2 sm:p-3 md:p-4 rounded-lg text-center transform transition-transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-white flex items-center justify-center">
+              <span className="mr-1">⚡</span>Base
+            </div>
             <div className="text-xs text-gray-500 uppercase font-mono mt-0.5 sm:mt-1">Network</div>
           </div>
-          <div className="glass-panel p-2 sm:p-3 md:p-4 rounded-lg text-center">
+          <div className="glass-panel p-2 sm:p-3 md:p-4 rounded-lg text-center transform transition-transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-cyber/20">
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-emerald-cyber">0%</div>
             <div className="text-xs text-gray-500 uppercase font-mono mt-0.5 sm:mt-1">Team Allocation</div>
           </div>
