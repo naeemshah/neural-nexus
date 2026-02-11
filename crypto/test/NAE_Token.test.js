@@ -28,10 +28,10 @@ describe("NAE_Token", function () {
     const addr1Balance = await naeToken.balanceOf(addr1.address);
     expect(addr1Balance).to.equal(transferAmount);
 
-    // Transfer from addr1 to addr2 (tax applied: 0.25% of 1000 = 2.5)
+    // Transfer from addr1 to addr2 (tax applied: 25% of 1000 = 250)
     await naeToken.connect(addr1).transfer(addr2.address, transferAmount);
     
-    const taxAmount = (transferAmount * 25n) / 10000n;
+    const taxAmount = (transferAmount * 2500n) / 10000n; // 25% burn
     const expectedAmount = transferAmount - taxAmount;
     
     expect(await naeToken.balanceOf(addr2.address)).to.equal(expectedAmount);
