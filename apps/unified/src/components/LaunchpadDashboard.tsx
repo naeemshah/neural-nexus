@@ -235,6 +235,11 @@ const LaunchpadDashboard: React.FC = () => {
                   <span className="hidden sm:inline">Secure transaction • Real-time tracking • Instant distribution</span>
                 </div>
               </div>
+
+              {/* Mobile-specific wallet connection hint */}
+              <div className="sm:hidden text-center text-xs text-gray-500 mt-2">
+                💡 On mobile? Use MetaMask mobile or WalletConnect
+              </div>
             </div>
           </div>
 
