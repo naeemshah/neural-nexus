@@ -1,0 +1,153 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+body {
+  background-color: #0B0E14;
+  color: #F8FAFC;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.cyber-glow {
+  text-shadow: 0 0 15px rgba(0, 255, 159, 0.6);
+}
+
+.cyber-border {
+  border: 1px solid rgba(0, 255, 159, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cyber-border:hover {
+  border-color: rgba(0, 255, 159, 0.5);
+  box-shadow: 0 0 30px rgba(0, 255, 159, 0.1);
+}
+
+.bg-obsidian-glass {
+  background: rgba(11, 14, 20, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.btn-primary {
+  background: #00FF9F;
+  color: #0B0E14;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(0, 255, 159, 0.2);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 159, 0.6);
+  transform: translateY(-2px);
+}
+
+.burn-gradient {
+  background: linear-gradient(180deg, rgba(0, 255, 159, 0.1) 0%, rgba(11, 14, 20, 0) 100%);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+  h1 { 
+    font-size: 2.25rem !important; 
+    line-height: 1.1 !important; 
+  }
+}
+
+/* Prevent horizontal scroll */
+* { 
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Tailwind-like utilities */
+.text-emerald-cyber {
+  color: #00FF9F;
+}
+
+.bg-emerald-cyber {
+  background-color: #00FF9F;
+}
+
+.bg-emerald-cyber\/10 {
+  background-color: rgba(0, 255, 159, 0.1);
+}
+
+.bg-emerald-cyber\/5 {
+  background-color: rgba(0, 255, 159, 0.05);
+}
+
+.border-emerald-cyber\/20 {
+  border-color: rgba(0, 255, 159, 0.2);
+}
+
+.border-emerald-cyber\/30 {
+  border-color: rgba(0, 255, 159, 0.3);
+}
+
+.border-emerald-cyber\/50 {
+  border-color: rgba(0, 255, 159, 0.5);
+}
+
+.text-obsidian-deep {
+  color: #0B0E14;
+}
+
+.bg-obsidian-deep {
+  background-color: #0B0E14;
+}
+
+.bg-obsidian-deep\/50 {
+  background-color: rgba(11, 14, 20, 0.5);
+}
+
+.bg-obsidian-deep\/60 {
+  background-color: rgba(11, 14, 20, 0.6);
+}
+
+.bg-obsidian-deep\/95 {
+  background-color: rgba(11, 14, 20, 0.95);
+}
+
+.bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.border-white\/5 {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.text-gray-400 {
+  color: #9CA3AF;
+}
+
+.text-gray-500 {
+  color: #6B7280;
+}
+
+.text-gray-600 {
+  color: #4B5563;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
