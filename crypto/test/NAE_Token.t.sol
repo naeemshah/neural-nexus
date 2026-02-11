@@ -33,7 +33,7 @@ contract NAE_TokenTest is Test {
         token.transfer(user1, setupAmount);
 
         uint256 transferAmount = 1000 * 10**18;
-        uint256 expectedBurn = (transferAmount * 2500) / 10000;
+        uint256 expectedBurn = (transferAmount * 25) / 10000;
         uint256 expectedSend = transferAmount - expectedBurn;
 
         vm.prank(user1);
@@ -50,7 +50,7 @@ contract NAE_TokenTest is Test {
         token.transfer(user1, setupAmount);
 
         uint256 transferAmount = 1000 * 10**18;
-        uint256 expectedBurn = (transferAmount * 2500) / 10000;
+        uint256 expectedBurn = (transferAmount * 25) / 10000;
         uint256 expectedSend = transferAmount - expectedBurn;
 
         vm.prank(user1);
