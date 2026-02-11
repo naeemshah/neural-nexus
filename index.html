@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Nexus | $NAE Token Launch</title>
+    <meta name="description" content="Join the revolution of digital scarcity with $NAE. A high-performance, deflationary token powering the Neural Nexus ecosystem.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            cyber: '#00FF9F',
+                        },
+                        obsidian: {
+                            deep: '#0B0E14',
+                            glass: 'rgba(11, 14, 20, 0.8)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        body {
+            background-color: #0B0E14;
+            color: #F8FAFC;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            h1 { font-size: 2.25rem !important; line-height: 1.1 !important; }
+            .hero-stats { grid-template-cols: 1fr 1fr !important; gap: 1rem !important; text-align: left; }
+            .section-padding { py-16 !important; }
+        }
+
+        /* Prevent horizontal scroll on small devices */
+        * { max-width: 100vw; }
+
+        /* Mobile Menu Overlay */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        .cyber-glow {
+            text-shadow: 0 0 15px rgba(0, 255, 159, 0.6);
+        }
+
+        .cyber-border {
+            border: 1px solid rgba(0, 255, 159, 0.2);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .cyber-border:hover {
+            border-color: rgba(0, 255, 159, 0.5);
+            box-shadow: 0 0 30px rgba(0, 255, 159, 0.1);
+        }
+
+        .btn-cyber {
+            background: #00FF9F;
+            color: #0B0E14;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-cyber:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 159, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(0, 255, 159, 0.5);
+            color: #00FF9F;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 255, 159, 0.1);
+            box-shadow: 0 0 15px rgba(0, 255, 159, 0.2);
+        }
+
+        .glass-panel {
+            background: rgba(11, 14, 20, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 375px) {
+            .glass-panel, .cyber-border {
+                padding: 1rem !important;
+            }
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 159, 0.15) 0%, rgba(11, 14, 20, 0) 70%);
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 4s infinite;
+        }
+
+        .token-chart-bar {
+            transition: height 1s ease-out;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Nav -->
+    <nav class="fixed w-full z-50 transition-all duration-300 px-6 py-4" id="main-nav">
+        <div class="max-w-7xl mx-auto flex items-center justify-between glass-panel px-6 py-3 rounded-full border-white/10">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-emerald-cyber rounded-lg flex items-center justify-center shrink-0">
+                    <span class="text-obsidian-deep font-black text-xl">N</span>
+                </div>
+                <span class="text-lg sm:text-xl font-bold tracking-tighter cyber-glow truncate">NEURAL NEXUS</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="#tokenomics" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Tokenomics</a>
+                <a href="https://github.com/naeemshah/neural-nexus/blob/main/LITEPAPER.md" target="_blank" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Litepaper</a>
+                <a href="../launchpad/index.html#tracker" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Burn Tracker</a>
+                <a href="#dashboard" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Dashboard</a>
+                <a href="#founder" class="hover:text-emerald-cyber transition-all hover:tracking-[0.2em]">Founder</a>
+            </div>
+
+            <div class="flex items-center">
+                <a href="../launchpad/index.html" class="btn-cyber px-4 sm:px-6 py-2 rounded-full text-[10px] sm:text-xs shrink-0 ml-2 flex items-center justify-center">
+                    Launchpad
+                </a>
+                <button id="menu-toggle" class="md:hidden ml-4 text-emerald-cyber p-2" aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-obsidian-deep/95 backdrop-blur-xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 text-center text-sm font-bold uppercase tracking-widest z-40">
+            <a href="#tokenomics" class="hover:text-emerald-cyber transition-colors">Tokenomics</a>
+            <a href="https://github.com/naeemshah/neural-nexus/blob/main/LITEPAPER.md" target="_blank" class="hover:text-emerald-cyber transition-colors">Litepaper</a>
+            <a href="../launchpad/index.html#tracker" class="hover:text-emerald-cyber transition-colors">Burn Tracker</a>
+            <a href="#dashboard" class="hover:text-emerald-cyber transition-colors">Dashboard</a>
+            <a href="#founder" class="hover:text-emerald-cyber transition-colors">Founder</a>
+            <a href="../launchpad/index.html" class="text-emerald-cyber">Launchpad</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden hero-gradient">
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-emerald-cyber/10 blur-[80px] sm:blur-[120px] rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-emerald-cyber/5 blur-[70px] sm:blur-[100px] rounded-full animate-pulse-slow" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center w-full">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-cyber/10 border border-emerald-cyber/20 mb-6 sm:mb-8 select-none">
+                <span class="w-2 h-2 rounded-full bg-emerald-cyber animate-ping"></span>
+                <span class="text-[9px] sm:text-[10px] font-mono font-bold text-emerald-cyber uppercase tracking-widest">$NAE Token Genesis Live</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-extrabold mb-6 sm:mb-8 tracking-tighter leading-[0.9] break-words">
+                Neural Scarcity <br class="hidden sm:block"/>
+                <span class="text-emerald-cyber cyber-glow">Redefined.</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 sm:mb-12 leading-relaxed">
+                Empowering the future of decentralized intelligence through the $NAE token. High-performance, deflationary, and community-driven.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="../launchpad/index.html" class="btn-cyber w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl text-sm sm:text-base flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    Access Launchpad
+                </a>
+                <a href="#tokenomics" class="btn-outline w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl text-sm sm:text-base font-bold flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    Tokenomics
+                </a>
+                <a href="https://github.com/naeemshah/neural-nexus/blob/main/LITEPAPER.md" target="_blank" class="btn-outline w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl text-sm sm:text-base font-bold flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Litepaper
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+                <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/5 pt-12 hero-stats">
+                    <div class="hover:translate-y-[-2px] transition-transform">
+                        <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Total Supply</div>
+                        <div class="text-xl sm:text-2xl font-bold">1,000,000,000</div>
+                    </div>
+                    <div class="hover:translate-y-[-2px] transition-transform">
+                        <div class="text-emerald-cyber text-[10px] font-mono uppercase mb-1">Genesis Burn</div>
+                        <div class="text-xl sm:text-2xl font-bold">25.0%</div>
+                    </div>
+                    <div class="hover:translate-y-[-2px] transition-transform">
+                        <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Tax</div>
+                        <div class="text-xl sm:text-2xl font-bold">0%</div>
+                    </div>
+                    <div class="hover:translate-y-[-2px] transition-transform">
+                        <div class="text-gray-500 text-[10px] font-mono uppercase mb-1">Locked Liquidity</div>
+                        <div class="text-xl sm:text-2xl font-bold">100%</div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics -->
+    <section id="tokenomics" class="py-20 sm:py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 sm:gap-20 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 sm:mb-8 tracking-tight break-words">
+                        Aggressive <br class="hidden sm:block"/>
+                        <span class="text-emerald-cyber">Deflationary Engine</span>
+                    </h2>
+                    <p class="text-gray-400 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed">
+                        $NAE is designed with a singular focus: permanent supply reduction. Our architecture ensures that every milestone achieved by the Neural Nexus directly benefits the $NAE ecosystem.
+                    </p>
+                    
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="glass-panel p-5 sm:p-6 rounded-2xl cyber-border transition-all hover:bg-emerald-cyber/5">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-cyber/10 flex items-center justify-center text-emerald-cyber">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.5-7 3 3 3.5 1.3 6 4.5 2.5 3.3.5 6-1.343 11.657z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold">25% Initial Burn</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">250 million tokens were permanently removed from circulation at genesis, sent to the provable 0x0...dead address.</p>
+                        </div>
+
+                        <div class="glass-panel p-6 rounded-2xl border-white/5 hover:bg-white/5 transition-all">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold">Zero Tax Protocol</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">No buy or sell taxes. Full value transfer for users, powered by pure ecosystem growth and scarcity.</p>
+                        </div>
+
+                        <div class="glass-panel p-6 rounded-2xl border-white/5 hover:bg-emerald-cyber/5 transition-all">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-cyber/10 flex items-center justify-center text-emerald-cyber">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold">100% Locked Liquidity</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">Initial liquidity pool is locked for 24 months via Unicrypt, ensuring rug-proof stability for the community.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="aspect-square glass-panel rounded-[2rem] sm:rounded-[3rem] cyber-border flex flex-col items-center justify-center p-6 sm:p-12 text-center">
+                        <div class="relative w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center mb-8">
+                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 256 256">
+                                <circle cx="128" cy="128" r="110" stroke="rgba(255,255,255,0.05)" stroke-width="24" fill="transparent" />
+                                <circle cx="128" cy="128" r="110" stroke="#00FF9F" stroke-width="24" fill="transparent" 
+                                    stroke-dasharray="691.15" stroke-dashoffset="172.78" />
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-4xl sm:text-6xl font-black text-white">25%</span>
+                                <span class="text-[10px] sm:text-xs font-mono text-emerald-cyber tracking-widest uppercase mt-2">Burned</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                            <div class="p-4 rounded-xl bg-white/5 text-left">
+                                <span class="block text-[10px] text-emerald-cyber font-mono uppercase">Burned Supply</span>
+                                <span class="text-base sm:text-lg font-bold">250,000,000</span>
+                            </div>
+                            <div class="p-4 rounded-xl bg-white/5 text-left">
+                                <span class="block text-[10px] text-gray-500 font-mono uppercase">Market Circ.</span>
+                                <span class="text-base sm:text-lg font-bold">750,000,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Data Badge -->
+                    <div class="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 glass-panel border-emerald-cyber/30 px-4 py-2 sm:px-6 sm:py-4 rounded-2xl shadow-2xl animate-bounce" style="animation-duration: 4s;">
+                        <span class="text-emerald-cyber font-mono font-bold text-[10px] sm:text-xs uppercase">Verified Burn Address</span>
+                        <div class="text-[8px] sm:text-[10px] font-mono text-gray-400 mt-1">0x000...dead</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Litepaper -->
+    <section id="litepaper" class="py-32 bg-white/[0.02]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-6">Technical Litepaper</h2>
+            <p class="text-gray-400 text-lg mb-12">
+                Deep dive into the Neural Nexus architecture, $NAE utility, and our roadmap for the next decade of digital scarcity.
+            </p>
+            <div class="glass-panel p-1 border-white/10 rounded-3xl group overflow-hidden">
+                <div class="bg-obsidian-deep p-6 sm:p-12 rounded-[1.4rem] border border-white/5 flex flex-col items-center transition-all group-hover:border-emerald-cyber/30">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-cyber/10 rounded-2xl flex items-center justify-center text-emerald-cyber mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Neural Nexus Litepaper v1.0</h3>
+                    <p class="text-gray-500 mb-8 max-w-sm text-sm sm:text-base">Interactive Web Version • Updated February 2026</p>
+                    <a href="https://github.com/naeemshah/neural-nexus/blob/main/LITEPAPER.md" target="_blank" class="btn-cyber w-full sm:w-auto px-8 sm:px-12 py-4 rounded-xl text-base sm:text-lg inline-block text-center">
+                        Read Litepaper
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Dashboard Preview -->
+    <section id="dashboard" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-extrabold mb-4">Internal Dashboard</h2>
+                <p class="text-gray-400">Real-time ecosystem metrics for the core development team.</p>
+            </div>
+
+            <div class="glass-panel rounded-[2rem] cyber-border overflow-hidden">
+                <div class="bg-white/5 border-b border-white/5 px-8 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-1.5">
+                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                        </div>
+                        <span class="text-xs font-mono text-gray-500">nexus_dashboard_v4.terminal</span>
+                    </div>
+                    <span class="text-[10px] font-mono text-emerald-cyber bg-emerald-cyber/10 px-3 py-1 rounded-full uppercase">Authenticated: Admin_Shah</span>
+                </div>
+                
+                <div class="p-4 sm:p-8 grid md:grid-cols-3 gap-8">
+                    <div class="space-y-4 sm:space-y-8 col-span-1">
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
+                            <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Liquidity Depth</div>
+                            <div class="text-2xl sm:text-3xl font-bold">$4,250,900</div>
+                            <div class="mt-2 text-emerald-cyber text-xs">+12.4% (24h)</div>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
+                            <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Active Nodes</div>
+                            <div class="text-2xl sm:text-3xl font-bold">1,204</div>
+                            <div class="mt-2 text-emerald-cyber text-xs">ONLINE</div>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-cyber/30 transition-all cursor-default group">
+                            <div class="text-xs font-mono text-gray-500 uppercase mb-2 group-hover:text-emerald-cyber transition-colors">Market Cap</div>
+                            <div class="text-2xl sm:text-3xl font-bold">$12.8M</div>
+                            <div class="mt-2 text-emerald-cyber text-xs">STABLE</div>
+                        </div>
+                    </div>
+
+                <div class="md:col-span-2 p-4 sm:p-8 rounded-2xl bg-white/5 border border-white/5 flex flex-col overflow-hidden relative group">
+                    <div class="absolute inset-0 bg-emerald-cyber/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                    <div class="flex items-center justify-between mb-8">
+                        <span class="text-[10px] sm:text-xs font-mono text-gray-500 uppercase">Burn Trajectory (Live)</span>
+                        <span class="text-[10px] sm:text-xs text-emerald-cyber font-mono">Real-time Feed</span>
+                    </div>
+                    <div class="flex-1 flex items-end gap-1 sm:gap-2 h-48 px-2 sm:px-4">
+                        <div class="token-chart-bar flex-1 bg-emerald-cyber/20 rounded-t-lg h-1/2 transition-all duration-700 ease-in-out"></div>
+                        <div class="token-chart-bar flex-1 bg-emerald-cyber/30 rounded-t-lg h-3/5 transition-all duration-700 ease-in-out"></div>
+                        <div class="token-chart-bar flex-1 bg-emerald-cyber/20 rounded-t-lg h-2/5 transition-all duration-700 ease-in-out"></div>
+                        <div class="token-chart-bar flex-1 bg-emerald-cyber/40 rounded-t-lg h-3/4 transition-all duration-700 ease-in-out"></div>
+                        <div class="token-chart-bar flex-1 bg-emerald-cyber/60 rounded-t-lg h-4/5 transition-all duration-700 ease-in-out"></div>
+                        <div class="token-chart-bar flex-1 bg-emerald-cyber/80 rounded-t-lg h-2/3 transition-all duration-700 ease-in-out"></div>
+                        <div class="token-chart-bar flex-1 bg-emerald-cyber rounded-t-lg h-full animate-pulse transition-all duration-700 ease-in-out"></div>
+                    </div>
+                    <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-white/5 pt-6 gap-4">
+                        <div class="flex gap-4 sm:gap-8">
+                            <div>
+                                <div class="text-[10px] text-gray-500 uppercase font-mono">Burned Today</div>
+                                <div class="text-sm sm:text-base font-bold" id="mainBurnToday">142,500 $NAE</div>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-gray-500 uppercase font-mono">Gas Saved</div>
+                                <div class="text-sm sm:text-base font-bold">14.2 ETH</div>
+                            </div>
+                        </div>
+                        <a href="../launchpad/index.html#tracker" class="text-xs text-emerald-cyber font-bold hover:underline">Full Analytics →</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder" class="py-32 px-6 bg-white/[0.01]">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 shrink-0 border-2 border-emerald-cyber/20">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Naeem" alt="Naeem Shah" class="w-full h-full object-cover bg-obsidian-deep">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Naeem Shah</h2>
+                    <h4 class="text-emerald-cyber font-mono text-sm uppercase mb-6 tracking-widest">Founder & Technical Architect</h4>
+                    <p class="text-gray-400 leading-relaxed mb-6 text-lg">
+                        Naeem Shah is a serial entrepreneur and technical architect with a decade of experience in building scalable digital infrastructures. His vision for $NAE stems from a deep-rooted belief in transparent, code-based monetary systems. 
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-lg">
+                        Under his leadership, Neural Nexus aims to bridge the gap between complex blockchain mechanics and intuitive user experiences, making decentralized wealth preservation accessible to everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t border-white/5 mt-20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-6 h-6 bg-emerald-cyber rounded flex items-center justify-center">
+                        <span class="text-obsidian-deep font-black text-sm">N</span>
+                    </div>
+                    <span class="text-lg font-bold tracking-tighter">NEURAL NEXUS</span>
+                </div>
+                <p class="text-gray-500 text-sm max-w-xs">Building the infrastructure for decentralized intelligence. Built by Naeem Shah.</p>
+            </div>
+            
+            <div class="flex gap-16">
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase mb-4 tracking-widest">Ecosystem</h4>
+                    <ul class="text-gray-500 text-sm space-y-2">
+                        <li><a href="../launchpad/index.html" class="hover:text-emerald-cyber transition-colors">Launchpad</a></li>
+                        <li><a href="../launchpad/index.html#tracker" class="hover:text-emerald-cyber transition-colors">Burn Tracker</a></li>
+                        <li><a href="https://github.com/naeemshah/neural-nexus/blob/main/LITEPAPER.md" target="_blank" class="hover:text-emerald-cyber transition-colors">Litepaper</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase mb-4 tracking-widest">Connect</h4>
+                    <ul class="text-gray-500 text-sm space-y-2">
+                        <li><a href="https://x.com/PAL47Bot" target="_blank" class="hover:text-emerald-cyber transition-colors">X / Twitter</a></li>
+                        <li><a href="https://t.me/PAL47Bot" target="_blank" class="hover:text-emerald-cyber transition-colors">Telegram</a></li>
+                        <li><a href="https://github.com/naeemshah/neural-nexus" target="_blank" class="hover:text-emerald-cyber transition-colors">GitHub</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase mb-4 tracking-widest">Legal</h4>
+                    <ul class="text-gray-500 text-sm space-y-2">
+                        <li><a href="#" class="hover:text-emerald-cyber transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-emerald-cyber transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 text-center">
+            <p class="text-[10px] font-mono text-gray-600 uppercase tracking-[0.2em]">© 2026 Neural Nexus Protocol | All Systems Nominal</p>
+        </div>
+    </footer>
+
+    <script>
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+
+        // Simple chart animation simulation
+        function randomizeChart() {
+            const bars = document.querySelectorAll('.token-chart-bar');
+            bars.forEach((bar, index) => {
+                if (index === bars.length - 1) return; // Skip pulse bar
+                const h = 20 + Math.random() * 60;
+                bar.style.height = `${h}%`;
+            });
+            
+            // Randomize burn today number
+            const burnToday = document.getElementById('mainBurnToday');
+            if (burnToday) {
+                const base = 142500;
+                const vari = Math.random() * 1000;
+                burnToday.innerText = Math.floor(base + vari).toLocaleString() + ' $NAE';
+            }
+        }
+
+        setInterval(randomizeChart, 3000);
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
