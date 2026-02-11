@@ -1,0 +1,71 @@
+NEURAL NEXUS LITEPAPER v2.0
+===============================
+Generated: 2026-02-11T16:55:50.156Z
+Status: PDF generation requires proper tools
+
+CONTENT SUMMARY:
+---------------
+# Neural Nexus ($NAE) Litepaper v2.0 - Enhanced Draft
+
+## Executive Summary
+
+Neural Nexus represents a paradigm shift in decentralized finance by combining artificial intelligence integration with a hyper-deflationary token economic model. Built on Base Network, Neural Nexus ($NAE) implements a revolutionary 25% ecosystem burn mechanism that creates permanent scarcity while funding continuous development through automated deflation.
+
+## Problem Statement
+
+The current DeFi landscape suffers from three critical issues:
+
+1. **Inflationary Pressure:** Most tokens lack meaningful deflationary mechanisms, leading to value dilution over time.
+2. **Fragmented Development:** Ecosystem projects often operate in isolation without unified technical frameworks.
+3. **Limited Utility:** Many tokens serve as speculative assets rather than functional ecosystem components.
+
+Neural Nexus addresses these challenges through an integrated approach that aligns developer incentives with long-term holder value.
+
+## The Neural Nexus Solution
+
+### Core Innovation: The 25% Ecosystem Burn
+
+The $NAE token implements a sophisticated burn mechanism that applies to all internal ecosystem transactions:
+
+- **Presale Participation:** 25% of tokens transferred during presale events are burned
+- **Marketplace Transactions:** All marketplace interactions trigger the burn tax
+- **Yield Farming:** Protocol interactions within the ecosystem contribute to deflation
+- **Owner Exemption:** Contract owner is exempted from burn tax for operational flexibility
+
+This creates a self-reinforcing cycle where ecosystem activity directly reduces total supply, increasing scarcity with every transaction.
+
+### Technical Architecture
+
+**Smart Contract:** NAE_Token.sol (ERC-20 compliant)
+- Fixed supply: 1,000,000,000 $NAE
+- No mint function (immutable supply)
+- Owner exemption for operational transfers
+- Automated burn to 0x000000000000000000000000000000000000dEaD
+
+**Development Framework:** NX Monorepo
+- Unified codebase f...
+
+[Content truncated for preview. Full version available in litepaper-v2-enhanced.md]
+
+PDF GENERATION NOTES:
+--------------------
+1. Current system lacks proper PDF conversion tools (puppeteer, weasyprint, wkhtmltopdf)
+2. HTML template created: litepaper-pdf-template.html
+3. Enhanced content ready: litepaper-v2-enhanced.md
+4. Professional PDF requires:
+   - Install puppeteer: npm install puppeteer
+   - Or use cloud PDF service
+   - Or manual design in Figma/Adobe
+
+IMMEDIATE ACTIONS:
+-----------------
+1. Install PDF conversion tools on server
+2. Use puppeteer for HTML→PDF conversion
+3. Add proper styling and branding
+4. Generate final PDF for distribution
+
+ALTERNATIVE APPROACH:
+-------------------
+1. Use online PDF conversion services
+2. Manual design in Canva/Figma
+3. Hire designer for professional version

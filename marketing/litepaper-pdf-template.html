@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Nexus Litepaper v2.0</title>
+    <style>
+        /* PDF-specific styles for A4 paper */
+        @page {
+            size: A4;
+            margin: 2cm;
+            @top-center {
+                content: "Neural Nexus Litepaper v2.0";
+                font-family: 'Inter', sans-serif;
+                font-size: 10pt;
+                color: #666;
+            }
+            @bottom-center {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: 'Inter', sans-serif;
+                font-size: 10pt;
+                color: #666;
+            }
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #0B0E14;
+            font-size: 11pt;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .cover-page {
+            page: cover;
+            text-align: center;
+            padding-top: 8cm;
+            height: 29.7cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0B0E14 0%, #1a1f2e 100%);
+            color: white;
+        }
+        
+        .cover-page h1 {
+            font-size: 48pt;
+            font-weight: 800;
+            margin: 0;
+            color: #00FF9F;
+            text-shadow: 0 0 20px rgba(0, 255, 159, 0.5);
+        }
+        
+        .cover-page h2 {
+            font-size: 24pt;
+            font-weight: 300;
+            margin: 20px 0;
+            color: #F8FAFC;
+        }
+        
+        .cover-page .subtitle {
+            font-size: 14pt;
+            color: #94A3B8;
+            margin-top: 40px;
+            font-style: italic;
+        }
+        
+        .cover-page .date {
+            font-size: 12pt;
+            color: #64748B;
+            margin-top: 60px;
+        }
+        
+        .section-break {
+            page-break-before: always;
+        }
+        
+        h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            color: #0B0E14;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00FF9F;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 18pt;
+            font-weight: 600;
+            color: #1E293B;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            font-size: 14pt;
+            font-weight: 600;
+            color: #334155;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: rgba(0, 255, 159, 0.1);
+            border-left: 4px solid #00FF9F;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .tokenomics-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .roadmap-phase {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .roadmap-phase h4 {
+            color: #00FF9F;
+            margin-top: 0;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-note {
+            font-size: 9pt;
+            color: #64748B;
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .legal-disclaimer {
+            font-size: 9pt;
+            color: #94A3B8;
+            font-style: italic;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f8fafc;
+            border-radius: 4px;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #0B0E14 0%, #1a1f2e 100%);
+            color: white;
+            border-radius: 8px;
+        }
+        
+        .contact-info a {
+            color: #00FF9F;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th {
+            background-color: #0B0E14;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        /* Code blocks */
+        pre {
+            background-color: #0B0E14;
+            color: #00FF9F;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 10pt;
+            margin: 20px 0;
+        }
+        
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10pt;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cover-page">
+        <h1>Neural Nexus</h1>
+        <h2>Litepaper v2.0</h2>
+        <div class="subtitle">Decentralized Intelligence Ecosystem</div>
+        <div class="date">February 2026</div>
+    </div>
+    
+    <div class="section-break">
+        <h1>Table of Contents</h1>
+        <ul>
+            <li><a href="#executive-summary">Executive Summary</a></li>
+            <li><a href="#problem-statement">Problem Statement</a></li>
+            <li><a href="#solution">The Neural Nexus Solution</a></li>
+            <li><a href="#tokenomics">Tokenomics</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#technical-architecture">Technical Architecture</a></li>
+            <li><a href="#ecosystem">Ecosystem Applications</a></li>
+            <li><a href="#team">Team & Advisors</a></li>
+            <li><a href="#legal">Legal Disclaimer</a></li>
+            <li><a href="#contact">Contact Information</a></li>
+        </ul>
+    </div>
+    
+    <div class="section-break" id="executive-summary">
+        <h1>Executive Summary</h1>
+        <div class="highlight">
+            <p>Neural Nexus represents a paradigm shift in decentralized finance by combining artificial intelligence integration with a hyper-deflationary token economic model. Built on Base Network, Neural Nexus ($NAE) implements a revolutionary 25% ecosystem burn mechanism that creates permanent scarcity while funding continuous development through automated deflation.</p>
+        </div>
+        
+        <h2>Key Innovations</h2>
+        <ul>
+            <li><strong>25% Hyper-Deflationary Burn:</strong> Every ecosystem transaction permanently removes tokens from circulation</li>
+            <li><strong>Base Network Integration:</strong> Leveraging Ethereum L2 for low-cost, high-speed transactions</li>
+            <li><strong>AI-Powered Ecosystem:</strong> Machine learning integration for optimized DeFi operations</li>
+            <li><strong>Fixed Supply Model:</strong> 1,000,000,000 $NAE with no mint function</li>
+            <li><strong>Owner Exemption:</strong> Contract owner exempted from burn tax for operational flexibility</li>
+        </ul>
+        
+        <h2>Value Proposition</h2>
+        <p>Neural Nexus creates a self-reinforcing economic system where ecosystem activity directly increases token scarcity, aligning incentives between developers, holders, and users through automated deflation and continuous development funding.</p>
+    </div>
+    
+    <!-- Note: This is a template. The full content would be inserted here from litepaper-v2-enhanced.md -->
+    
+    <div class="section-break" id="legal">
+        <h1>Legal Disclaimer</h1>
+        <div class="legal-disclaimer">
+            <p><strong>Important Notice:</strong> This litepaper is for informational purposes only and does not constitute investment advice, financial advice, trading advice, or any other type of advice. You should not treat any of the content as such.</p>
+            
+            <p><strong>Risk Warning:</strong> Cryptocurrency investments are subject to high market risk. The value of your investment may go down as well as up. You may lose all your invested capital. You are solely responsible for your investment decisions.</p>
+            
+            <p><strong>Regulatory Status:</strong> The $NAE token is a utility token designed for use within the Neural Nexus ecosystem. It is not intended to be a security or investment product. The regulatory status of digital assets varies by jurisdiction.</p>
+            
+            <p><strong>No Guarantees:</strong> All information in this litepaper is subject to change without notice. Neural Nexus makes no guarantees regarding the accuracy, completeness, or timeliness of the information provided.</p>
+            
+            <p><strong>Consult Professionals:</strong> Before making any financial decisions, consult with qualified financial, legal, and tax professionals.</p>
+        </div>
+    </div>
+    
+    <div class="section-break" id="contact">
+        <h1>Contact Information</h1>
+        <div class="contact-info">
+            <h3>Official Channels</h3>
+            <ul>
+                <li><strong>Website:</strong> https://neuralnexus.ai (Coming Soon)</li>
+                <li><strong>Twitter/X:</strong> @NeuralNexusNAE</li>
+                <li><strong>Telegram:</strong> t.me/NeuralNexusOfficial</li>
+                <li><strong>Discord:</strong> discord.gg/neuralnexus</li>
+                <li><strong>GitHub:</strong> github.com/naeemshah/neural-nexus</li>
+                <li><strong>Medium:</strong> medium.com/@neuralnexus</li>
+                <li><strong>Email:</strong> contact@neuralnexus.ai</li>
+            </ul>
+            
+            <h3>Development Resources</h3>
+            <ul>
+                <li><strong>Smart Contracts:</strong> Available on GitHub</li>
+                <li><strong>Documentation:</strong> Comprehensive developer docs</li>
+                <li><strong>API Access:</strong> REST API for ecosystem integration</li>
+                <li><strong>SDK:</strong> JavaScript/TypeScript SDK</li>
+            </ul>
+            
+            <h3>Community Support</h3>
+            <ul>
+                <li><strong>Technical Support:</strong> GitHub Issues</li>
+                <li><strong>General Questions:</strong> Telegram/Discord</li>
+                <li><strong>Partnership Inquiries:</strong> contact@neuralnexus.ai</li>
+                <li><strong>Media Requests:</strong> press@neuralnexus.ai</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-note">
+        <p>Neural Nexus Litepaper v2.0 | February 2026 | Version: 2.0.0</p>
+        <p>© 2026 Neural Nexus. All rights reserved.</p>
+        <p>This document is proprietary and confidential. Distribution requires written permission.</p>
+    </div>
+</body>
+</html>
