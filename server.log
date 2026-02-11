@@ -44,3 +44,6 @@
 127.0.0.1 - - [11/Feb/2026 02:15:17] "GET /launchpad/index.html HTTP/1.1" 200 -
 127.0.0.1 - - [11/Feb/2026 02:15:34] "GET /website/index.html HTTP/1.1" 200 -
 127.0.0.1 - - [11/Feb/2026 02:18:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Feb/2026 02:28:16] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Feb/2026 02:33:45] "GET /website/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Feb/2026 02:35:36] "GET /website/index.html HTTP/1.1" 304 -
