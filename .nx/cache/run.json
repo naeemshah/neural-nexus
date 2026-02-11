@@ -1,8 +1,8 @@
 {
   "run": {
-    "command": "nx run launchpad:build",
-    "startTime": "2026-02-11T13:12:18.067Z",
-    "endTime": "2026-02-11T13:12:19.933Z",
+    "command": "nx build launchpad",
+    "startTime": "2026-02-11T13:36:51.797Z",
+    "endTime": "2026-02-11T13:36:54.195Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "launchpad:build",
       "target": "build",
       "projectName": "launchpad",
-      "hash": "11087248258712585546",
-      "startTime": "2026-02-11T13:12:18.075Z",
-      "endTime": "2026-02-11T13:12:19.929Z",
+      "hash": "14352180956354070659",
+      "startTime": "2026-02-11T13:36:51.803Z",
+      "endTime": "2026-02-11T13:36:54.189Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

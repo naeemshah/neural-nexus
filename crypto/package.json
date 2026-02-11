@@ -10,8 +10,15 @@
   "scripts": {
     "test": "hardhat test",
     "compile": "hardhat compile",
-    "deploy:sepolia": "hardhat run scripts/deploy.js --network base-sepolia",
-    "deploy:mainnet": "hardhat run scripts/deploy.js --network base-mainnet"
+    "deploy:sepolia": "hardhat run scripts/deploy-sepolia.js --network base-sepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network base-mainnet",
+    "verify": "hardhat verify --network base-sepolia",
+    "test:deploy": "hardhat run scripts/test-deployment.js --network hardhat",
+    "jira:update": "node scripts/update-jira.js",
+    "security:audit": "node scripts/security-audit.js",
+    "evaluate:streme": "node scripts/evaluate-streme.js",
+    "deploy:full": "npm run deploy:sepolia && npm run security:audit",
+    "professional:assessment": "npm run security:audit && npm run evaluate:streme"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +31,7 @@
   },
   "dependencies": {
     "chalk": "^5.6.2",
+    "dotenv": "^17.2.4",
     "ethereum-cryptography": "^2.2.1",
     "p-map": "^7.0.4",
     "ws": "^8.19.0"

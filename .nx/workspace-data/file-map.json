@@ -34,6 +34,213 @@
   ],
   "fileMap": {
     "projectFileMap": {
+      "launchpad": [
+        {
+          "file": "apps/launchpad/dist/assets/index-Bw4Q-bss.js",
+          "hash": "8668555132845283817"
+        },
+        {
+          "file": "apps/launchpad/dist/assets/index-Dao7bMO-.css",
+          "hash": "8678231664069401505"
+        },
+        {
+          "file": "apps/launchpad/dist/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/launchpad/dist/index.html",
+          "hash": "11952760009328988381"
+        },
+        {
+          "file": "apps/launchpad/index.html",
+          "hash": "8608260812339919961"
+        },
+        {
+          "file": "apps/launchpad/package.json",
+          "hash": "3176027650938005631"
+        },
+        {
+          "file": "apps/launchpad/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/launchpad/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/launchpad/src/app/app.tsx",
+          "hash": "15285021634919014600"
+        },
+        {
+          "file": "apps/launchpad/src/app/nx-welcome.tsx",
+          "hash": "1775940914884046162"
+        },
+        {
+          "file": "apps/launchpad/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/launchpad/src/components/Footer.tsx",
+          "hash": "14437805438876231825"
+        },
+        {
+          "file": "apps/launchpad/src/components/Founder.tsx",
+          "hash": "1574179174703453065"
+        },
+        {
+          "file": "apps/launchpad/src/components/Hero.tsx",
+          "hash": "11194176436110975712"
+        },
+        {
+          "file": "apps/launchpad/src/components/LaunchpadDashboard.tsx",
+          "hash": "13957191571286243273",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/components/Navigation.tsx",
+          "hash": "17552453458206840659",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/components/Roadmap.tsx",
+          "hash": "16986631944619986675"
+        },
+        {
+          "file": "apps/launchpad/src/components/Tokenomics.tsx",
+          "hash": "14226937788612991090"
+        },
+        {
+          "file": "apps/launchpad/src/context/WalletContext.tsx",
+          "hash": "13181729237427574277",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/main.tsx",
+          "hash": "8890228936609297660",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/launchpad/src/styles.css",
+          "hash": "7459279284553041775"
+        },
+        {
+          "file": "apps/launchpad/tsconfig.app.json",
+          "hash": "12830358968167672754"
+        },
+        {
+          "file": "apps/launchpad/tsconfig.json",
+          "hash": "1731869790938503978"
+        },
+        {
+          "file": "apps/launchpad/vite.config.mts",
+          "hash": "13312556737403092774",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ],
+      "website": [
+        {
+          "file": "apps/website/index.html",
+          "hash": "13659816319766690989"
+        },
+        {
+          "file": "apps/website/index.html.backup",
+          "hash": "13659816319766690989"
+        },
+        {
+          "file": "apps/website/package.json",
+          "hash": "16379867364606647227"
+        },
+        {
+          "file": "apps/website/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/website/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/website/src/app/app.tsx",
+          "hash": "18381543030862764349"
+        },
+        {
+          "file": "apps/website/src/app/nx-welcome.tsx",
+          "hash": "1775940914884046162"
+        },
+        {
+          "file": "apps/website/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/website/src/components/Dashboard.tsx",
+          "hash": "16818190818941989867",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/website/src/components/Founder.tsx",
+          "hash": "14894437116291509650"
+        },
+        {
+          "file": "apps/website/src/components/Hero.tsx",
+          "hash": "2938277739333852488"
+        },
+        {
+          "file": "apps/website/src/components/Litepaper.tsx",
+          "hash": "15619404426622868182"
+        },
+        {
+          "file": "apps/website/src/components/Navigation.tsx",
+          "hash": "12330540407967666574",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/website/src/components/Tokenomics.tsx",
+          "hash": "15578784627147385451"
+        },
+        {
+          "file": "apps/website/src/main.tsx",
+          "hash": "7944529105552768481",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/website/src/styles.css",
+          "hash": "18370634881595959827"
+        },
+        {
+          "file": "apps/website/tsconfig.app.json",
+          "hash": "12830358968167672754"
+        },
+        {
+          "file": "apps/website/tsconfig.json",
+          "hash": "1731869790938503978"
+        },
+        {
+          "file": "apps/website/vite.config.mts",
+          "hash": "10071300610008145038",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ],
       "crypto": [
         {
           "file": "crypto/README.md",
@@ -187,206 +394,6 @@
             "npm:hardhat"
           ]
         }
-      ],
-      "launchpad": [
-        {
-          "file": "apps/launchpad/dist/assets/index-DmmACsVO.js",
-          "hash": "8668555132845283817"
-        },
-        {
-          "file": "apps/launchpad/dist/assets/index-pDfol4m9.css",
-          "hash": "2678695948551462641"
-        },
-        {
-          "file": "apps/launchpad/dist/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/launchpad/dist/index.html",
-          "hash": "2919873184244949349"
-        },
-        {
-          "file": "apps/launchpad/index.html",
-          "hash": "8608260812339919961"
-        },
-        {
-          "file": "apps/launchpad/package.json",
-          "hash": "3176027650938005631"
-        },
-        {
-          "file": "apps/launchpad/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/launchpad/src/app/app.module.css",
-          "hash": "8887387885984320532"
-        },
-        {
-          "file": "apps/launchpad/src/app/app.tsx",
-          "hash": "9274445491945053705"
-        },
-        {
-          "file": "apps/launchpad/src/app/nx-welcome.tsx",
-          "hash": "1775940914884046162"
-        },
-        {
-          "file": "apps/launchpad/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/launchpad/src/components/Footer.tsx",
-          "hash": "14437805438876231825"
-        },
-        {
-          "file": "apps/launchpad/src/components/Founder.tsx",
-          "hash": "1574179174703453065"
-        },
-        {
-          "file": "apps/launchpad/src/components/Hero.tsx",
-          "hash": "11194176436110975712"
-        },
-        {
-          "file": "apps/launchpad/src/components/LaunchpadDashboard.tsx",
-          "hash": "12682345446206895229",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/launchpad/src/components/Navigation.tsx",
-          "hash": "8080460157243622154",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/launchpad/src/components/Roadmap.tsx",
-          "hash": "16986631944619986675"
-        },
-        {
-          "file": "apps/launchpad/src/components/Tokenomics.tsx",
-          "hash": "17926218567239624623"
-        },
-        {
-          "file": "apps/launchpad/src/main.tsx",
-          "hash": "8890228936609297660",
-          "deps": [
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "apps/launchpad/src/styles.css",
-          "hash": "7459279284553041775"
-        },
-        {
-          "file": "apps/launchpad/tsconfig.app.json",
-          "hash": "12830358968167672754"
-        },
-        {
-          "file": "apps/launchpad/tsconfig.json",
-          "hash": "1731869790938503978"
-        },
-        {
-          "file": "apps/launchpad/vite.config.mts",
-          "hash": "13312556737403092774",
-          "deps": [
-            "npm:vite",
-            "npm:@vitejs/plugin-react"
-          ]
-        }
-      ],
-      "website": [
-        {
-          "file": "apps/website/index.html",
-          "hash": "13659816319766690989"
-        },
-        {
-          "file": "apps/website/index.html.backup",
-          "hash": "13659816319766690989"
-        },
-        {
-          "file": "apps/website/package.json",
-          "hash": "16379867364606647227"
-        },
-        {
-          "file": "apps/website/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/website/src/app/app.module.css",
-          "hash": "8887387885984320532"
-        },
-        {
-          "file": "apps/website/src/app/app.tsx",
-          "hash": "18381543030862764349"
-        },
-        {
-          "file": "apps/website/src/app/nx-welcome.tsx",
-          "hash": "1775940914884046162"
-        },
-        {
-          "file": "apps/website/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/website/src/components/Dashboard.tsx",
-          "hash": "16818190818941989867",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/website/src/components/Founder.tsx",
-          "hash": "14894437116291509650"
-        },
-        {
-          "file": "apps/website/src/components/Hero.tsx",
-          "hash": "2938277739333852488"
-        },
-        {
-          "file": "apps/website/src/components/Litepaper.tsx",
-          "hash": "15619404426622868182"
-        },
-        {
-          "file": "apps/website/src/components/Navigation.tsx",
-          "hash": "12330540407967666574",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/website/src/components/Tokenomics.tsx",
-          "hash": "15578784627147385451"
-        },
-        {
-          "file": "apps/website/src/main.tsx",
-          "hash": "7944529105552768481",
-          "deps": [
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "apps/website/src/styles.css",
-          "hash": "18370634881595959827"
-        },
-        {
-          "file": "apps/website/tsconfig.app.json",
-          "hash": "12830358968167672754"
-        },
-        {
-          "file": "apps/website/tsconfig.json",
-          "hash": "1731869790938503978"
-        },
-        {
-          "file": "apps/website/vite.config.mts",
-          "hash": "10071300610008145038",
-          "deps": [
-            "npm:vite",
-            "npm:@vitejs/plugin-react"
-          ]
-        }
       ]
     },
     "nonProjectFiles": [
@@ -525,6 +532,10 @@
       {
         "file": "launchpad_tunnel.log",
         "hash": "17784634039478192579"
+      },
+      {
+        "file": "litepaper-v2-enhanced.md",
+        "hash": "1892371813398143376"
       },
       {
         "file": "litepaper.html",
