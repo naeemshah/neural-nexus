@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useWallet } from '../context/WalletContext';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,9 +50,7 @@ const Navigation = () => {
         </div>
         
         <div className="flex items-center gap-1.5 xs:gap-2 sm:gap-3 md:gap-4">
-          <button className="btn-primary px-3 xs:px-4 sm:px-5 md:px-6 py-1.5 xs:py-2 rounded-full font-bold text-[8px] xs:text-[9px] sm:text-xs uppercase tracking-wider whitespace-nowrap">
-            Connect Wallet
-          </button>
+          <WalletConnectButton />
           <button 
             id="menu-toggle" 
             className="md:hidden text-emerald-cyber p-1.5 xs:p-2" 
@@ -84,6 +83,44 @@ const Navigation = () => {
         <a href="#founder" className="hover:text-emerald-cyber transition-colors py-2 xs:py-3" onClick={handleMenuItemClick}>Founder</a>
       </div>
     </nav>
+  );
+};
+
+const WalletConnectButton = () => {
+  const { isConnected, address, connectWallet, disconnectWallet, isLoading } = useWallet();
+
+  const formatAddress = (addr: string | null) => {
+    if (!addr) return '';
+    return `${addr.substring(0, 6)}...${addr.substring(addr.length - 4)}`;
+  };
+
+  if (isConnected && address) {
+    return (
+      <div className="flex items-center gap-2">
+        <div className="px-2 xs:px-3 py-1 xs:py-1.5 rounded-full bg-emerald-cyber/10 border border-emerald-cyber/20">
+          <span className="text-[8px] xs:text-[9px] font-mono text-emerald-cyber">
+            {formatAddress(address)}
+          </span>
+        </div>
+        <button 
+          onClick={disconnectWallet}
+          className="btn-primary px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 rounded-full font-bold text-[8px] xs:text-[9px] sm:text-xs uppercase tracking-wider whitespace-nowrap"
+          disabled={isLoading}
+        >
+          {isLoading ? '...' : 'Disconnect'}
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <button 
+      onClick={connectWallet}
+      className="btn-primary px-3 xs:px-4 sm:px-5 md:px-6 py-1.5 xs:py-2 rounded-full font-bold text-[8px] xs:text-[9px] sm:text-xs uppercase tracking-wider whitespace-nowrap"
+      disabled={isLoading}
+    >
+      {isLoading ? 'Connecting...' : 'Connect Wallet'}
+    </button>
   );
 };
 
