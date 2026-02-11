@@ -1,0 +1,203 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.0.0",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": "AGENTS.md",
+        "hash": "11975787563018185217"
+      },
+      {
+        "file": "BOOT.md",
+        "hash": "11661811923465261102"
+      },
+      {
+        "file": "HEARTBEAT.md",
+        "hash": "10591217435286549305"
+      },
+      {
+        "file": "IDENTITY.md",
+        "hash": "11214835050860424498"
+      },
+      {
+        "file": "MEMORY.md",
+        "hash": "9988521307452179131"
+      },
+      {
+        "file": "NEW_REQUIREMENTS.md",
+        "hash": "7625379015968821379"
+      },
+      {
+        "file": "SOUL.md",
+        "hash": "14820798590149558305"
+      },
+      {
+        "file": "TOOLS.md",
+        "hash": "1358715563064051833"
+      },
+      {
+        "file": "UPTIME.md",
+        "hash": "11575177284510723471"
+      },
+      {
+        "file": "USER.md",
+        "hash": "4160193131703659864"
+      },
+      {
+        "file": "agile_tunnel.log",
+        "hash": "1808790735424593695"
+      },
+      {
+        "file": "apps/launchpad/index.html",
+        "hash": "2091619647503337542"
+      },
+      {
+        "file": "apps/website/index.html",
+        "hash": "9050448734982141541"
+      },
+      {
+        "file": "archive/deprecated_boards/DASHBOARD.md",
+        "hash": "8471796361471253852"
+      },
+      {
+        "file": "archive/deprecated_boards/JIRA_INTEGRATION_PLAN.md",
+        "hash": "15909265462026563306"
+      },
+      {
+        "file": "archive/deprecated_boards/PROJECT_PLAN.md",
+        "hash": "2530510802124969890"
+      },
+      {
+        "file": "archive/deprecated_boards/README.md",
+        "hash": "4788971672760413209"
+      },
+      {
+        "file": "archive/deprecated_boards/agile_board.html",
+        "hash": "2085324540073726684"
+      },
+      {
+        "file": "archive/deprecated_boards/dev_tasks.md",
+        "hash": "12303819619512924717"
+      },
+      {
+        "file": "archive/deprecated_boards/jira_board.html",
+        "hash": "1322852917681678578"
+      },
+      {
+        "file": "archive/deprecated_boards/team_dashboard.html",
+        "hash": "4705737742680918656"
+      },
+      {
+        "file": "archive/games/neural_nexus/GDD.md",
+        "hash": "12117910916201927190"
+      },
+      {
+        "file": "archive/games/neural_nexus/prototype/capacitor.config.json",
+        "hash": "1372748206160714079"
+      },
+      {
+        "file": "archive/games/neural_nexus/prototype/index.html",
+        "hash": "2464689287060234482"
+      },
+      {
+        "file": "archive/games/neural_nexus/prototype/package.json",
+        "hash": "15883330965479543112"
+      },
+      {
+        "file": "archive/games/neural_nexus/prototype/scripts/build_instructions.md",
+        "hash": "10093359716593957803"
+      },
+      {
+        "file": "archive/games/neural_nexus/prototype/www/index.html",
+        "hash": "17070047164470790957"
+      },
+      {
+        "file": "archive/resume/polished_resume.html",
+        "hash": "9470855557046809062"
+      },
+      {
+        "file": "archive/website/index.html",
+        "hash": "9958174445137789591"
+      },
+      {
+        "file": "cloudflared.deb",
+        "hash": "8245704254013187531"
+      },
+      {
+        "file": "crypto/contracts/NAE_Token.sol",
+        "hash": "11993893373178758304"
+      },
+      {
+        "file": "crypto/foundry.toml",
+        "hash": "6720239761127762301"
+      },
+      {
+        "file": "crypto/hardhat.config.js",
+        "hash": "13252532947676477125"
+      },
+      {
+        "file": "crypto/test/NAE_Token.t.sol",
+        "hash": "9254111067165487852"
+      },
+      {
+        "file": "dashboard_tunnel.log",
+        "hash": "2337451782531087087"
+      },
+      {
+        "file": "game_tunnel.log",
+        "hash": "15011331028065925829"
+      },
+      {
+        "file": "index.html",
+        "hash": "9670279994869419230"
+      },
+      {
+        "file": "launchpad_tunnel.log",
+        "hash": "17784634039478192579"
+      },
+      {
+        "file": "litepaper.html",
+        "hash": "12105840523475513145"
+      },
+      {
+        "file": "litepaper.txt",
+        "hash": "4823028991106900637"
+      },
+      {
+        "file": "local_status.html",
+        "hash": "9305014108696404028"
+      },
+      {
+        "file": "nx.json",
+        "hash": "9396151912043268842"
+      },
+      {
+        "file": "package.json",
+        "hash": "18102164639725968400"
+      },
+      {
+        "file": "server.log",
+        "hash": "7965975456411842692"
+      },
+      {
+        "file": "tunnel.log",
+        "hash": "10901048291262891425"
+      },
+      {
+        "file": "usr/bin/cloudflared",
+        "hash": "12502288535031249235"
+      },
+      {
+        "file": "usr/share/doc/cloudflared/changelog.gz",
+        "hash": "13273156240783931185"
+      },
+      {
+        "file": "usr/share/man/man1/cloudflared.1",
+        "hash": "3520246524940440080"
+      }
+    ]
+  }
+}

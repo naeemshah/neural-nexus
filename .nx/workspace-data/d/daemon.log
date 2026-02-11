@@ -1,0 +1,11 @@
+[NX Daemon Server] - 2026-02-11T03:43:25.493Z - Started listening on: /tmp/81e7724c0fded663cb22/d.sock
+[NX Daemon Server] - 2026-02-11T03:43:25.512Z - [WATCHER]: Subscribed to changes within: /data/.openclaw/workspace/neural-nexus (native)
+[NX Daemon Server] - 2026-02-11T03:43:25.520Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-02-11T03:43:25.521Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2026-02-11T03:43:25.538Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-02-11T03:43:25.545Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2026-02-11T03:43:25.554Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2026-02-11T03:43:25.554Z - Handled FORCE_SHUTDOWN. Handling time: 1. Response time: 9.
+[NX Daemon Server] - 2026-02-11T03:43:25.563Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2026-02-11T03:43:25.579Z - [WATCHER]: Stopping the watcher for /data/.openclaw/workspace/neural-nexus (sources)
+[NX Daemon Server] - 2026-02-11T03:43:25.582Z - [WATCHER]: Stopping the watcher for /data/.openclaw/workspace/neural-nexus (outputs)
