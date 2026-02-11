@@ -1,0 +1,18 @@
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[33m[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+18 |  }
+19 |  
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;7...
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  @layer base {[39m
+[32m✓[39m 36 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  1.18 kB[22m[1m[22m[2m │ gzip:  0.57 kB[22m
+[2mdist/[22m[2massets/[22m[35mindex-pDfol4m9.css  [39m[1m[2m 37.56 kB[22m[1m[22m[2m │ gzip:  6.76 kB[22m
+[2mdist/[22m[2massets/[22m[36mindex-DmmACsVO.js   [39m[1m[2m213.85 kB[22m[1m[22m[2m │ gzip: 65.90 kB[22m
+[32m✓ built in 1.50s[39m

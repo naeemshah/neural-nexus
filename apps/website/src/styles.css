@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-obsidian-deep text-gray-100 overflow-x-hidden scroll-smooth m-0 font-sans;
+  }
+}
+
+@layer components {
+  .cyber-glow {
+    @apply shadow-[0_0_15px_rgba(0,255,159,0.6)];
+  }
+  
+  .cyber-border {
+    @apply border border-emerald-cyber/20 shadow-lg;
+  }
+  
+  .cyber-border:hover {
+    @apply border-emerald-cyber/50 shadow-[0_0_30px_rgba(0,255,159,0.1)];
+  }
+  
+  .bg-obsidian-glass {
+    @apply bg-obsidian-deep/80 backdrop-blur-xl;
+  }
+  
+  .btn-cyber {
+    @apply bg-emerald-cyber text-obsidian-deep transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] font-bold uppercase tracking-wider relative overflow-hidden;
+  }
+  
+  .btn-cyber:hover {
+    @apply shadow-[0_0_25px_rgba(0,255,159,0.6)] -translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply border border-emerald-cyber/50 text-emerald-cyber transition-all duration-300;
+  }
+  
+  .btn-outline:hover {
+    @apply bg-emerald-cyber/10 shadow-[0_0_15px_rgba(0,255,159,0.2)];
+  }
+  
+  .glass-panel {
+    @apply bg-obsidian-deep/60 backdrop-blur-xl border border-white/10;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+  h1 { 
+    @apply text-4xl !important leading-tight !important;
+  }
+}
+
+/* Prevent horizontal scroll */
+* { 
+  @apply max-w-screen box-border;
+}
