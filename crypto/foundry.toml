@@ -1,0 +1,14 @@
+[package]
+name = "neural-nexus-crypto"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+forge-std = { name = "forge-std", git = "https://github.com/foundry-rs/forge-std", tag = "v1.9.1" }
+openzeppelin-contracts = { name = "openzeppelin-contracts", git = "https://github.com/OpenZeppelin/openzeppelin-contracts", tag = "v5.0.0" }
+
+[profile.default]
+src = "."
+test = "test"
+out = "out"
+libs = ["lib"]
