@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "forge-std/Test.sol";
-import "../NAE_Token.sol";
+import "../contracts/NAE_Token.sol";
 
 contract NAETokenTest is Test {
     NAEToken public token;
@@ -47,25 +47,30 @@ contract NAETokenTest is Test {
 
     function testEcosystemBurnOnTransferFrom() public {
         uint256 transferAmount = 1000 * 10**18;
-        uint256 expectedBurn = (transferAmount * 2500) / 10000;
-        uint256 expectedTransfer = transferAmount - expectedBurn;
-
+        
         vm.prank(owner);
         token.setEcosystemAddress(ecosystemAddr, true);
         
-        // Give ecosystem address some tokens
+        // Give ecosystem address some tokens from owner (owner is NOT ecosystem addr, but ecosystemAddr IS)
+        // Transfer TO ecosystem address triggers burn
+        uint256 ownerInitialBalance = token.balanceOf(owner);
         vm.prank(owner);
         token.transfer(ecosystemAddr, transferAmount);
-        // Note: Transfer TO ecosystem addr burns, so ecosystemAddr gets expectedTransfer
-        uint256 balanceAfterTo = token.balanceOf(ecosystemAddr);
         
-        uint256 initialTotalSupply = token.totalSupply();
+        uint256 expectedBurn1 = (transferAmount * 2500) / 10000;
+        uint256 expectedTransfer1 = transferAmount - expectedBurn1;
+        
+        assertEq(token.balanceOf(ecosystemAddr), expectedTransfer1);
+        
+        uint256 supplyAfterFirstTransfer = token.totalSupply();
+        
+        // Transfer FROM ecosystem address triggers burn
         vm.prank(ecosystemAddr);
-        token.transfer(user1, balanceAfterTo);
+        token.transfer(user1, expectedTransfer1);
 
-        uint256 secondaryBurn = (balanceAfterTo * 2500) / 10000;
-        assertEq(token.balanceOf(user1), balanceAfterTo - secondaryBurn);
-        assertEq(token.totalSupply(), initialTotalSupply - secondaryBurn);
+        uint256 expectedBurn2 = (expectedTransfer1 * 2500) / 10000;
+        assertEq(token.balanceOf(user1), expectedTransfer1 - expectedBurn2);
+        assertEq(token.totalSupply(), supplyAfterFirstTransfer - expectedBurn2);
     }
 
     function testNoBurnOnStandardTransfer() public {
@@ -76,8 +81,9 @@ contract NAETokenTest is Test {
     }
 
     function testOnlyOwnerCanSetEcosystem() public {
-        vm.prank(user1);
+        vm.startPrank(user1);
         vm.expectRevert();
         token.setEcosystemAddress(ecosystemAddr, true);
+        vm.stopPrank();
     }
 }
