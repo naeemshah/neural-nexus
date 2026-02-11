@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const LaunchpadDashboard: React.FC = () => {
   const [amount, setAmount] = useState('');
   const [connected, setConnected] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
+
+  // Clear error when amount changes
+  useEffect(() => {
+    if (error && error.includes('amount')) {
+      setError(null);
+    }
+  }, [amount, error]);
 
   const stats = [
     { label: 'Total Raised', value: '$125,450', change: '+12.5%' },
@@ -11,15 +21,59 @@ const LaunchpadDashboard: React.FC = () => {
     { label: 'Time Remaining', value: '3D 12H', change: 'Live' },
   ];
 
-  const handleConnect = () => {
-    setConnected(true);
-    // In a real app, this would connect to wallet
+  const handleConnect = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      // Simulate wallet connection delay
+      await new Promise(resolve => setTimeout(resolve, 800));
+      setConnected(true);
+      // In a real app, this would connect to MetaMask, WalletConnect, etc.
+      console.log('Wallet connected (simulated)');
+    } catch (err) {
+      setError('Failed to connect wallet. Please try again.');
+      console.error('Wallet connection error:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleBuy = () => {
-    if (!amount || !connected) return;
-    alert(`Buying $${amount} worth of $NAE tokens!`);
-    setAmount('');
+  const handleBuy = async () => {
+    if (!amount || !connected) {
+      setError(connected ? 'Please enter an amount' : 'Please connect wallet first');
+      return;
+    }
+    
+    const amountNum = parseFloat(amount);
+    if (amountNum < 10) {
+      setError('Minimum purchase is $10');
+      return;
+    }
+    if (amountNum > 10000) {
+      setError('Maximum purchase is $10,000');
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+    try {
+      // Simulate purchase processing
+      await new Promise(resolve => setTimeout(resolve, 1200));
+      const successMsg = `Successfully purchased $${amount} worth of $NAE tokens!`;
+      setSuccess(successMsg);
+      setAmount('');
+      
+      // Auto-clear success message after 5 seconds
+      setTimeout(() => {
+        setSuccess(null);
+      }, 5000);
+    } catch (err) {
+      setError('Purchase failed. Please try again.');
+      console.error('Purchase error:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,6 +98,38 @@ const LaunchpadDashboard: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* Error Display */}
+        {error && (
+          <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-red-900/30 border border-red-700 rounded-lg">
+            <div className="flex items-center">
+              <span className="text-red-400 mr-2">⚠️</span>
+              <span className="text-red-300 text-sm sm:text-base">{error}</span>
+              <button 
+                onClick={() => setError(null)}
+                className="ml-auto text-red-400 hover:text-red-300 text-sm"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Success Display */}
+        {success && (
+          <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-900/30 border border-green-700 rounded-lg">
+            <div className="flex items-center">
+              <span className="text-green-400 mr-2">✅</span>
+              <span className="text-green-300 text-sm sm:text-base">{success}</span>
+              <button 
+                onClick={() => setSuccess(null)}
+                className="ml-auto text-green-400 hover:text-green-300 text-sm"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        )}
 
         <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {/* Purchase Panel */}
@@ -105,21 +191,40 @@ const LaunchpadDashboard: React.FC = () => {
               {!connected ? (
                 <button
                   onClick={handleConnect}
-                  className="w-full bg-emerald-cyber text-black font-bold py-3 rounded-lg hover:shadow-[0_0_20px_rgba(0,255,159,0.4)] transition-all text-sm sm:text-base mobile-tap-target"
+                  disabled={loading}
+                  className={`w-full font-bold py-3 rounded-lg transition-all text-sm sm:text-base mobile-tap-target flex items-center justify-center ${
+                    loading
+                      ? 'bg-emerald-cyber/70 text-black cursor-wait'
+                      : 'bg-emerald-cyber text-black hover:shadow-[0_0_20px_rgba(0,255,159,0.4)]'
+                  }`}
                 >
-                  Connect Wallet
+                  {loading ? (
+                    <>
+                      <span className="animate-spin rounded-full h-4 w-4 border-b-2 border-black mr-2"></span>
+                      Connecting...
+                    </>
+                  ) : (
+                    'Connect Wallet'
+                  )}
                 </button>
               ) : (
                 <button
                   onClick={handleBuy}
-                  disabled={!amount}
-                  className={`w-full font-bold py-3 rounded-lg transition-all text-sm sm:text-base mobile-tap-target ${
-                    amount
+                  disabled={!amount || loading}
+                  className={`w-full font-bold py-3 rounded-lg transition-all text-sm sm:text-base mobile-tap-target flex items-center justify-center ${
+                    amount && !loading
                       ? 'bg-emerald-cyber text-black hover:shadow-[0_0_20px_rgba(0,255,159,0.4)]'
                       : 'bg-gray-700 text-gray-400 cursor-not-allowed'
                   }`}
                 >
-                  Buy $NAE Tokens
+                  {loading ? (
+                    <>
+                      <span className="animate-spin rounded-full h-4 w-4 border-b-2 border-black mr-2"></span>
+                      Processing...
+                    </>
+                  ) : (
+                    'Buy $NAE Tokens'
+                  )}
                 </button>
               )}
 
