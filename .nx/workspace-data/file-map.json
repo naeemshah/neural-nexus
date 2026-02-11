@@ -34,110 +34,6 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "website": [
-        {
-          "file": "apps/website/index.html",
-          "hash": "17767896771599346011"
-        },
-        {
-          "file": "apps/website/index.html.backup",
-          "hash": "13659816319766690989"
-        },
-        {
-          "file": "apps/website/package.json",
-          "hash": "16379867364606647227"
-        },
-        {
-          "file": "apps/website/project.json",
-          "hash": "18245219435119387105"
-        },
-        {
-          "file": "apps/website/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/website/src/app/app.module.css",
-          "hash": "8887387885984320532"
-        },
-        {
-          "file": "apps/website/src/app/app.tsx",
-          "hash": "18381543030862764349"
-        },
-        {
-          "file": "apps/website/src/app/nx-welcome.tsx",
-          "hash": "1775940914884046162"
-        },
-        {
-          "file": "apps/website/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/website/src/components/Dashboard.tsx",
-          "hash": "16818190818941989867",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/website/src/components/Footer.tsx",
-          "hash": "10990793677795530680"
-        },
-        {
-          "file": "apps/website/src/components/Founder.tsx",
-          "hash": "14894437116291509650"
-        },
-        {
-          "file": "apps/website/src/components/Hero.tsx",
-          "hash": "2011136167981413084"
-        },
-        {
-          "file": "apps/website/src/components/Litepaper.tsx",
-          "hash": "15619404426622868182"
-        },
-        {
-          "file": "apps/website/src/components/Navigation.tsx",
-          "hash": "2107592291298573444",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/website/src/components/Tokenomics.tsx",
-          "hash": "15578784627147385451"
-        },
-        {
-          "file": "apps/website/src/main.tsx",
-          "hash": "7944529105552768481",
-          "deps": [
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "apps/website/src/styles.css",
-          "hash": "4100722873957850507"
-        },
-        {
-          "file": "apps/website/tsconfig.app.json",
-          "hash": "12830358968167672754"
-        },
-        {
-          "file": "apps/website/tsconfig.json",
-          "hash": "1731869790938503978"
-        },
-        {
-          "file": "apps/website/tsconfig.tsbuildinfo",
-          "hash": "9165916567911027470"
-        },
-        {
-          "file": "apps/website/vite.config.mts",
-          "hash": "10071300610008145038",
-          "deps": [
-            "npm:vite",
-            "npm:@vitejs/plugin-react"
-          ]
-        }
-      ],
       "ui": [
         {
           "file": "packages/ui/package.json",
@@ -321,6 +217,239 @@
           ]
         }
       ],
+      "website": [
+        {
+          "file": "apps/website/index.html",
+          "hash": "17767896771599346011"
+        },
+        {
+          "file": "apps/website/index.html.backup",
+          "hash": "13659816319766690989"
+        },
+        {
+          "file": "apps/website/package.json",
+          "hash": "16379867364606647227"
+        },
+        {
+          "file": "apps/website/project.json",
+          "hash": "18245219435119387105"
+        },
+        {
+          "file": "apps/website/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/website/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/website/src/app/app.tsx",
+          "hash": "18381543030862764349"
+        },
+        {
+          "file": "apps/website/src/app/nx-welcome.tsx",
+          "hash": "1775940914884046162"
+        },
+        {
+          "file": "apps/website/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/website/src/components/Dashboard.tsx",
+          "hash": "16818190818941989867",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/website/src/components/Footer.tsx",
+          "hash": "10990793677795530680"
+        },
+        {
+          "file": "apps/website/src/components/Founder.tsx",
+          "hash": "14894437116291509650"
+        },
+        {
+          "file": "apps/website/src/components/Hero.tsx",
+          "hash": "2011136167981413084"
+        },
+        {
+          "file": "apps/website/src/components/Litepaper.tsx",
+          "hash": "15619404426622868182"
+        },
+        {
+          "file": "apps/website/src/components/Navigation.tsx",
+          "hash": "2107592291298573444",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/website/src/components/Tokenomics.tsx",
+          "hash": "15578784627147385451"
+        },
+        {
+          "file": "apps/website/src/main.tsx",
+          "hash": "7944529105552768481",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/website/src/styles.css",
+          "hash": "4100722873957850507"
+        },
+        {
+          "file": "apps/website/tsconfig.app.json",
+          "hash": "12830358968167672754"
+        },
+        {
+          "file": "apps/website/tsconfig.json",
+          "hash": "1731869790938503978"
+        },
+        {
+          "file": "apps/website/tsconfig.tsbuildinfo",
+          "hash": "9165916567911027470"
+        },
+        {
+          "file": "apps/website/vite.config.mts",
+          "hash": "10071300610008145038",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ],
+      "unified": [
+        {
+          "file": "apps/unified/index.html",
+          "hash": "2072450701644422006"
+        },
+        {
+          "file": "apps/unified/package.json",
+          "hash": "18304369293744854579"
+        },
+        {
+          "file": "apps/unified/project.json",
+          "hash": "6911223629934651274"
+        },
+        {
+          "file": "apps/unified/src/app/app.tsx",
+          "hash": "13850556788685856103",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Dashboard.tsx",
+          "hash": "17452433817429888401",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Footer.tsx",
+          "hash": "2581930839235542812",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Founder.tsx",
+          "hash": "7438591418239864015",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Hero.tsx",
+          "hash": "3856664878029364130",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/LaunchpadContent.tsx",
+          "hash": "8224453975491233475",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/LaunchpadDashboard.tsx",
+          "hash": "11984435126309190986",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Litepaper.tsx",
+          "hash": "14823320540316449796",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Navigation.tsx",
+          "hash": "6999175694627372739",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Roadmap.tsx",
+          "hash": "15405676299588977508",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/Tokenomics.tsx",
+          "hash": "13262167196509708179",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/components/WebsiteContent.tsx",
+          "hash": "1002424418375171658",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/context/WalletContext.tsx",
+          "hash": "17397330847226961764",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/unified/src/main.tsx",
+          "hash": "4565563966996085829",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/unified/tsconfig.app.json",
+          "hash": "16934318557528033754"
+        },
+        {
+          "file": "apps/unified/tsconfig.json",
+          "hash": "8555148234875497851"
+        },
+        {
+          "file": "apps/unified/vite.config.mts",
+          "hash": "11408307701306946053",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ],
       "launchpad": [
         {
           "file": "apps/launchpad/dist/assets/index-5zh6tFas.js",
@@ -495,7 +624,7 @@
       },
       {
         "file": "UPTIME.md",
-        "hash": "3774037775257219953"
+        "hash": "14186837825326093981"
       },
       {
         "file": "USER.md",
@@ -630,18 +759,6 @@
         "hash": "17784634039478192579"
       },
       {
-        "file": "litepaper-v2-enhanced.md",
-        "hash": "5676660606306949507"
-      },
-      {
-        "file": "litepaper.html",
-        "hash": "13043272278818468615"
-      },
-      {
-        "file": "litepaper.txt",
-        "hash": "2876103596487770963"
-      },
-      {
         "file": "local_status.html",
         "hash": "9305014108696404028"
       },
@@ -668,6 +785,18 @@
       {
         "file": "marketing/litepaper-pdf-plan.md",
         "hash": "2240629877653064244"
+      },
+      {
+        "file": "marketing/litepaper-v2-enhanced.md",
+        "hash": "5676660606306949507"
+      },
+      {
+        "file": "marketing/litepaper.html",
+        "hash": "13043272278818468615"
+      },
+      {
+        "file": "marketing/litepaper.txt",
+        "hash": "2876103596487770963"
       },
       {
         "file": "marketing/market-trends-tracker.md",
@@ -699,7 +828,7 @@
       },
       {
         "file": "package.json",
-        "hash": "16638247285832596328"
+        "hash": "586040661747722354"
       },
       {
         "file": "postcss.config.js",
@@ -724,6 +853,10 @@
       {
         "file": "tunnel.log",
         "hash": "10901048291262891425"
+      },
+      {
+        "file": "tunnel_new.log",
+        "hash": "16989699092207082330"
       },
       {
         "file": "usr/bin/cloudflared",
