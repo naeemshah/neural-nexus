@@ -1,23 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
 
-@import "tailwindcss";
-
-@theme {
-  --color-emerald-cyber: #00FF9F;
-  --color-obsidian-deep: #0B0E14;
-  --color-obsidian-glass: rgba(11, 14, 20, 0.8);
-  
-  --font-sans: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  
-  --breakpoint-xs: 375px;
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   body {

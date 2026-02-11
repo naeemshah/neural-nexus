@@ -1,9 +1,10 @@
 [36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
 transforming...
-[32m✓[39m 37 modules transformed.
-rendering chunks...
-computing gzip size...
-[2m../../dist/apps/launchpad/[22m[32mindex.html                 [39m[1m[2m  1.18 kB[22m[1m[22m[2m │ gzip:  0.58 kB[22m
-[2m../../dist/apps/launchpad/[22m[2massets/[22m[35mindex-CT7UwRDU.css  [39m[1m[2m 61.95 kB[22m[1m[22m[2m │ gzip: 10.03 kB[22m
-[2m../../dist/apps/launchpad/[22m[2massets/[22m[36mindex-bJdqVS3a.js   [39m[1m[2m219.37 kB[22m[1m[22m[2m │ gzip: 67.40 kB[22m
-[32m✓ built in 3.30s[39m
+[32m✓[39m 4 modules transformed.
+[31m✗[39m Build failed in 102ms
+
+[7m[1m[31m NX [39m[22m[27m  [31m[31m[vite:css] [postcss] postcss-import: /data/.openclaw/workspace/neural-nexus/node_modules/tailwindcss/lib/index.js:1:1: Unknown word "use strict"[31m[39m
+
+file: [36m/data/.openclaw/workspace/neural-nexus/node_modules/tailwindcss/lib/index.js:1:0 (/data/.openclaw/workspace/neural-nexus/apps/launchpad/src/styles.css)[39m
+Pass --verbose to see the stacktrace.
+

@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx build website",
-    "startTime": "2026-02-11T14:10:06.014Z",
-    "endTime": "2026-02-11T14:10:08.505Z",
+    "command": "nx build launchpad",
+    "startTime": "2026-02-11T14:41:53.385Z",
+    "endTime": "2026-02-11T14:41:55.820Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "website:build:production",
+      "taskId": "launchpad:build:production",
       "target": "build",
-      "projectName": "website",
-      "hash": "10109212267987902896",
-      "startTime": "2026-02-11T14:10:06.023Z",
-      "endTime": "2026-02-11T14:10:08.504Z",
+      "projectName": "launchpad",
+      "hash": "9971875508619136393",
+      "startTime": "2026-02-11T14:41:53.394Z",
+      "endTime": "2026-02-11T14:41:55.819Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

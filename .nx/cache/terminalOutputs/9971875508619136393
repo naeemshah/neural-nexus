@@ -1,0 +1,9 @@
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 37 modules transformed.
+rendering chunks...
+computing gzip size...
+[2m../../dist/apps/launchpad/[22m[32mindex.html                 [39m[1m[2m  1.18 kB[22m[1m[22m[2m │ gzip:  0.58 kB[22m
+[2m../../dist/apps/launchpad/[22m[2massets/[22m[35mindex-C2UxE9s5.css  [39m[1m[2m 33.89 kB[22m[1m[22m[2m │ gzip:  6.38 kB[22m
+[2m../../dist/apps/launchpad/[22m[2massets/[22m[36mindex-9zHpAJ8X.js   [39m[1m[2m219.37 kB[22m[1m[22m[2m │ gzip: 67.40 kB[22m
+[32m✓ built in 1.73s[39m
