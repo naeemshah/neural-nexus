@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project $NAE | Launchpad</title>
+    <title>Neural Nexus | Launchpad</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,10 +11,10 @@
                 extend: {
                     colors: {
                         emerald: {
-                            cyber: '#00FF9F', // Cyber Emerald
+                            cyber: '#00FF9F',
                         },
                         obsidian: {
-                            deep: '#0B0E14', // Deep Sea Obsidian
+                            deep: '#0B0E14',
                         }
                     },
                     fontFamily: {
@@ -29,41 +29,57 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
         
         body {
             background-color: #0B0E14;
-            color: #E2E8F0;
+            color: #F8FAFC;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         .cyber-glow {
-            text-shadow: 0 0 10px rgba(0, 255, 159, 0.5);
+            text-shadow: 0 0 15px rgba(0, 255, 159, 0.6);
         }
 
-        .border-cyber {
-            border: 1px solid rgba(0, 255, 159, 0.3);
+        .cyber-border {
+            border: 1px solid rgba(0, 255, 159, 0.2);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .cyber-border:hover {
+            border-color: rgba(0, 255, 159, 0.5);
+            box-shadow: 0 0 30px rgba(0, 255, 159, 0.1);
         }
 
         .bg-obsidian-glass {
             background: rgba(11, 14, 20, 0.8);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .btn-primary {
             background: #00FF9F;
             color: #0B0E14;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 0 15px rgba(0, 255, 159, 0.2);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .btn-primary:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 159, 0.5);
+            box-shadow: 0 0 25px rgba(0, 255, 159, 0.6);
             transform: translateY(-2px);
         }
 
         .burn-gradient {
             background: linear-gradient(180deg, rgba(0, 255, 159, 0.1) 0%, rgba(11, 14, 20, 0) 100%);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            h1 { font-size: 2.25rem !important; line-height: 1.1 !important; }
         }
 
         /* Mobile Menu Overlay */
@@ -124,9 +140,9 @@
                 <span class="w-2 h-2 rounded-full bg-emerald-cyber animate-ping"></span>
                 <span class="text-[9px] sm:text-[10px] font-mono font-bold text-emerald-cyber uppercase tracking-widest">Genesis Presale Coming Soon</span>
             </div>
-            <h1 class="text-4xl sm:text-5xl md:text-8xl font-bold mb-6 tracking-tight leading-[1.1]">
+            <h1 class="text-4xl sm:text-5xl md:text-8xl font-extrabold mb-6 tracking-tight leading-[0.9]">
                 The Future of <br class="hidden sm:block"/>
-                <span class="text-emerald-cyber">Digital Scarcity</span>
+                <span class="text-emerald-cyber cyber-glow">Digital Scarcity</span>
             </h1>
             <p class="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
                 Empowering the next generation of decentralized finance through aggressive deflationary mechanics and transparent leadership.
@@ -145,7 +161,7 @@
     <!-- Burn Tracker Section -->
     <section id="tracker" class="py-16 sm:py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="bg-obsidian-glass border-cyber rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden burn-gradient">
+            <div class="bg-obsidian-deep/60 backdrop-blur-xl border-emerald-cyber/20 border-2 rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden burn-gradient cyber-border">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 text-center">
                     <div>
                         <h3 class="text-gray-400 text-[10px] sm:text-sm font-mono mb-2 uppercase tracking-widest">Live Burn Rate</h3>
@@ -187,41 +203,41 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row gap-16 items-center">
                 <div class="md:w-1/2">
-                    <h2 class="text-4xl font-bold mb-6">Built for <span class="text-emerald-cyber">Value Preservation</span></h2>
-                    <p class="text-gray-400 mb-8 text-lg">
+                    <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Built for <br/><span class="text-emerald-cyber">Value Preservation</span></h2>
+                    <p class="text-gray-400 mb-8 text-lg leading-relaxed">
                         Our smart contract is engineered to reward long-term holders while continuously reducing circulating supply.
                     </p>
-                    <ul class="space-y-4">
+                    <ul class="space-y-6">
                         <li class="flex items-start gap-4">
-                            <div class="w-6 h-6 rounded-full bg-emerald-cyber/20 flex items-center justify-center shrink-0 mt-1">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-cyber/10 flex items-center justify-center shrink-0 mt-1 border border-emerald-cyber/20">
                                 <div class="w-2 h-2 rounded-full bg-emerald-cyber"></div>
                             </div>
                             <div>
-                                <span class="font-bold block">1 Billion Total Supply</span>
+                                <span class="font-bold block text-xl">1 Billion Total Supply</span>
                                 <span class="text-gray-500 text-sm">Hard-coded limit. No new tokens can ever be minted.</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-4">
-                            <div class="w-6 h-6 rounded-full bg-emerald-cyber/20 flex items-center justify-center shrink-0 mt-1">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-cyber/10 flex items-center justify-center shrink-0 mt-1 border border-emerald-cyber/20">
                                 <div class="w-2 h-2 rounded-full bg-emerald-cyber"></div>
                             </div>
                             <div>
-                                <span class="font-bold block">25% Genesis Burn</span>
+                                <span class="font-bold block text-xl">25% Genesis Burn</span>
                                 <span class="text-gray-500 text-sm">250,000,000 $NAE sent to dead address at launch.</span>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="md:w-1/2 w-full">
-                    <div class="aspect-square rounded-full border-2 border-emerald-cyber/10 flex items-center justify-center relative">
-                        <div class="w-4/5 h-4/5 rounded-full border-2 border-emerald-cyber/30 flex items-center justify-center p-8 text-center">
+                    <div class="aspect-square rounded-[3rem] border-2 border-emerald-cyber/10 flex items-center justify-center relative bg-emerald-cyber/5 cyber-border">
+                        <div class="w-4/5 h-4/5 rounded-[2rem] border-2 border-emerald-cyber/30 flex items-center justify-center p-8 text-center bg-obsidian-deep/50">
                              <div class="text-emerald-cyber">
-                                 <div class="text-6xl font-bold">25%</div>
-                                 <div class="text-sm font-mono tracking-widest uppercase">Burned</div>
+                                 <div class="text-7xl font-black cyber-glow">25%</div>
+                                 <div class="text-xs font-mono tracking-[0.3em] uppercase mt-4">Supply Burned</div>
                              </div>
                         </div>
-                        <div class="absolute -top-4 right-1/4 bg-obsidian-deep border border-emerald-cyber/50 px-4 py-2 rounded-lg text-xs font-mono">
-                            TOTAL: 1,000,000,000
+                        <div class="absolute -top-4 right-1/4 bg-obsidian-deep border border-emerald-cyber/50 px-4 py-2 rounded-lg text-[10px] font-mono tracking-widest uppercase">
+                            Cap: 1,000,000,000
                         </div>
                     </div>
                 </div>
@@ -233,17 +249,17 @@
     <section id="founder" class="py-24 px-6 mb-20">
         <div class="max-w-4xl mx-auto">
             <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 shrink-0 border-2 border-emerald-cyber/20">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 shrink-0 border-2 border-emerald-cyber/20 shadow-2xl">
                     <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Naeem" alt="Naeem Shah" class="w-full h-full object-cover bg-obsidian-deep">
                 </div>
                 <div>
-                    <h2 class="text-3xl font-bold mb-4">Naeem Shah</h2>
-                    <h4 class="text-emerald-cyber font-mono text-sm uppercase mb-6 tracking-widest">Founder & Visionary</h4>
-                    <p class="text-gray-400 leading-relaxed mb-6">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Naeem Shah</h2>
+                    <h4 class="text-emerald-cyber font-mono text-sm uppercase mb-6 tracking-widest">Founder & Technical Architect</h4>
+                    <p class="text-gray-400 leading-relaxed mb-6 text-lg">
                         Naeem Shah is a serial entrepreneur and technical architect with a decade of experience in building scalable digital infrastructures. His vision for $NAE stems from a deep-rooted belief in transparent, code-based monetary systems. 
                     </p>
-                    <p class="text-gray-400 leading-relaxed">
-                        Under his leadership, Project $NAE aims to bridge the gap between complex blockchain mechanics and intuitive user experiences, making decentralized wealth preservation accessible to everyone.
+                    <p class="text-gray-400 leading-relaxed text-lg">
+                        Under his leadership, Neural Nexus aims to bridge the gap between complex blockchain mechanics and intuitive user experiences, making decentralized wealth preservation accessible to everyone.
                     </p>
                 </div>
             </div>
