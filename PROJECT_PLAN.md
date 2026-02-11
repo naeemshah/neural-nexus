@@ -11,7 +11,7 @@ Neural Nexus is an AI-driven crypto ecosystem centered around the $NAE token on 
 
 ## Phase 1: Foundation (Current)
 ...
-- [ ] Website Mobile & UI Final Polish (dev/qa)
+- [ ] Website Mobile & UI Final Polish (dev/qa) [DEPRECATED - See React Rewrite]
 - [ ] Base Testnet Deployment & Verify Burn Logic (dev/qa)
 - [ ] Litepaper v2: PDF Formatting & Branding (marketing)
 - [ ] Social Media Account Activation & Initial Posts (marketing)
@@ -23,6 +23,8 @@ Neural Nexus is an AI-driven crypto ecosystem centered around the $NAE token on 
 - [ ] Setup Development Toolchain (dev) - Foundry or Hardhat for Base deployment.
 - [ ] Contract Unit Testing - focused on burn tax (qa)
 - [x] Litepaper Draft v1 (marketing) [See NAE_Litepaper_v1.md in marketing workstation]
+- [ ] Monorepo Setup (NX) (dev) - High Priority [NEW]
+- [ ] React Website Rewrite (frontend) - High Priority [NEW]
 
 ## Phase 2: Refinement & Testing
 - [ ] Integration of launchpad UI with $NAE branding (dev/marketing)
